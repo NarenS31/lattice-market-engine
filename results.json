@@ -1,0 +1,91 @@
+{
+  "meta": {
+    "n_runs": 100,
+    "n_ticks": 25,
+    "shock_tick": 10
+  },
+  "return_distribution": {
+    "n_observations": 1856,
+    "kurtosis": 5.55552,
+    "skewness": -0.764357,
+    "is_fat_tailed": true
+  },
+  "flash_crash": {
+    "runs_with_crash": 0,
+    "crash_rate_pct": 0,
+    "total_events": 0,
+    "mean_tick": null,
+    "median_tick": null,
+    "tick_distribution": {}
+  },
+  "pnl_by_regime": {
+    "liquidity_shock": {
+      "n_runs": 30,
+      "archetypes": {
+        "retail": {
+          "mean_pnl": -0.4617,
+          "std_pnl": 0.612
+        },
+        "inst": {
+          "mean_pnl": 114.6846,
+          "std_pnl": 102.7891
+        },
+        "quant": {
+          "mean_pnl": 19.2727,
+          "std_pnl": 55.0134
+        }
+      },
+      "best_archetype": "inst",
+      "worst_archetype": "retail"
+    },
+    "rate_spike": {
+      "n_runs": 35,
+      "archetypes": {
+        "retail": {
+          "mean_pnl": -0.0005,
+          "std_pnl": 0.0394
+        },
+        "inst": {
+          "mean_pnl": 11.4182,
+          "std_pnl": 12.0436
+        },
+        "quant": {
+          "mean_pnl": -9.3386,
+          "std_pnl": 8.4531
+        }
+      },
+      "best_archetype": "inst",
+      "worst_archetype": "quant"
+    },
+    "sentiment_crash": {
+      "n_runs": 35,
+      "archetypes": {
+        "retail": {
+          "mean_pnl": -0.0958,
+          "std_pnl": 0.479
+        },
+        "inst": {
+          "mean_pnl": 116.4239,
+          "std_pnl": 88.427
+        },
+        "quant": {
+          "mean_pnl": 10.5155,
+          "std_pnl": 50.7357
+        }
+      },
+      "best_archetype": "inst",
+      "worst_archetype": "retail"
+    }
+  },
+  "contagion": {
+    "n_valid_runs": 91,
+    "mean_correlation": -0.39904,
+    "high_contagion_runs": 16,
+    "overall_high_contagion": false,
+    "distribution": {
+      "min": -0.999773,
+      "median": -0.675189,
+      "max": 0.965439
+    }
+  }
+}
