@@ -1,3 +1,5 @@
+
+
 #!/usr/bin/env python3
 """
 run_simulation.py
@@ -24,7 +26,6 @@ INITIAL_CASH = {
     "Retail": 10_000.0,
     "Inst":   100_000.0,
     "Quant":  50_000.0,
-    "MM":     0,
 }
 
 _SHOCK_TICK = 10   # first tick at which the supply chain event activates
@@ -135,7 +136,7 @@ def main() -> None:
         archetype = agent.name.split("-")[0]
         initial   = INITIAL_CASH[archetype]
         pnl       = w - initial
-        pct       = (pnl / initial * 100) if initial else 0.0
+        pct       = pnl / initial * 100
         print(
             f"  {agent.name:<12}  "
             f"initial={initial:>10.2f}  "
