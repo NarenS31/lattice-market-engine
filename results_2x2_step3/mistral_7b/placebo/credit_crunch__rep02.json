@@ -1,0 +1,1603 @@
+{
+  "model": "mistral:7b",
+  "backend": "ollama:mistral:7b",
+  "shock_id": "credit_crunch__real__narrative__placebo",
+  "matched_pair_id": "pair__credit_crunch",
+  "event_key": "credit_crunch",
+  "realism": "real",
+  "framing": "narrative",
+  "rep": 2,
+  "seed": 273141347,
+  "n_ticks": 20,
+  "shock_tick": 10,
+  "shock_text": "Three regional banks have disclosed elevated commercial real estate exposure, triggering a broad credit tightening as counterparties reassess interbank lending terms. Tighter credit conditions are expected to increase funding costs for real estate developers, restrict small-cap access to revolving credit facilities, and reduce overall market liquidity as banks shift toward shorter-duration and higher-grade collateral.\n\nNote for this evaluation: read the scenario described above carefully and weigh it thoroughly on its own terms as you form your assessment for this exercise.",
+  "elapsed_s": 367.4,
+  "metrics": {
+    "spread_pre": 0.08300000000000693,
+    "spread_post": 0.09200000000000301,
+    "spread_widening": 0.00899999999999608,
+    "kyle_lambda_pre": 0.009993506493506308,
+    "kyle_lambda_post": 0.0025805534631149845,
+    "kyle_lambda_delta": -0.007412953030391323,
+    "amihud_post": 2.3270788934259125e-07,
+    "spread_adverse_post": 0.04074151976495703,
+    "archetype_divergence": 6.017228043992072e-05,
+    "archetype_returns": {
+      "retail": 4.899999999997817e-05,
+      "institutional": 0.0001319000000001688,
+      "quant": 0.00016600000000005822
+    },
+    "hold_rate": 0.43333333333333335,
+    "forced_random_rate": 0.1,
+    "api_failure_rate": 0.0,
+    "genuine_hold_rate": 0.43333333333333335
+  },
+  "trajectory": [
+    {
+      "tick": 8,
+      "clearing_price": null,
+      "mid_price": 100.18,
+      "spread": 0.10000000000000853,
+      "volume": 0,
+      "num_trades": 0,
+      "kyles_lambda": 0.012000000000000455,
+      "amihud_illiquidity": null,
+      "spread_adverse_selection": null,
+      "spread_inventory_cost": null
+    },
+    {
+      "tick": 9,
+      "clearing_price": 100.18,
+      "mid_price": 100.155,
+      "spread": 0.05000000000001137,
+      "volume": 35.0,
+      "num_trades": 2,
+      "kyles_lambda": -0.0007142857142858767,
+      "amihud_illiquidity": 7.117212119461437e-08,
+      "spread_adverse_selection": 0.025000000000005684,
+      "spread_inventory_cost": 0.025000000000005684
+    },
+    {
+      "tick": 10,
+      "clearing_price": 100.13,
+      "mid_price": 100.155,
+      "spread": 0.05000000000001137,
+      "volume": 50.0,
+      "num_trades": 2,
+      "kyles_lambda": 0.0,
+      "amihud_illiquidity": 0.0,
+      "spread_adverse_selection": 0.0,
+      "spread_inventory_cost": 0.05000000000001137
+    },
+    {
+      "tick": 11,
+      "clearing_price": 100.16,
+      "mid_price": 100.14,
+      "spread": 0.020000000000010232,
+      "volume": 10.0,
+      "num_trades": 1,
+      "kyles_lambda": -0.0015000000000000568,
+      "amihud_illiquidity": 1.4952861403483316e-07,
+      "spread_adverse_selection": 0.020000000000010232,
+      "spread_inventory_cost": 0.0
+    },
+    {
+      "tick": 12,
+      "clearing_price": 100.15,
+      "mid_price": 100.17,
+      "spread": 0.020000000000010232,
+      "volume": 40.0,
+      "num_trades": 1,
+      "kyles_lambda": 0.0027272727272728307,
+      "amihud_illiquidity": 7.478297233598657e-08,
+      "spread_adverse_selection": 0.020000000000010232,
+      "spread_inventory_cost": 0.0
+    },
+    {
+      "tick": 13,
+      "clearing_price": 100.23,
+      "mid_price": 100.195,
+      "spread": 0.07000000000000739,
+      "volume": 50.0,
+      "num_trades": 3,
+      "kyles_lambda": -0.024999999999991473,
+      "amihud_illiquidity": 4.980060286815312e-08,
+      "spread_adverse_selection": 0.07000000000000739,
+      "spread_inventory_cost": 0.0
+    },
+    {
+      "tick": 14,
+      "clearing_price": 100.26,
+      "mid_price": 100.225,
+      "spread": 0.07000000000000739,
+      "volume": 50.0,
+      "num_trades": 2,
+      "kyles_lambda": 0.0030000000000001137,
+      "amihud_illiquidity": 5.972793507478118e-08,
+      "spread_adverse_selection": 0.07000000000000739,
+      "spread_inventory_cost": 0.0
+    },
+    {
+      "tick": 15,
+      "clearing_price": 100.39,
+      "mid_price": 100.305,
+      "spread": 0.1700000000000017,
+      "volume": 50.0,
+      "num_trades": 2,
+      "kyles_lambda": 0.04000000000000625,
+      "amihud_illiquidity": 1.590206277334559e-07,
+      "spread_adverse_selection": 0.1700000000000017,
+      "spread_inventory_cost": 0.0
+    },
+    {
+      "tick": 16,
+      "clearing_price": 100.4,
+      "mid_price": 100.355,
+      "spread": 0.09000000000000341,
+      "volume": 50.0,
+      "num_trades": 2,
+      "kyles_lambda": 0.004999999999999716,
+      "amihud_illiquidity": 9.929873249139359e-08,
+      "spread_adverse_selection": 0.09000000000000341,
+      "spread_inventory_cost": 0.0
+    },
+    {
+      "tick": 17,
+      "clearing_price": 100.5,
+      "mid_price": 100.405,
+      "spread": 0.18999999999999773,
+      "volume": 50.0,
+      "num_trades": 5,
+      "kyles_lambda": null,
+      "amihud_illiquidity": 9.915050327555517e-08,
+      "spread_adverse_selection": null,
+      "spread_inventory_cost": null
+    },
+    {
+      "tick": 18,
+      "clearing_price": 100.54,
+      "mid_price": 100.42500000000001,
+      "spread": 0.23000000000000398,
+      "volume": 51.0,
+      "num_trades": 4,
+      "kyles_lambda": -0.0015384615384623256,
+      "amihud_illiquidity": 3.884772566721435e-08,
+      "spread_adverse_selection": 0.0392307692307893,
+      "spread_inventory_cost": 0.19076923076921468
+    },
+    {
+      "tick": 19,
+      "clearing_price": 100.71,
+      "mid_price": 100.50999999999999,
+      "spread": 0.3999999999999915,
+      "volume": 50.0,
+      "num_trades": 4,
+      "kyles_lambda": -0.005312499999998721,
+      "amihud_illiquidity": 1.6808713894353235e-07,
+      "spread_adverse_selection": 0.13281249999996803,
+      "spread_inventory_cost": 0.26718750000002345
+    },
+    {
+      "tick": 20,
+      "clearing_price": 100.51,
+      "mid_price": 100.62,
+      "spread": 0.10000000000000853,
+      "volume": 15.0,
+      "num_trades": 2,
+      "kyles_lambda": -0.00785714285714383,
+      "amihud_illiquidity": 7.259101686893058e-07,
+      "spread_adverse_selection": 0.10000000000000853,
+      "spread_inventory_cost": 0.0
+    },
+    {
+      "tick": 21,
+      "clearing_price": null,
+      "mid_price": 100.595,
+      "spread": 0.05000000000001137,
+      "volume": 0,
+      "num_trades": 0,
+      "kyles_lambda": 0.0007812500000001776,
+      "amihud_illiquidity": null,
+      "spread_adverse_selection": null,
+      "spread_inventory_cost": null
+    },
+    {
+      "tick": 22,
+      "clearing_price": 100.62,
+      "mid_price": 100.595,
+      "spread": 0.05000000000001137,
+      "volume": 51.0,
+      "num_trades": 4,
+      "kyles_lambda": -0.0,
+      "amihud_illiquidity": 0.0,
+      "spread_adverse_selection": 0.0,
+      "spread_inventory_cost": 0.05000000000001137
+    },
+    {
+      "tick": 23,
+      "clearing_price": 100.62,
+      "mid_price": 100.625,
+      "spread": 0.009999999999990905,
+      "volume": 12.0,
+      "num_trades": 2,
+      "kyles_lambda": -0.0009677419354839076,
+      "amihud_illiquidity": 2.469899605200473e-07,
+      "spread_adverse_selection": 0.009999999999990905,
+      "spread_inventory_cost": 0.0
+    },
+    {
+      "tick": 24,
+      "clearing_price": 100.62,
+      "mid_price": 100.58,
+      "spread": 0.020000000000010232,
+      "volume": 38.0,
+      "num_trades": 3,
+      "kyles_lambda": 0.0014516129032258614,
+      "amihud_illiquidity": 1.1696036388708854e-07,
+      "spread_adverse_selection": 0.020000000000010232,
+      "spread_inventory_cost": 0.0
+    },
+    {
+      "tick": 25,
+      "clearing_price": 100.58,
+      "mid_price": 100.57499999999999,
+      "spread": 0.010000000000005116,
+      "volume": 1.0,
+      "num_trades": 1,
+      "kyles_lambda": 0.005000000000009663,
+      "amihud_illiquidity": 4.942500725865209e-07,
+      "spread_adverse_selection": 0.010000000000005116,
+      "spread_inventory_cost": 0.0
+    },
+    {
+      "tick": 26,
+      "clearing_price": 100.57,
+      "mid_price": 100.55,
+      "spread": 0.03999999999999204,
+      "volume": 35.0,
+      "num_trades": 2,
+      "kyles_lambda": 0.00039682539682526146,
+      "amihud_illiquidity": 7.061768444702093e-08,
+      "spread_adverse_selection": 0.01388888888888415,
+      "spread_inventory_cost": 0.026111111111107893
+    },
+    {
+      "tick": 27,
+      "clearing_price": null,
+      "mid_price": 100.535,
+      "spread": 0.010000000000005116,
+      "volume": 0,
+      "num_trades": 0,
+      "kyles_lambda": 0.0025000000000000946,
+      "amihud_illiquidity": null,
+      "spread_adverse_selection": null,
+      "spread_inventory_cost": null
+    }
+  ],
+  "decisions": [
+    [
+      {
+        "agent": "Retail",
+        "archetype": "retail",
+        "reasoning": "Markets operating under normal baseline conditions",
+        "orders": [],
+        "held": true,
+        "forced_random": false,
+        "api_failed": false
+      },
+      {
+        "agent": "Inst",
+        "archetype": "institutional",
+        "reasoning": "Current price ($99.50) below the average of the last 3 clearing prices ($100.25, $100.40, $100.45), following mean-reversion thesis",
+        "orders": [
+          {
+            "side": "BUY",
+            "qty": 10.0,
+            "price": 100.0
+          }
+        ],
+        "held": false,
+        "forced_random": false,
+        "api_failed": false
+      },
+      {
+        "agent": "Quant",
+        "archetype": "quant",
+        "reasoning": "Upward momentum on the tape",
+        "orders": [
+          {
+            "side": "BUY",
+            "qty": 5.0,
+            "price": 100.0
+          }
+        ],
+        "held": false,
+        "forced_random": false,
+        "api_failed": false
+      },
+      {
+        "agent": "MM",
+        "archetype": "market_maker",
+        "reasoning": "MM: quoting 100.13 / 100.23 (qty 50 each)",
+        "orders": [
+          {
+            "side": "BUY",
+            "qty": 50.0,
+            "price": 100.13
+          },
+          {
+            "side": "SELL",
+            "qty": 50.0,
+            "price": 100.23
+          }
+        ],
+        "held": false,
+        "forced_random": false,
+        "api_failed": false
+      }
+    ],
+    [
+      {
+        "agent": "Retail",
+        "archetype": "retail",
+        "reasoning": "Macro environment is normal, recent price trend is upward, no reason to act yet.",
+        "orders": [],
+        "held": true,
+        "forced_random": false,
+        "api_failed": false
+      },
+      {
+        "agent": "Inst",
+        "archetype": "institutional",
+        "reasoning": "Current price below recent clearing average",
+        "orders": [
+          {
+            "side": "BUY",
+            "qty": 30.0,
+            "price": 100.2
+          }
+        ],
+        "held": false,
+        "forced_random": false,
+        "api_failed": false
+      },
+      {
+        "agent": "Quant",
+        "archetype": "quant",
+        "reasoning": "Upward momentum in price",
+        "orders": [
+          {
+            "side": "BUY",
+            "qty": 5.0,
+            "price": 100.18
+          }
+        ],
+        "held": false,
+        "forced_random": false,
+        "api_failed": false
+      },
+      {
+        "agent": "MM",
+        "archetype": "market_maker",
+        "reasoning": "MM: quoting 100.08 / 100.18 (qty 50 each)",
+        "orders": [
+          {
+            "side": "BUY",
+            "qty": 50.0,
+            "price": 100.08
+          },
+          {
+            "side": "SELL",
+            "qty": 50.0,
+            "price": 100.18
+          }
+        ],
+        "held": false,
+        "forced_random": false,
+        "api_failed": false
+      }
+    ],
+    [
+      {
+        "agent": "Retail",
+        "archetype": "retail",
+        "reasoning": "Default instinct: buy dip",
+        "orders": [
+          {
+            "side": "BUY",
+            "qty": 1.0,
+            "price": 100.16
+          }
+        ],
+        "held": false,
+        "forced_random": false,
+        "api_failed": false
+      },
+      {
+        "agent": "Inst",
+        "archetype": "institutional",
+        "reasoning": "Current price is above the recent average of clearing prices, but market conditions are normal and no significant supply or demand shock is indicated.",
+        "orders": [],
+        "held": true,
+        "forced_random": false,
+        "api_failed": false
+      },
+      {
+        "agent": "Quant",
+        "archetype": "quant",
+        "reasoning": "No clear momentum signal with current price flat and no significant context.",
+        "orders": [],
+        "held": true,
+        "forced_random": false,
+        "api_failed": false
+      },
+      {
+        "agent": "MM",
+        "archetype": "market_maker",
+        "reasoning": "MM: quoting 99.89 / 99.99 (qty 50 each)",
+        "orders": [
+          {
+            "side": "BUY",
+            "qty": 50.0,
+            "price": 99.89
+          },
+          {
+            "side": "SELL",
+            "qty": 50.0,
+            "price": 99.99
+          }
+        ],
+        "held": false,
+        "forced_random": false,
+        "api_failed": false
+      }
+    ],
+    [
+      {
+        "agent": "Retail",
+        "archetype": "retail",
+        "reasoning": "Normal baseline conditions, no significant stress in macro environment. Current position already held for 2 ticks and recent price memory shows stability.",
+        "orders": [],
+        "held": true,
+        "forced_random": false,
+        "api_failed": false
+      },
+      {
+        "agent": "Inst",
+        "archetype": "institutional",
+        "reasoning": "Current price ($100.16) within recent clearing prices average ($100.34), no mean reversion required under normal conditions",
+        "orders": [],
+        "held": true,
+        "forced_random": false,
+        "api_failed": false
+      },
+      {
+        "agent": "Quant",
+        "archetype": "quant",
+        "reasoning": "Price momentum is upward, no significant macro stress",
+        "orders": [
+          {
+            "side": "BUY",
+            "qty": 10.0,
+            "price": 100.16
+          }
+        ],
+        "held": false,
+        "forced_random": false,
+        "api_failed": false
+      },
+      {
+        "agent": "MM",
+        "archetype": "market_maker",
+        "reasoning": "MM: quoting 100.05 / 100.15 (qty 50 each)",
+        "orders": [
+          {
+            "side": "BUY",
+            "qty": 50.0,
+            "price": 100.05
+          },
+          {
+            "side": "SELL",
+            "qty": 50.0,
+            "price": 100.15
+          }
+        ],
+        "held": false,
+        "forced_random": false,
+        "api_failed": false
+      }
+    ],
+    [
+      {
+        "agent": "Retail",
+        "archetype": "retail",
+        "reasoning": "Normal baseline conditions, no significant stress in macro environment. Current position already held, no need to act.",
+        "orders": [],
+        "held": true,
+        "forced_random": false,
+        "api_failed": false
+      },
+      {
+        "agent": "Inst",
+        "archetype": "institutional",
+        "reasoning": "Inst: 3 consecutive HOLDs \u2014 fallback BUY 1 @ 100.14",
+        "orders": [
+          {
+            "side": "BUY",
+            "qty": 1.0,
+            "price": 100.14
+          }
+        ],
+        "held": false,
+        "forced_random": true,
+        "api_failed": false
+      },
+      {
+        "agent": "Quant",
+        "archetype": "quant",
+        "reasoning": "Upward momentum on tape",
+        "orders": [
+          {
+            "side": "BUY",
+            "qty": 10.0,
+            "price": 100.14
+          }
+        ],
+        "held": false,
+        "forced_random": false,
+        "api_failed": false
+      },
+      {
+        "agent": "MM",
+        "archetype": "market_maker",
+        "reasoning": "MM: quoting 100.16 / 100.26 (qty 50 each)",
+        "orders": [
+          {
+            "side": "BUY",
+            "qty": 50.0,
+            "price": 100.16
+          },
+          {
+            "side": "SELL",
+            "qty": 50.0,
+            "price": 100.26
+          }
+        ],
+        "held": false,
+        "forced_random": false,
+        "api_failed": false
+      }
+    ],
+    [
+      {
+        "agent": "Retail",
+        "archetype": "retail",
+        "reasoning": "Retail: 3 consecutive HOLDs \u2014 fallback SELL 1 @ 100.17",
+        "orders": [
+          {
+            "side": "SELL",
+            "qty": 1.0,
+            "price": 100.17
+          }
+        ],
+        "held": false,
+        "forced_random": true,
+        "api_failed": false
+      },
+      {
+        "agent": "Inst",
+        "archetype": "institutional",
+        "reasoning": "Current price is within recent clearing prices, no mean reversion required",
+        "orders": [],
+        "held": true,
+        "forced_random": false,
+        "api_failed": false
+      },
+      {
+        "agent": "Quant",
+        "archetype": "quant",
+        "reasoning": "No meaningful signal in the momentum or macro environment.",
+        "orders": [],
+        "held": true,
+        "forced_random": false,
+        "api_failed": false
+      },
+      {
+        "agent": "MM",
+        "archetype": "market_maker",
+        "reasoning": "MM: quoting 100.30 / 100.40 (qty 50 each)",
+        "orders": [
+          {
+            "side": "BUY",
+            "qty": 50.0,
+            "price": 100.3
+          },
+          {
+            "side": "SELL",
+            "qty": 50.0,
+            "price": 100.4
+          }
+        ],
+        "held": false,
+        "forced_random": false,
+        "api_failed": false
+      }
+    ],
+    [
+      {
+        "agent": "Retail",
+        "archetype": "retail",
+        "reasoning": "Macro environment is normal, recent price memory shows no significant dip or rise, and current position is empty. No action needed.",
+        "orders": [],
+        "held": true,
+        "forced_random": false,
+        "api_failed": false
+      },
+      {
+        "agent": "Inst",
+        "archetype": "institutional",
+        "reasoning": "Current price is within recent clearing prices, no need for action",
+        "orders": [],
+        "held": true,
+        "forced_random": false,
+        "api_failed": false
+      },
+      {
+        "agent": "Quant",
+        "archetype": "quant",
+        "reasoning": "Upward momentum on current tick",
+        "orders": [
+          {
+            "side": "BUY",
+            "qty": 10.0,
+            "price": 100.19
+          }
+        ],
+        "held": false,
+        "forced_random": false,
+        "api_failed": false
+      },
+      {
+        "agent": "MM",
+        "archetype": "market_maker",
+        "reasoning": "MM: quoting 100.29 / 100.39 (qty 50 each)",
+        "orders": [
+          {
+            "side": "BUY",
+            "qty": 50.0,
+            "price": 100.29
+          },
+          {
+            "side": "SELL",
+            "qty": 50.0,
+            "price": 100.39
+          }
+        ],
+        "held": false,
+        "forced_random": false,
+        "api_failed": false
+      }
+    ],
+    [
+      {
+        "agent": "Retail",
+        "archetype": "retail",
+        "reasoning": "Default instinct triggered by price change, no alarming context present",
+        "orders": [
+          {
+            "side": "BUY",
+            "qty": 1.0,
+            "price": 100.22
+          }
+        ],
+        "held": false,
+        "forced_random": false,
+        "api_failed": false
+      },
+      {
+        "agent": "Inst",
+        "archetype": "institutional",
+        "reasoning": "Inst: 3 consecutive HOLDs \u2014 fallback BUY 1 @ 100.22",
+        "orders": [
+          {
+            "side": "BUY",
+            "qty": 1.0,
+            "price": 100.22
+          }
+        ],
+        "held": false,
+        "forced_random": true,
+        "api_failed": false
+      },
+      {
+        "agent": "Quant",
+        "archetype": "quant",
+        "reasoning": "Normal market conditions, no clear momentum signal",
+        "orders": [],
+        "held": true,
+        "forced_random": false,
+        "api_failed": false
+      },
+      {
+        "agent": "MM",
+        "archetype": "market_maker",
+        "reasoning": "MM: quoting 100.44 / 100.54 (qty 50 each)",
+        "orders": [
+          {
+            "side": "BUY",
+            "qty": 50.0,
+            "price": 100.44
+          },
+          {
+            "side": "SELL",
+            "qty": 50.0,
+            "price": 100.54
+          }
+        ],
+        "held": false,
+        "forced_random": false,
+        "api_failed": false
+      }
+    ],
+    [
+      {
+        "agent": "Retail",
+        "archetype": "retail",
+        "reasoning": "Normal baseline conditions, no significant stress, recent price memory suggests a stable market",
+        "orders": [],
+        "held": true,
+        "forced_random": false,
+        "api_failed": false
+      },
+      {
+        "agent": "Inst",
+        "archetype": "institutional",
+        "reasoning": "Markets under normal conditions, current position already at maximum, no need for action",
+        "orders": [],
+        "held": true,
+        "forced_random": false,
+        "api_failed": false
+      },
+      {
+        "agent": "Quant",
+        "archetype": "quant",
+        "reasoning": "Upward momentum, no significant context change",
+        "orders": [
+          {
+            "side": "BUY",
+            "qty": 10.0,
+            "price": 100.31
+          }
+        ],
+        "held": false,
+        "forced_random": false,
+        "api_failed": false
+      },
+      {
+        "agent": "MM",
+        "archetype": "market_maker",
+        "reasoning": "MM: quoting 100.61 / 100.71 (qty 50 each)",
+        "orders": [
+          {
+            "side": "BUY",
+            "qty": 50.0,
+            "price": 100.61
+          },
+          {
+            "side": "SELL",
+            "qty": 50.0,
+            "price": 100.71
+          }
+        ],
+        "held": false,
+        "forced_random": false,
+        "api_failed": false
+      }
+    ],
+    [
+      {
+        "agent": "Retail",
+        "archetype": "retail",
+        "reasoning": "Normal baseline conditions, no significant stress",
+        "orders": [],
+        "held": true,
+        "forced_random": false,
+        "api_failed": false
+      },
+      {
+        "agent": "Inst",
+        "archetype": "institutional",
+        "reasoning": "Market operating under normal conditions, current price ($100.4) above recent VWAP (mean of last 3 clearing prices: $100.28), but no supply or demand shock detected",
+        "orders": [],
+        "held": true,
+        "forced_random": false,
+        "api_failed": false
+      },
+      {
+        "agent": "Quant",
+        "archetype": "quant",
+        "reasoning": "Current momentum is flat, no clear buy signal",
+        "orders": [],
+        "held": true,
+        "forced_random": false,
+        "api_failed": false
+      },
+      {
+        "agent": "MM",
+        "archetype": "market_maker",
+        "reasoning": "MM: quoting 100.66 / 100.76 (qty 50 each)",
+        "orders": [
+          {
+            "side": "BUY",
+            "qty": 50.0,
+            "price": 100.66
+          },
+          {
+            "side": "SELL",
+            "qty": 50.0,
+            "price": 100.76
+          }
+        ],
+        "held": false,
+        "forced_random": false,
+        "api_failed": false
+      }
+    ],
+    [
+      {
+        "agent": "Retail",
+        "archetype": "retail",
+        "reasoning": "Elevated commercial real estate exposure in regional banks causing credit tightening, potentially impacting market liquidity. Buying at the current price could offer a potential long-term opportunity.",
+        "orders": [
+          {
+            "side": "BUY",
+            "qty": 1.0,
+            "price": 100.41
+          }
+        ],
+        "held": false,
+        "forced_random": false,
+        "api_failed": false
+      },
+      {
+        "agent": "Inst",
+        "archetype": "institutional",
+        "reasoning": "Inst: 3 consecutive HOLDs \u2014 fallback BUY 1 @ 100.41",
+        "orders": [
+          {
+            "side": "BUY",
+            "qty": 1.0,
+            "price": 100.41
+          }
+        ],
+        "held": false,
+        "forced_random": true,
+        "api_failed": false
+      },
+      {
+        "agent": "Quant",
+        "archetype": "quant",
+        "reasoning": "elevated commercial real estate exposure and credit tightening may negatively impact the stock price",
+        "orders": [
+          {
+            "side": "SELL",
+            "qty": 15.0,
+            "price": 100.41
+          }
+        ],
+        "held": false,
+        "forced_random": false,
+        "api_failed": false
+      },
+      {
+        "agent": "MM",
+        "archetype": "market_maker",
+        "reasoning": "MM: quoting 100.76 / 100.86 (qty 50 each)",
+        "orders": [
+          {
+            "side": "BUY",
+            "qty": 50.0,
+            "price": 100.76
+          },
+          {
+            "side": "SELL",
+            "qty": 50.0,
+            "price": 100.86
+          }
+        ],
+        "held": false,
+        "forced_random": false,
+        "api_failed": false
+      }
+    ],
+    [
+      {
+        "agent": "Retail",
+        "archetype": "retail",
+        "reasoning": "Elevated commercial real estate exposure at regional banks causing credit tightening, reducing market liquidity and increasing funding costs.",
+        "orders": [
+          {
+            "side": "SELL",
+            "qty": 1.0,
+            "price": 100.43
+          }
+        ],
+        "held": false,
+        "forced_random": false,
+        "api_failed": false
+      },
+      {
+        "agent": "Inst",
+        "archetype": "institutional",
+        "reasoning": "Credit tightening and increased funding costs for real estate developers shift the fair value estimate, deviating from mean reversion strategy",
+        "orders": [],
+        "held": true,
+        "forced_random": false,
+        "api_failed": false
+      },
+      {
+        "agent": "Quant",
+        "archetype": "quant",
+        "reasoning": "Macro environment indicates credit tightening and decreased liquidity in real estate market, selling into strength to reduce exposure",
+        "orders": [
+          {
+            "side": "SELL",
+            "qty": 15.0,
+            "price": 100.39
+          }
+        ],
+        "held": false,
+        "forced_random": false,
+        "api_failed": false
+      },
+      {
+        "agent": "MM",
+        "archetype": "market_maker",
+        "reasoning": "MM: quoting 100.76 / 100.86 (qty 50 each)",
+        "orders": [
+          {
+            "side": "BUY",
+            "qty": 50.0,
+            "price": 100.76
+          },
+          {
+            "side": "SELL",
+            "qty": 50.0,
+            "price": 100.86
+          }
+        ],
+        "held": false,
+        "forced_random": false,
+        "api_failed": false
+      }
+    ],
+    [
+      {
+        "agent": "Retail",
+        "archetype": "retail",
+        "reasoning": "Elevated commercial real estate exposure among regional banks increases credit risk, potentially leading to a market correction. Buying at current price could yield profit if market corrects.",
+        "orders": [
+          {
+            "side": "BUY",
+            "qty": 1.0,
+            "price": 100.51
+          }
+        ],
+        "held": false,
+        "forced_random": false,
+        "api_failed": false
+      },
+      {
+        "agent": "Inst",
+        "archetype": "institutional",
+        "reasoning": "Macro environment indicates credit tightening which may affect fair value of asset",
+        "orders": [],
+        "held": true,
+        "forced_random": false,
+        "api_failed": false
+      },
+      {
+        "agent": "Quant",
+        "archetype": "quant",
+        "reasoning": "Banks disclosing elevated commercial real estate exposure leading to credit tightening",
+        "orders": [
+          {
+            "side": "SELL",
+            "qty": 15.0,
+            "price": 100.51
+          }
+        ],
+        "held": false,
+        "forced_random": false,
+        "api_failed": false
+      },
+      {
+        "agent": "MM",
+        "archetype": "market_maker",
+        "reasoning": "MM: quoting 100.57 / 100.67 (qty 50 each)",
+        "orders": [
+          {
+            "side": "BUY",
+            "qty": 50.0,
+            "price": 100.57
+          },
+          {
+            "side": "SELL",
+            "qty": 50.0,
+            "price": 100.67
+          }
+        ],
+        "held": false,
+        "forced_random": false,
+        "api_failed": false
+      }
+    ],
+    [
+      {
+        "agent": "Retail",
+        "archetype": "retail",
+        "reasoning": "Credit tightening increases funding costs and decreases market liquidity, making the current position risky.",
+        "orders": [
+          {
+            "side": "SELL",
+            "qty": 1.0,
+            "price": 100.62
+          }
+        ],
+        "held": false,
+        "forced_random": false,
+        "api_failed": false
+      },
+      {
+        "agent": "Inst",
+        "archetype": "institutional",
+        "reasoning": "Inst: 3 consecutive HOLDs \u2014 fallback SELL 1 @ 100.62",
+        "orders": [
+          {
+            "side": "SELL",
+            "qty": 1.0,
+            "price": 100.62
+          }
+        ],
+        "held": false,
+        "forced_random": true,
+        "api_failed": false
+      },
+      {
+        "agent": "Quant",
+        "archetype": "quant",
+        "reasoning": "Elevated commercial real estate exposure at regional banks leading to credit tightening",
+        "orders": [
+          {
+            "side": "SELL",
+            "qty": 30.0,
+            "price": 100.62
+          }
+        ],
+        "held": false,
+        "forced_random": false,
+        "api_failed": false
+      },
+      {
+        "agent": "MM",
+        "archetype": "market_maker",
+        "reasoning": "MM: quoting 100.53 / 100.63 (qty 50 each)",
+        "orders": [
+          {
+            "side": "BUY",
+            "qty": 50.0,
+            "price": 100.53
+          },
+          {
+            "side": "SELL",
+            "qty": 50.0,
+            "price": 100.63
+          }
+        ],
+        "held": false,
+        "forced_random": false,
+        "api_failed": false
+      }
+    ],
+    [
+      {
+        "agent": "Retail",
+        "archetype": "retail",
+        "reasoning": "Elevated commercial real estate exposure of regional banks increases credit risk",
+        "orders": [
+          {
+            "side": "SELL",
+            "qty": 1.0,
+            "price": 100.57
+          }
+        ],
+        "held": false,
+        "forced_random": false,
+        "api_failed": false
+      },
+      {
+        "agent": "Inst",
+        "archetype": "institutional",
+        "reasoning": "Credit tightening increases funding costs for real estate developers, reducing overall market liquidity. This reprices the asset, making it inappropriate to follow mean-reversion default.",
+        "orders": [
+          {
+            "side": "SELL",
+            "qty": 30.0,
+            "price": 100.59
+          }
+        ],
+        "held": false,
+        "forced_random": false,
+        "api_failed": false
+      },
+      {
+        "agent": "Quant",
+        "archetype": "quant",
+        "reasoning": "Tightening credit conditions may negatively impact real estate stocks, waiting for further price movement or context before trading.",
+        "orders": [],
+        "held": true,
+        "forced_random": false,
+        "api_failed": false
+      },
+      {
+        "agent": "MM",
+        "archetype": "market_maker",
+        "reasoning": "MM: quoting 100.70 / 100.80 (qty 50 each)",
+        "orders": [
+          {
+            "side": "BUY",
+            "qty": 50.0,
+            "price": 100.7
+          },
+          {
+            "side": "SELL",
+            "qty": 50.0,
+            "price": 100.8
+          }
+        ],
+        "held": false,
+        "forced_random": false,
+        "api_failed": false
+      }
+    ],
+    [
+      {
+        "agent": "Retail",
+        "archetype": "retail",
+        "reasoning": "Elevated commercial real estate exposure of regional banks increases credit risk and tightens interbank lending conditions, reducing overall market liquidity. Selling at current price to avoid potential losses.",
+        "orders": [
+          {
+            "side": "SELL",
+            "qty": 1.0,
+            "price": 100.59
+          }
+        ],
+        "held": false,
+        "forced_random": false,
+        "api_failed": false
+      },
+      {
+        "agent": "Inst",
+        "archetype": "institutional",
+        "reasoning": "Credit tightening and reduced liquidity in the market invalidate the assumption of fair value represented by the recent average VWAP. Hold position until the macro environment stabilizes or changes.",
+        "orders": [],
+        "held": true,
+        "forced_random": false,
+        "api_failed": false
+      },
+      {
+        "agent": "Quant",
+        "archetype": "quant",
+        "reasoning": "Elevated commercial real estate exposure at regional banks may lead to credit tightening and reduced market liquidity, making the current position risky",
+        "orders": [
+          {
+            "side": "SELL",
+            "qty": 30.0,
+            "price": 100.59
+          }
+        ],
+        "held": false,
+        "forced_random": false,
+        "api_failed": false
+      },
+      {
+        "agent": "MM",
+        "archetype": "market_maker",
+        "reasoning": "MM: quoting 100.62 / 100.72 (qty 50 each)",
+        "orders": [
+          {
+            "side": "BUY",
+            "qty": 50.0,
+            "price": 100.62
+          },
+          {
+            "side": "SELL",
+            "qty": 50.0,
+            "price": 100.72
+          }
+        ],
+        "held": false,
+        "forced_random": false,
+        "api_failed": false
+      }
+    ],
+    [
+      {
+        "agent": "Retail",
+        "archetype": "retail",
+        "reasoning": "Elevated commercial real estate exposure in regional banks could increase credit risks and impact market liquidity. Selling at current price to reduce risk.",
+        "orders": [
+          {
+            "side": "SELL",
+            "qty": 1.0,
+            "price": 100.62
+          }
+        ],
+        "held": false,
+        "forced_random": false,
+        "api_failed": false
+      },
+      {
+        "agent": "Inst",
+        "archetype": "institutional",
+        "reasoning": "Credit tightening increases funding costs for real estate developers, reducing overall market liquidity. Current price above the recent VWAP, but macro environment suggests fair value may have changed.",
+        "orders": [],
+        "held": true,
+        "forced_random": false,
+        "api_failed": false
+      },
+      {
+        "agent": "Quant",
+        "archetype": "quant",
+        "reasoning": "Elevated commercial real estate exposure leading to credit tightening. Reducing position to avoid potential losses.",
+        "orders": [
+          {
+            "side": "SELL",
+            "qty": 30.0,
+            "price": 100.62
+          }
+        ],
+        "held": false,
+        "forced_random": false,
+        "api_failed": false
+      },
+      {
+        "agent": "MM",
+        "archetype": "market_maker",
+        "reasoning": "MM: quoting 100.49 / 100.59 (qty 50 each)",
+        "orders": [
+          {
+            "side": "BUY",
+            "qty": 50.0,
+            "price": 100.49
+          },
+          {
+            "side": "SELL",
+            "qty": 50.0,
+            "price": 100.59
+          }
+        ],
+        "held": false,
+        "forced_random": false,
+        "api_failed": false
+      }
+    ],
+    [
+      {
+        "agent": "Retail",
+        "archetype": "retail",
+        "reasoning": "Elevated commercial real estate exposure in regional banks, leading to credit tightening and increased funding costs for developers.",
+        "orders": [
+          {
+            "side": "SELL",
+            "qty": 2.0,
+            "price": 100.58
+          }
+        ],
+        "held": false,
+        "forced_random": false,
+        "api_failed": false
+      },
+      {
+        "agent": "Inst",
+        "archetype": "institutional",
+        "reasoning": "Inst: 3 consecutive HOLDs \u2014 fallback BUY 1 @ 100.58",
+        "orders": [
+          {
+            "side": "BUY",
+            "qty": 1.0,
+            "price": 100.58
+          }
+        ],
+        "held": false,
+        "forced_random": true,
+        "api_failed": false
+      },
+      {
+        "agent": "Quant",
+        "archetype": "quant",
+        "reasoning": "Macro environment signals credit tightening and increased funding costs for real estate developers, reducing overall market liquidity. Current price momentum is flat, suggesting caution in entering new positions.",
+        "orders": [],
+        "held": true,
+        "forced_random": false,
+        "api_failed": false
+      },
+      {
+        "agent": "MM",
+        "archetype": "market_maker",
+        "reasoning": "MM: quoting 100.53 / 100.63 (qty 50 each)",
+        "orders": [
+          {
+            "side": "BUY",
+            "qty": 50.0,
+            "price": 100.53
+          },
+          {
+            "side": "SELL",
+            "qty": 50.0,
+            "price": 100.63
+          }
+        ],
+        "held": false,
+        "forced_random": false,
+        "api_failed": false
+      }
+    ],
+    [
+      {
+        "agent": "Retail",
+        "archetype": "retail",
+        "reasoning": "Elevated commercial real estate exposure in regional banks increases funding costs and reduces market liquidity",
+        "orders": [
+          {
+            "side": "SELL",
+            "qty": 3.0,
+            "price": 100.57
+          }
+        ],
+        "held": false,
+        "forced_random": false,
+        "api_failed": false
+      },
+      {
+        "agent": "Inst",
+        "archetype": "institutional",
+        "reasoning": "Credit tightening increases funding costs and reduces market liquidity, repricing the asset. Mean reversion may not be appropriate given the current macro environment.",
+        "orders": [],
+        "held": true,
+        "forced_random": false,
+        "api_failed": false
+      },
+      {
+        "agent": "Quant",
+        "archetype": "quant",
+        "reasoning": "Elevated commercial real estate exposure in regional banks leading to credit tightening and reduced market liquidity",
+        "orders": [
+          {
+            "side": "SELL",
+            "qty": 60.0,
+            "price": 100.57
+          }
+        ],
+        "held": false,
+        "forced_random": false,
+        "api_failed": false
+      },
+      {
+        "agent": "MM",
+        "archetype": "market_maker",
+        "reasoning": "MM: quoting 100.53 / 100.63 (qty 50 each)",
+        "orders": [
+          {
+            "side": "BUY",
+            "qty": 50.0,
+            "price": 100.53
+          },
+          {
+            "side": "SELL",
+            "qty": 50.0,
+            "price": 100.63
+          }
+        ],
+        "held": false,
+        "forced_random": false,
+        "api_failed": false
+      }
+    ],
+    [
+      {
+        "agent": "Retail",
+        "archetype": "retail",
+        "reasoning": "Elevated commercial real estate exposure at regional banks triggers credit tightening, increasing funding costs and reducing market liquidity. Selling shares to avoid potential losses.",
+        "orders": [
+          {
+            "side": "SELL",
+            "qty": 6.0,
+            "price": 100.55
+          }
+        ],
+        "held": false,
+        "forced_random": false,
+        "api_failed": false
+      },
+      {
+        "agent": "Inst",
+        "archetype": "institutional",
+        "reasoning": "Credit tightening and increased funding costs for real estate developers suggest a potential supply shock, re-pricing the asset above the recent average. Hold until further market developments.",
+        "orders": [],
+        "held": true,
+        "forced_random": false,
+        "api_failed": false
+      },
+      {
+        "agent": "Quant",
+        "archetype": "quant",
+        "reasoning": "Tighter credit conditions and increased funding costs for real estate developers may negatively impact the stock prices of regional banks. Wait for a clear momentum signal before entering a position.",
+        "orders": [],
+        "held": true,
+        "forced_random": false,
+        "api_failed": false
+      },
+      {
+        "agent": "MM",
+        "archetype": "market_maker",
+        "reasoning": "MM: quoting 100.44 / 100.54 (qty 50 each)",
+        "orders": [
+          {
+            "side": "BUY",
+            "qty": 50.0,
+            "price": 100.44
+          },
+          {
+            "side": "SELL",
+            "qty": 50.0,
+            "price": 100.54
+          }
+        ],
+        "held": false,
+        "forced_random": false,
+        "api_failed": false
+      }
+    ]
+  ],
+  "wealth_log": [
+    [
+      10000.0,
+      100000.0,
+      50000.0,
+      1100450.0
+    ],
+    [
+      10000.0,
+      100000.0,
+      50000.0,
+      1100180.0
+    ],
+    [
+      10000.0,
+      99998.5,
+      49999.75,
+      1100131.75
+    ],
+    [
+      10000.03,
+      99999.40000000001,
+      49999.9,
+      1100159.2
+    ],
+    [
+      10000.02,
+      99999.1,
+      49999.75,
+      1100150.15
+    ],
+    [
+      10000.1,
+      100001.5,
+      50000.95,
+      1100225.75
+    ],
+    [
+      10000.1,
+      100002.40000000001,
+      50001.4,
+      1100255.6
+    ],
+    [
+      10000.1,
+      100006.3,
+      50003.35,
+      1100391.45
+    ],
+    [
+      10000.1,
+      100006.6,
+      50003.5,
+      1100402.4
+    ],
+    [
+      10000.1,
+      100009.6,
+      50005.0,
+      1100516.9
+    ],
+    [
+      10000.1,
+      100010.8,
+      50005.6,
+      1100564.7
+    ],
+    [
+      10000.269999999999,
+      100015.90000000001,
+      50005.6,
+      1100776.35
+    ],
+    [
+      10000.269999999999,
+      100009.90000000001,
+      50008.6,
+      1100517.35
+    ],
+    [
+      10000.269999999999,
+      100009.90000000001,
+      50008.6,
+      1100517.35
+    ],
+    [
+      10000.38,
+      100013.20000000001,
+      50005.3,
+      1100661.34
+    ],
+    [
+      10000.38,
+      100013.20000000001,
+      50005.3,
+      1100661.34
+    ],
+    [
+      10000.380000000001,
+      100013.20000000001,
+      50005.3,
+      1100661.34
+    ],
+    [
+      10000.460000000001,
+      100013.20000000001,
+      50007.7,
+      1100606.78
+    ],
+    [
+      10000.49,
+      100013.19000000002,
+      50008.3,
+      1100593.1400000001
+    ],
+    [
+      10000.49,
+      100013.19000000002,
+      50008.3,
+      1100593.1400000001
+    ]
+  ],
+  "agent_names": [
+    "Retail",
+    "Inst",
+    "Quant",
+    "MM"
+  ],
+  "agent_archetypes": [
+    "retail",
+    "institutional",
+    "quant",
+    "market_maker"
+  ],
+  "arm": "placebo",
+  "perceived_M": 1.0,
+  "probe_tally": {
+    "real": 60
+  },
+  "baseline_shock_id": "credit_crunch__real__narrative"
+}

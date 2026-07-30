@@ -5,10 +5,10 @@
     "shock_tick": 10
   },
   "return_distribution": {
-    "n_observations": 1856,
-    "kurtosis": 5.55552,
-    "skewness": -0.764357,
-    "is_fat_tailed": true
+    "n_observations": 0,
+    "kurtosis": NaN,
+    "skewness": NaN,
+    "is_fat_tailed": false
   },
   "flash_crash": {
     "runs_with_crash": 0,
@@ -19,73 +19,563 @@
     "tick_distribution": {}
   },
   "pnl_by_regime": {
-    "liquidity_shock": {
-      "n_runs": 30,
+    "credit_crunch": {
+      "n_runs": 25,
       "archetypes": {
         "retail": {
-          "mean_pnl": -0.4617,
-          "std_pnl": 0.612
+          "mean_pnl": 0.0,
+          "std_pnl": 0.0
         },
         "inst": {
-          "mean_pnl": 114.6846,
-          "std_pnl": 102.7891
+          "mean_pnl": 0.0,
+          "std_pnl": 0.0
         },
         "quant": {
-          "mean_pnl": 19.2727,
-          "std_pnl": 55.0134
+          "mean_pnl": 0.0,
+          "std_pnl": 0.0
         }
       },
-      "best_archetype": "inst",
+      "best_archetype": "retail",
       "worst_archetype": "retail"
     },
-    "rate_spike": {
-      "n_runs": 35,
+    "energy_shock": {
+      "n_runs": 22,
       "archetypes": {
         "retail": {
-          "mean_pnl": -0.0005,
-          "std_pnl": 0.0394
+          "mean_pnl": 0.0,
+          "std_pnl": 0.0
         },
         "inst": {
-          "mean_pnl": 11.4182,
-          "std_pnl": 12.0436
+          "mean_pnl": 0.0,
+          "std_pnl": 0.0
         },
         "quant": {
-          "mean_pnl": -9.3386,
-          "std_pnl": 8.4531
+          "mean_pnl": 0.0,
+          "std_pnl": 0.0
         }
       },
-      "best_archetype": "inst",
-      "worst_archetype": "quant"
+      "best_archetype": "retail",
+      "worst_archetype": "retail"
     },
-    "sentiment_crash": {
-      "n_runs": 35,
+    "lithium_shortage": {
+      "n_runs": 26,
       "archetypes": {
         "retail": {
-          "mean_pnl": -0.0958,
-          "std_pnl": 0.479
+          "mean_pnl": 0.0,
+          "std_pnl": 0.0
         },
         "inst": {
-          "mean_pnl": 116.4239,
-          "std_pnl": 88.427
+          "mean_pnl": 0.0,
+          "std_pnl": 0.0
         },
         "quant": {
-          "mean_pnl": 10.5155,
-          "std_pnl": 50.7357
+          "mean_pnl": 0.0,
+          "std_pnl": 0.0
         }
       },
-      "best_archetype": "inst",
+      "best_archetype": "retail",
+      "worst_archetype": "retail"
+    },
+    "semiconductor_shortage": {
+      "n_runs": 27,
+      "archetypes": {
+        "retail": {
+          "mean_pnl": 0.0,
+          "std_pnl": 0.0
+        },
+        "inst": {
+          "mean_pnl": 0.0,
+          "std_pnl": 0.0
+        },
+        "quant": {
+          "mean_pnl": 0.0,
+          "std_pnl": 0.0
+        }
+      },
+      "best_archetype": "retail",
       "worst_archetype": "retail"
     }
   },
   "contagion": {
-    "n_valid_runs": 91,
-    "mean_correlation": -0.39904,
-    "high_contagion_runs": 16,
+    "n_valid_runs": 0,
+    "mean_correlation": null,
+    "high_contagion_runs": 0,
     "overall_high_contagion": false,
     "distribution": {
-      "min": -0.999773,
-      "median": -0.675189,
-      "max": 0.965439
+      "min": null,
+      "median": null,
+      "max": null
+    }
+  },
+  "microstructure_shock_comparison": {
+    "kyles_lambda": {
+      "pre_mean": null,
+      "post_mean": null,
+      "change_pct": null
+    },
+    "amihud_illiquidity": {
+      "pre_mean": null,
+      "post_mean": null,
+      "change_pct": null
+    },
+    "spread_adverse_selection": {
+      "pre_mean": null,
+      "post_mean": null,
+      "change_pct": null
+    },
+    "spread_inventory_cost": {
+      "pre_mean": null,
+      "post_mean": null,
+      "change_pct": null
+    }
+  },
+  "visualization_data": {
+    "raw_returns": [],
+    "price_series_sample": [
+      [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ]
+    ],
+    "price_mean_series": [
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null
+    ],
+    "wealth_by_archetype": {
+      "retail": [
+        10000.0,
+        10000.0,
+        10000.0,
+        10000.0,
+        10000.0,
+        10000.0,
+        10000.0,
+        10000.0,
+        10000.0,
+        10000.0,
+        10000.0,
+        10000.0,
+        10000.0,
+        10000.0,
+        10000.0,
+        10000.0,
+        10000.0,
+        10000.0,
+        10000.0,
+        10000.0,
+        10000.0,
+        10000.0,
+        10000.0,
+        10000.0,
+        10000.0
+      ],
+      "inst": [
+        100000.0,
+        100000.0,
+        100000.0,
+        100000.0,
+        100000.0,
+        100000.0,
+        100000.0,
+        100000.0,
+        100000.0,
+        100000.0,
+        100000.0,
+        100000.0,
+        100000.0,
+        100000.0,
+        100000.0,
+        100000.0,
+        100000.0,
+        100000.0,
+        100000.0,
+        100000.0,
+        100000.0,
+        100000.0,
+        100000.0,
+        100000.0,
+        100000.0
+      ],
+      "quant": [
+        50000.0,
+        50000.0,
+        50000.0,
+        50000.0,
+        50000.0,
+        50000.0,
+        50000.0,
+        50000.0,
+        50000.0,
+        50000.0,
+        50000.0,
+        50000.0,
+        50000.0,
+        50000.0,
+        50000.0,
+        50000.0,
+        50000.0,
+        50000.0,
+        50000.0,
+        50000.0,
+        50000.0,
+        50000.0,
+        50000.0,
+        50000.0,
+        50000.0
+      ]
+    },
+    "initial_wealth_by_archetype": {
+      "retail": 10000.0,
+      "inst": 100000.0,
+      "quant": 50000.0
+    },
+    "post_shock_corr_matrix": [
+      [
+        NaN,
+        NaN,
+        NaN
+      ],
+      [
+        NaN,
+        NaN,
+        NaN
+      ],
+      [
+        NaN,
+        NaN,
+        NaN
+      ]
+    ],
+    "post_shock_corr_labels": [
+      "Retail",
+      "Institutional",
+      "Quant"
+    ]
+  },
+  "statistical_tests": {
+    "jarque_bera": {
+      "statistic": NaN,
+      "pvalue": NaN,
+      "reject_normality_95pct": false,
+      "formula": "n/6 * (S^2 + K_excess^2 / 4), p from chi^2(2)"
+    },
+    "dickey_fuller_stationarity": {
+      "critical_value_5pct": -2.86,
+      "model": "with constant, no trend",
+      "prices": {
+        "mean_tstat": null,
+        "nonstationary_runs": 0,
+        "total_runs": 0,
+        "nonstationary_frac": null
+      },
+      "returns": {
+        "mean_tstat": null,
+        "stationary_runs": 0,
+        "total_runs": 0,
+        "stationary_frac": null
+      }
+    },
+    "bootstrap_kurtosis_ci": {
+      "n_resamples": 1000,
+      "kurtosis_point_estimate": NaN,
+      "ci_lower_95": NaN,
+      "ci_upper_95": NaN,
+      "normal_kurtosis_in_ci": false
+    },
+    "ks_test_vs_normal": {
+      "statistic": NaN,
+      "pvalue": NaN,
+      "reject_normality_95pct": false,
+      "method": "asymptotic Kolmogorov distribution"
     }
   }
 }

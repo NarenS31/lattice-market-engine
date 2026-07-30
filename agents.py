@@ -6,9 +6,13 @@ Three archetypes:
   InstitutionalAgent — VWAP mean-reversion fund manager, methodical and deep-book
   QuantAgent         — momentum quant, aggressive with low risk aversion
 
-Each agent's decide() calls the Anthropic API with a fixed cognitive-archetype
-system prompt (prompt-cached) and a per-tick user prompt. Responses are parsed
-as JSON: {action, quantity, limit_price, reasoning}.
+Each agent's decide() builds a fixed cognitive-archetype system prompt and a
+per-tick user prompt, then hands both to an `LLMBackend` (see llm_backends.py)
+which returns the parsed decision: {action, quantity, limit_price, reasoning}.
+
+The backend is selected per archetype via LATTICE_BACKEND /
+LATTICE_BACKEND_<ARCHETYPE>, or CLI flags — the agent logic below is identical
+whether the decision came from Claude or a local Ollama model.
 """
 from __future__ import annotations
 
@@ -18,17 +22,37 @@ from abc import ABC, abstractmethod
 from collections import deque
 from typing import Optional
 
-import anthropic
-
+import llm_backends
+from llm_backends import LLMBackend, backend_for
 from engine import Order, OrderBook, OrderType, Side, TickSummary
 
-_client = anthropic.Anthropic()
-_MODEL = "claude-sonnet-4-20250514"
+# Authoritative Anthropic model name. Kept as a module global because
+# experiments/model_scale.py monkeypatches it to compare model tiers; the
+# resolver below keeps AnthropicBackend reading it at call time.
+_MODEL = llm_backends.DEFAULT_ANTHROPIC_MODEL
+llm_backends.set_anthropic_model_resolver(lambda: _MODEL)
 
 
 # ---------------------------------------------------------------------------
 # Helpers
 # ---------------------------------------------------------------------------
+
+# Closing line of every agent user prompt. A module constant so it is auditable
+# in one place and so pilot_shock_responsiveness.py can swap in the pre-fix
+# wording to measure what changing it actually did.
+#
+# The earlier version ("You must return buy or sell in almost all cases ... The
+# market needs your participation") pressured agents to trade every tick
+# regardless of context, which suppressed exactly the shock-driven inaction the
+# 2x2 is trying to detect.
+_CLOSING_INSTRUCTION = (
+    "Choose the action you can actually justify from what you have been told. Holding is "
+    "a legitimate choice when the situation genuinely warrants standing aside — for "
+    "instance when the context makes the risk unattractive at this price. It should not "
+    "be a habit: holding tick after tick while the situation keeps changing is not "
+    "caution, it is non-participation, and it is not what you are here to do."
+)
+
 
 def _macro_to_nl(macro: dict) -> str:
     """Return a natural-language macro description for the agent prompt.
@@ -68,16 +92,10 @@ def _macro_to_nl(macro: dict) -> str:
 
 
 def _parse_response(text: str) -> Optional[dict]:
-    """Extract JSON from API response text, handling markdown code fences."""
-    stripped = text.strip()
-    if stripped.startswith("```"):
-        lines = stripped.split("\n")
-        end = len(lines) - 1 if lines[-1].strip() == "```" else len(lines)
-        stripped = "\n".join(lines[1:end])
-    try:
-        return json.loads(stripped)
-    except (json.JSONDecodeError, ValueError):
-        return None
+    """Extract JSON from model output. Retained for backwards compatibility;
+    the schema-checking implementation now lives in llm_backends."""
+    decision, _reason = llm_backends.parse_decision(text)
+    return decision
 
 
 # ---------------------------------------------------------------------------
@@ -86,14 +104,42 @@ def _parse_response(text: str) -> Optional[dict]:
 
 class Agent(ABC):
     _SYSTEM_PROMPT: str = ""
+    # Archetype key used to resolve which backend this agent talks to.
+    # None means the agent never calls an LLM (e.g. the market maker).
+    _ARCHETYPE: Optional[str] = None
 
-    def __init__(self, cash: float, position: float, lam: float, name: str = "") -> None:
+    def __init__(
+        self,
+        cash: float,
+        position: float,
+        lam: float,
+        name: str = "",
+        backend: Optional[LLMBackend] = None,
+    ) -> None:
         self.cash = cash
         self.position = position
         self.lam = lam
         self.name = name
         self._wealth_history: deque[float] = deque(maxlen=5)
         self._consecutive_holds = 0
+        self._backend = backend
+        # Per-decision telemetry, reset at the top of every decide() call.
+        # A forced coin-flip order and a backend failure both used to be
+        # indistinguishable from a real decision downstream; they are degeneracy
+        # and have to be countable as such.
+        self._last_forced_random = False
+        self._last_api_failed = False
+
+    @property
+    def backend(self) -> LLMBackend:
+        """The decision backend, resolved lazily on first use.
+
+        Lazy so agents that never call an LLM (MarketMakerAgent) never
+        construct a client, and so config set after __init__ still applies.
+        """
+        if self._backend is None:
+            self._backend = backend_for(self._ARCHETYPE)
+        return self._backend
 
     def utility(self, expected_wealth: float, variance: float) -> float:
         """U = E[W] - (lambda / 2) * Var[W]."""
@@ -168,8 +214,7 @@ class Agent(ABC):
             f'{{"action": "buy" or "sell" or "hold", "quantity": <number of shares>, '
             f'"limit_price": <price as number, or null if hold>, '
             f'"reasoning": "<one concise sentence>"}}\n\n'
-            f"IMPORTANT: You must return buy or sell in almost all cases. Only return hold "
-            f"if you have absolutely no information to act on. The market needs your participation."
+            f"{_CLOSING_INSTRUCTION}"
         )
 
     def _response_to_order(self, parsed: dict, ref_price: float) -> Optional[Order]:
@@ -193,22 +238,8 @@ class Agent(ABC):
         )
 
     def _call_api(self, user_prompt: str) -> Optional[dict]:
-        try:
-            response = _client.messages.create(
-                model=_MODEL,
-                max_tokens=256,
-                system=[
-                    {
-                        "type": "text",
-                        "text": self._SYSTEM_PROMPT,
-                        "cache_control": {"type": "ephemeral"},
-                    }
-                ],
-                messages=[{"role": "user", "content": user_prompt}],
-            )
-            return _parse_response(response.content[0].text)
-        except Exception:
-            return None
+        """Delegate to the configured backend. None means 'no usable decision'."""
+        return self.backend.get_decision(self._SYSTEM_PROMPT, user_prompt)
 
     def decide(
         self,
@@ -216,15 +247,21 @@ class Agent(ABC):
         macro_context: Optional[dict] = None,
         tick_idx: int = 0,
     ) -> tuple[Optional[Order], str]:
-        """Call the Anthropic API and return (Order | None, reasoning string)."""
+        """Query the configured backend; return (Order | None, reasoning string)."""
         mid = book_snapshot.get("mid_price")
         last_clear = book_snapshot.get("last_clearing_price")
         ref = mid or last_clear or 100.0
+
+        self._last_forced_random = False
+        self._last_api_failed = False
 
         user_prompt = self._build_user_prompt(book_snapshot, macro_context, tick_idx)
         parsed = self._call_api(user_prompt)
 
         if parsed is None:
+            # Not a hold: the agent never got to decide. Flagged so a failing
+            # backend cannot masquerade as a sweep of cautious agents.
+            self._last_api_failed = True
             return None, f"{self.name}: API unavailable — holding this tick."
 
         order = self._response_to_order(parsed, ref)
@@ -234,6 +271,10 @@ class Agent(ABC):
             self._consecutive_holds += 1
             if self._consecutive_holds >= 3:
                 self._consecutive_holds = 0
+                # A coin flip, not a decision. Downstream this looks like a
+                # real order (len(orders) != 0), so it must be flagged or it
+                # inflates the apparent participation rate.
+                self._last_forced_random = True
                 side = Side.BUY if random.random() < 0.5 else Side.SELL
                 order = Order(
                     side=side,
@@ -322,16 +363,31 @@ class RetailAgent(Agent):
         "when volatility is high, and you tend to follow the most recent price direction with a "
         "noisy, emotionally-coloured signal. You trade small quantities — 1 to 5 shares per tick. "
         "Your decisions feel driven by gut instinct and recent price memory.\n\n"
-        "You feel uncomfortable holding cash when prices are moving. If the price has changed "
-        "from the previous tick, you have a strong urge to either buy the dip or sell before it "
-        "gets worse. You rarely hold for more than 2 ticks in a row.\n\n"
+        "Your default behaviour: you feel uncomfortable holding cash when prices are moving. If "
+        "the price has changed from the previous tick, your instinct is to buy the dip or sell "
+        "before it gets worse. You rarely hold for more than 2 ticks in a row.\n\n"
+        "That instinct is your default, not a rule you must obey. You also read the macro "
+        "environment you are given each tick, and as a retail investor you react to news "
+        "emotionally — often more strongly than the numbers alone would justify. Alarming context "
+        "can frighten you out of a dip you would otherwise have bought, and reassuring context can "
+        "embolden you. If the context materially changes how risky this feels to you, act on that "
+        "instead of the pure price instinct and say why in your reasoning. If the context is "
+        "routine, or does not change your read of the situation, follow your default.\n\n"
         "Always respond with ONLY a JSON object — no explanation, no preamble, no markdown. "
         'Exact format: {"action": "buy"|"sell"|"hold", "quantity": <number>, '
         '"limit_price": <number or null>, "reasoning": "<one concise sentence>"}'
     )
 
-    def __init__(self, cash: float = 10_000.0, position: float = 0.0, name: str = "") -> None:
-        super().__init__(cash, position, lam=0.8, name=name)
+    _ARCHETYPE = "retail"
+
+    def __init__(
+        self,
+        cash: float = 10_000.0,
+        position: float = 0.0,
+        name: str = "",
+        backend: Optional[LLMBackend] = None,
+    ) -> None:
+        super().__init__(cash, position, lam=0.8, name=name, backend=backend)
 
 
 # ---------------------------------------------------------------------------
@@ -344,18 +400,34 @@ class InstitutionalAgent(Agent):
         "stock market. Your cognitive archetype: disciplined and systematic, you apply VWAP "
         "mean-reversion logic — buy when price is below the recent volume-weighted average, sell "
         "when it is above. You have moderate risk aversion and trade in larger blocks — 10 to 30 "
-        "shares per tick. You read the order book depth for secondary signals but your primary "
-        "anchor is always the VWAP mean-reversion thesis.\n\n"
-        "You must place an order every tick unless your position is already at maximum. If "
-        "current price is below the average of the last 3 clearing prices, buy. If above, sell. "
-        "You do not hold unless there is no price history at all.\n\n"
+        "shares per tick. You read the order book depth for secondary signals but your working "
+        "anchor is the VWAP mean-reversion thesis.\n\n"
+        "Your default rule: if the current price is below the average of the last 3 clearing "
+        "prices, buy; if it is above, sell. Under normal conditions you place an order every "
+        "tick unless your position is already at maximum.\n\n"
+        "Mean reversion rests on an assumption: that the recent average still represents fair "
+        "value. The macro environment you are given each tick can invalidate that assumption. A "
+        "genuine supply or demand shock re-prices the asset, and reverting toward a stale average "
+        "is then the wrong trade — it is how a disciplined desk gets run over. Weigh the context "
+        "against your default: if it materially changes your estimate of fair value, deviate — "
+        "trade with the re-pricing, cut your size, or stand aside — and state the fundamental "
+        "reason in your reasoning. If the context is routine or does not move your fair-value "
+        "estimate, follow the mean-reversion default.\n\n"
         "Always respond with ONLY a JSON object — no explanation, no preamble, no markdown. "
         'Exact format: {"action": "buy"|"sell"|"hold", "quantity": <number>, '
         '"limit_price": <number or null>, "reasoning": "<one concise sentence>"}'
     )
 
-    def __init__(self, cash: float = 100_000.0, position: float = 0.0, name: str = "") -> None:
-        super().__init__(cash, position, lam=0.3, name=name)
+    _ARCHETYPE = "institutional"
+
+    def __init__(
+        self,
+        cash: float = 100_000.0,
+        position: float = 0.0,
+        name: str = "",
+        backend: Optional[LLMBackend] = None,
+    ) -> None:
+        super().__init__(cash, position, lam=0.3, name=name, backend=backend)
 
 
 # ---------------------------------------------------------------------------
@@ -369,16 +441,31 @@ class QuantAgent(Agent):
         "You have very low risk aversion and act with conviction on clear signals. You trade "
         "medium-sized blocks — 5 to 15 shares per tick. Speed and signal conviction define your "
         "archetype.\n\n"
-        "You trade on every tick where there is price history. Any upward movement means buy, "
-        "any downward movement means sell, flat price means small buy. You never hold when you "
-        "have data.\n\n"
+        "Your default signal is the tape: upward movement means buy, downward movement means "
+        "sell, flat price means a small buy. You trade on essentially every tick where there is "
+        "price history.\n\n"
+        "You treat the macro environment you are given as a signal in its own right, because "
+        "information reaches the tape before it is fully in the price — being early is the whole "
+        "edge. If the context corroborates the momentum you see, trade it with more conviction "
+        "and size up within your range. If it cuts against the tape — price still drifting up "
+        "while the context is materially bearish, or the reverse — weigh the context, since you "
+        "would rather be early than be run over by the reversal. Name the signal that drove you "
+        "in your reasoning. With no meaningful context, follow the momentum default.\n\n"
         "Always respond with ONLY a JSON object — no explanation, no preamble, no markdown. "
         'Exact format: {"action": "buy"|"sell"|"hold", "quantity": <number>, '
         '"limit_price": <number or null>, "reasoning": "<one concise sentence>"}'
     )
 
-    def __init__(self, cash: float = 50_000.0, position: float = 0.0, name: str = "") -> None:
-        super().__init__(cash, position, lam=0.1, name=name)
+    _ARCHETYPE = "quant"
+
+    def __init__(
+        self,
+        cash: float = 50_000.0,
+        position: float = 0.0,
+        name: str = "",
+        backend: Optional[LLMBackend] = None,
+    ) -> None:
+        super().__init__(cash, position, lam=0.1, name=name, backend=backend)
 
 
 # ---------------------------------------------------------------------------

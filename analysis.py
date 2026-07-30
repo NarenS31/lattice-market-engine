@@ -116,6 +116,8 @@ def _adf_stat(series: np.ndarray) -> float:
 
 def _bootstrap_kurtosis_ci(ret: np.ndarray, n_boot: int = 1000) -> tuple[float, float]:
     """95% bootstrap CI for kurtosis via percentile method (1000 resamples, fixed seed)."""
+    if len(ret) == 0:
+        return float("nan"), float("nan")
     rng = np.random.default_rng(42)
     boot = np.array([
         _kurtosis(rng.choice(ret, size=len(ret), replace=True))
@@ -126,6 +128,8 @@ def _bootstrap_kurtosis_ci(ret: np.ndarray, n_boot: int = 1000) -> tuple[float, 
 
 def _ks_test(ret: np.ndarray) -> tuple[float, float]:
     """KS statistic and asymptotic p-value comparing empirical returns to a fitted normal."""
+    if len(ret) == 0:
+        return float("nan"), float("nan")
     mu = float(np.mean(ret))
     sigma = float(np.std(ret))
     if sigma == 0:
@@ -270,7 +274,7 @@ def main() -> None:
     for run in all_runs:
         all_returns.extend(tick_returns(run["clearing_prices"]))
 
-    ret = np.array(all_returns)
+    ret = np.array([r for r in all_returns if not math.isnan(r)], dtype=float)
     kurt = _kurtosis(ret)
     skew = _skewness(ret)
     is_fat_tailed = kurt > 3
@@ -308,11 +312,17 @@ def main() -> None:
 
     # [C] Bootstrap CI for kurtosis
     print("   Bootstrap CI for kurtosis (1000 resamples)...", flush=True)
-    ci_lo, ci_hi = _bootstrap_kurtosis_ci(ret)
+    if len(ret) > 1:
+        ci_lo, ci_hi = _bootstrap_kurtosis_ci(ret)
+    else:
+        ci_lo, ci_hi = float("nan"), float("nan")
     normal_kurt_in_ci = ci_lo <= 3.0 <= ci_hi
 
     # [D] KS test
-    ks_stat, ks_pval = _ks_test(ret)
+    if len(ret) > 1:
+        ks_stat, ks_pval = _ks_test(ret)
+    else:
+        ks_stat, ks_pval = float("nan"), float("nan")
     ks_reject = ks_pval < 0.05
 
     print("\n" + "=" * 66)

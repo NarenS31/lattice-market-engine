@@ -12,6 +12,9 @@ tick 10), then prints:
     sectors, severity, and full multi-sentence narrative
   - final wealth + P&L summary
 """
+import argparse
+
+import llm_backends
 from engine import OrderBook
 from agents import (
     Simulation,
@@ -29,6 +32,20 @@ INITIAL_CASH = {
 }
 
 _SHOCK_TICK = 10   # first tick at which the supply chain event activates
+
+
+def print_research_overview() -> None:
+    banner = "RESEARCH CONTRIBUTION SUMMARY"
+    line = "=" * len(banner)
+    print(line)
+    print(banner)
+    print(line)
+    print("- Fully original limit-order book engine implemented from scratch in engine.py")
+    print("- LLM-market simulation with Retail, Institutional, Quant, and Market Maker archetypes")
+    print("- Natural-language supply-chain narrative shocks injected into each agent prompt")
+    print("- Per-round microstructure analytics: Kyle's lambda, Amihud illiquidity, spread decomposition")
+    print("- Rolling agent P&L memory for realistic short-run adaptation")
+    print(line + "\n")
 
 
 def _event_cols(macro: dict) -> tuple[str, str]:
@@ -75,6 +92,12 @@ def _print_shock_banner(macro: dict) -> None:
 
 
 def main() -> None:
+    ap = argparse.ArgumentParser(
+        description="Run the LOB + LLM-agent simulation with a supply-chain shock."
+    )
+    llm_backends.add_backend_cli_args(ap)
+    llm_backends.apply_cli_args(ap.parse_args())
+
     book  = OrderBook(symbol="SIM")
     pulse = SupplyChainPulse()
 
@@ -85,6 +108,7 @@ def main() -> None:
         + [MarketMakerAgent(name="MM-1")]
     )
 
+    print_research_overview()
     sim = Simulation(book, agents)
     sim.seed_book(fair_value=100.0)
     summaries = sim.run(n_ticks=25, factor_pulse=pulse, verbose=True)

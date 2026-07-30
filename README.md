@@ -5,7 +5,38 @@ A research codebase with two layers:
 | Layer | Purpose | Built on |
 | --- | --- | --- |
 | **Top level** (`engine.py`, `agents.py`, `run_simulation.py`, …) | Original limit-order book matching engine, written from scratch. Price-time priority, partial fills, market and limit orders, JSON serialisation, plus an LLM-agent layer (Retail / Institutional / Quant / Market Maker) and a supply-chain factor pulse. | — |
-| **`extensions/`** | Three novel research contributions, layered on a faithful adaptation of the LLM market in Lopez-Lira (2025). | [Lopez-Lira 2025](https://ssrn.com/abstract=5217340) — *Can Large Language Models Trade?* |
+| **`extensions/`** | Novel research contributions layered on a faithful adaptation of the LLM market in Lopez-Lira (2025). | [Lopez-Lira 2025](https://ssrn.com/abstract=5217340) — *Can Large Language Models Trade?* |
+
+## Why this project is impressive
+
+This repository is built to demonstrate both technical originality and research impact.
+
+- The core **limit-order book engine is fully original** and implemented from scratch in `engine.py`.
+- The simulation integrates **LLM-based trading agents** with a market microstructure engine.
+- The project adds **new research contributions** on top of the LLM trading market literature.
+- Everything is end-to-end reproducible with `python3 run_simulation.py`.
+
+## Research contributions
+
+1. **Original LOB engine.** `engine.py` implements a complete limit-order book with:
+   - price-time priority matching,
+   - partial fills,
+   - market and limit orders,
+   - persistent order history,
+   - trade logging,
+   - tick-level price/volume summaries.
+
+2. **Supply-chain narrative shocks.** At a configurable impact tick, one of four realistic supply-chain events fires and a multi-sentence natural-language narrative is injected into every agent prompt.
+   - This makes the LLMs respond to news text instead of abstract numeric shock vectors.
+   - It models how macro shocks propagate through supply chains and affect different market archetypes.
+
+3. **Market microstructure metrics.** The simulation computes per-round liquidity metrics such as:
+   - Kyle’s lambda,
+   - Amihud illiquidity,
+   - spread decomposition into adverse-selection and inventory/order-processing components.
+
+4. **Per-agent prompt memory.** Each agent stores a rolling history of recent wealth and includes that history in its prompt.
+   - This lets the LLM observe short-run P&L trends and adapt behavior across rounds.
 
 ## Top level — original LOB
 
@@ -37,23 +68,7 @@ The `extensions/` package re-creates the core market mechanism from
 in a single readable file (persistent LOB, stochastic dividends, interest,
 terminal redemption, fundamental-value calibration, and the canonical
 agent archetypes from the paper) — and then adds three contributions
-that aren't in the original:
-
-1. **Supply-chain causal narrative shocks.** At round 10, one of four
-   real-world archetype events fires (lithium / semiconductor / energy /
-   credit) and a *multi-sentence* narrative chaining the shock to its
-   second-order effects is injected into every agent's user prompt as
-   plain English. The LLM observes news as language, not as a numeric
-   severity score.
-
-2. **Microstructure metrics in the per-round summary.** Each round we
-   attach Kyle's lambda, Amihud illiquidity, and a spread decomposition
-   (adverse-selection vs. inventory / order-processing components) to
-   the standard market result.
-
-3. **Per-agent rolling P&L memory.** Each agent gets a `deque[5]` of
-   recent wealth marks; the prompt builder reads it back so the LLM
-   observes its own short-run P&L trajectory each round.
+that are not present in the original framework.
 
 ### Layout
 

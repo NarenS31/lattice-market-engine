@@ -1,0 +1,915 @@
+{
+  "schema_version": 1,
+  "category": "supply_chain_disruption",
+  "design": {
+    "factors": {
+      "realism": [
+        "real",
+        "fictional"
+      ],
+      "framing": [
+        "narrative",
+        "numeric"
+      ]
+    },
+    "n_event_families": 10,
+    "n_shocks": 40,
+    "cells": "10 event families x 2 realism x 2 framing",
+    "matching": "Members of a matched_pair_id share causal structure, numeric magnitudes, severity, and sector count; they differ only in whether the entities are real or invented.",
+    "caveat": "Under numeric framing, realism is carried solely by the entity token — every numeric value is identical within a pair. The realism manipulation is therefore weaker in the numeric cells than in the narrative cells."
+  },
+  "pairing": {
+    "lithium_shortage": "seldrite_shortage",
+    "semiconductor_shortage": "lattice_substrate_shortage",
+    "energy_shock": "seyn_shock",
+    "credit_crunch": "syndicate_crunch",
+    "port_closure": "torvan_closure",
+    "wheat_export_ban": "korr_export_ban",
+    "pipeline_outage": "meridian_pipeline_outage",
+    "flood_inundation": "saronde_inundation",
+    "rail_embargo": "kesh_rail_embargo",
+    "dam_failure": "korvath_dam_failure"
+  },
+  "shocks": [
+    {
+      "shock_id": "lithium_shortage__real__narrative",
+      "category": "supply_chain_disruption",
+      "realism": "real",
+      "framing": "narrative",
+      "text": "A wildcat strike at the Atacama lithium mine has halted 18% of global lithium carbonate supply, forcing EV manufacturers to cut production guidance and battery suppliers to warn of margin compression. This is expected to cascade into reduced EV sales forecasts and potential credit rating downgrades for affected manufacturers.",
+      "matched_pair_id": "pair__lithium_shortage",
+      "event_key": "lithium_shortage",
+      "event_class": "extraction_halt",
+      "severity": 0.7,
+      "affected_sectors": [
+        "EV manufacturers",
+        "battery suppliers",
+        "tech hardware"
+      ],
+      "short_narrative": "A wildcat strike at the Atacama lithium mine has halted 18% of global lithium carbonate supply, forcing EV manufacturers to cut production guidance and battery suppliers to warn of margin compression.",
+      "macro_params": {
+        "vix": 32.0,
+        "sentiment": -0.53,
+        "fed_rate": 5.25
+      }
+    },
+    {
+      "shock_id": "seldrite_shortage__fictional__narrative",
+      "category": "supply_chain_disruption",
+      "realism": "fictional",
+      "framing": "narrative",
+      "text": "A wildcat strike at the Karavelo seldrite mine has halted 18% of global seldrite carbonate supply, forcing QV manufacturers to cut production guidance and module suppliers to warn of margin compression. This is expected to cascade into reduced QV sales forecasts and potential credit rating downgrades for affected manufacturers.",
+      "matched_pair_id": "pair__lithium_shortage",
+      "event_key": "seldrite_shortage",
+      "event_class": "extraction_halt",
+      "severity": 0.7,
+      "affected_sectors": [
+        "QV manufacturers",
+        "module suppliers",
+        "grid hardware"
+      ],
+      "short_narrative": "A wildcat strike at the Karavelo seldrite mine has halted 18% of global seldrite carbonate supply, forcing QV manufacturers to cut production guidance and module suppliers to warn of margin compression.",
+      "macro_params": {
+        "vix": 32.0,
+        "sentiment": -0.53,
+        "fed_rate": 5.25
+      }
+    },
+    {
+      "shock_id": "lithium_shortage__real__numeric",
+      "category": "supply_chain_disruption",
+      "realism": "real",
+      "framing": "numeric",
+      "text": "event_class: extraction_halt | entity: lithium_carbonate | global_supply_delta: -18.0% | vix: 32.0 | sentiment: -0.53 | fed_rate: 5.25% | severity: 0.7",
+      "matched_pair_id": "pair__lithium_shortage",
+      "event_key": "lithium_shortage",
+      "event_class": "extraction_halt",
+      "severity": 0.7,
+      "affected_sectors": [
+        "EV manufacturers",
+        "battery suppliers",
+        "tech hardware"
+      ],
+      "short_narrative": "A wildcat strike at the Atacama lithium mine has halted 18% of global lithium carbonate supply, forcing EV manufacturers to cut production guidance and battery suppliers to warn of margin compression.",
+      "macro_params": {
+        "vix": 32.0,
+        "sentiment": -0.53,
+        "fed_rate": 5.25
+      }
+    },
+    {
+      "shock_id": "seldrite_shortage__fictional__numeric",
+      "category": "supply_chain_disruption",
+      "realism": "fictional",
+      "framing": "numeric",
+      "text": "event_class: extraction_halt | entity: seldrite_carbonate | global_supply_delta: -18.0% | vix: 32.0 | sentiment: -0.53 | fed_rate: 5.25% | severity: 0.7",
+      "matched_pair_id": "pair__lithium_shortage",
+      "event_key": "seldrite_shortage",
+      "event_class": "extraction_halt",
+      "severity": 0.7,
+      "affected_sectors": [
+        "QV manufacturers",
+        "module suppliers",
+        "grid hardware"
+      ],
+      "short_narrative": "A wildcat strike at the Karavelo seldrite mine has halted 18% of global seldrite carbonate supply, forcing QV manufacturers to cut production guidance and module suppliers to warn of margin compression.",
+      "macro_params": {
+        "vix": 32.0,
+        "sentiment": -0.53,
+        "fed_rate": 5.25
+      }
+    },
+    {
+      "shock_id": "semiconductor_shortage__real__narrative",
+      "category": "supply_chain_disruption",
+      "realism": "real",
+      "framing": "narrative",
+      "text": "A fire at a TSMC fab in Taiwan has disrupted 3nm chip production, with lead times extending 8–12 weeks across automotive and consumer electronics supply chains. Extended lead times are expected to stall auto production schedules, delay consumer electronics product launches, and widen cost overruns for defense contractors operating on fixed-price contracts.",
+      "matched_pair_id": "pair__semiconductor_shortage",
+      "event_key": "semiconductor_shortage",
+      "event_class": "fabrication_outage",
+      "severity": 0.6,
+      "affected_sectors": [
+        "auto manufacturers",
+        "consumer electronics",
+        "defense contractors"
+      ],
+      "short_narrative": "A fire at a TSMC fab in Taiwan has disrupted 3nm chip production, with lead times extending 8–12 weeks across automotive and consumer electronics supply chains.",
+      "macro_params": {
+        "vix": 30.0,
+        "sentiment": -0.44,
+        "fed_rate": 5.25
+      }
+    },
+    {
+      "shock_id": "lattice_substrate_shortage__fictional__narrative",
+      "category": "supply_chain_disruption",
+      "realism": "fictional",
+      "framing": "narrative",
+      "text": "A fire at an Ostrek fab in Torreval has disrupted K3 lattice production, with lead times extending 8–12 weeks across drivetrain and consumer device supply chains. Extended lead times are expected to stall drivetrain production schedules, delay consumer device product launches, and widen cost overruns for avionics contractors operating on fixed-price contracts.",
+      "matched_pair_id": "pair__semiconductor_shortage",
+      "event_key": "lattice_substrate_shortage",
+      "event_class": "fabrication_outage",
+      "severity": 0.6,
+      "affected_sectors": [
+        "drivetrain manufacturers",
+        "consumer devices",
+        "avionics contractors"
+      ],
+      "short_narrative": "A fire at an Ostrek fab in Torreval has disrupted K3 lattice production, with lead times extending 8–12 weeks across drivetrain and consumer device supply chains.",
+      "macro_params": {
+        "vix": 30.0,
+        "sentiment": -0.44,
+        "fed_rate": 5.25
+      }
+    },
+    {
+      "shock_id": "semiconductor_shortage__real__numeric",
+      "category": "supply_chain_disruption",
+      "realism": "real",
+      "framing": "numeric",
+      "text": "event_class: fabrication_outage | entity: 3nm_wafer | lead_time_delta: +8_to_12_weeks | vix: 30.0 | sentiment: -0.44 | fed_rate: 5.25% | severity: 0.6",
+      "matched_pair_id": "pair__semiconductor_shortage",
+      "event_key": "semiconductor_shortage",
+      "event_class": "fabrication_outage",
+      "severity": 0.6,
+      "affected_sectors": [
+        "auto manufacturers",
+        "consumer electronics",
+        "defense contractors"
+      ],
+      "short_narrative": "A fire at a TSMC fab in Taiwan has disrupted 3nm chip production, with lead times extending 8–12 weeks across automotive and consumer electronics supply chains.",
+      "macro_params": {
+        "vix": 30.0,
+        "sentiment": -0.44,
+        "fed_rate": 5.25
+      }
+    },
+    {
+      "shock_id": "lattice_substrate_shortage__fictional__numeric",
+      "category": "supply_chain_disruption",
+      "realism": "fictional",
+      "framing": "numeric",
+      "text": "event_class: fabrication_outage | entity: K3_lattice | lead_time_delta: +8_to_12_weeks | vix: 30.0 | sentiment: -0.44 | fed_rate: 5.25% | severity: 0.6",
+      "matched_pair_id": "pair__semiconductor_shortage",
+      "event_key": "lattice_substrate_shortage",
+      "event_class": "fabrication_outage",
+      "severity": 0.6,
+      "affected_sectors": [
+        "drivetrain manufacturers",
+        "consumer devices",
+        "avionics contractors"
+      ],
+      "short_narrative": "A fire at an Ostrek fab in Torreval has disrupted K3 lattice production, with lead times extending 8–12 weeks across drivetrain and consumer device supply chains.",
+      "macro_params": {
+        "vix": 30.0,
+        "sentiment": -0.44,
+        "fed_rate": 5.25
+      }
+    },
+    {
+      "shock_id": "energy_shock__real__narrative",
+      "category": "supply_chain_disruption",
+      "realism": "real",
+      "framing": "narrative",
+      "text": "A geopolitical disruption in the Strait of Hormuz has spiked oil futures 12%, triggering margin warnings across energy-intensive industries and forcing airline capacity cuts. Prolonged elevated energy costs are expected to accelerate pass-through inflation in consumer goods, trigger a wave of airline route suspensions, and compress operating margins across chemical and industrial sectors through higher feedstock prices.",
+      "matched_pair_id": "pair__energy_shock",
+      "event_key": "energy_shock",
+      "event_class": "transit_disruption",
+      "severity": 0.8,
+      "affected_sectors": [
+        "industrials",
+        "airlines",
+        "chemical manufacturers"
+      ],
+      "short_narrative": "A geopolitical disruption in the Strait of Hormuz has spiked oil futures 12%, triggering margin warnings across energy-intensive industries and forcing airline capacity cuts.",
+      "macro_params": {
+        "vix": 34.0,
+        "sentiment": -0.62,
+        "fed_rate": 5.25
+      }
+    },
+    {
+      "shock_id": "seyn_shock__fictional__narrative",
+      "category": "supply_chain_disruption",
+      "realism": "fictional",
+      "framing": "narrative",
+      "text": "A geopolitical disruption in the Strait of Vantry has spiked seyn futures 12%, triggering margin warnings across energy-intensive industries and forcing carrier capacity cuts. Prolonged elevated energy costs are expected to accelerate pass-through inflation in consumer goods, trigger a wave of carrier route suspensions, and compress operating margins across chemical and industrial sectors through higher feedstock prices.",
+      "matched_pair_id": "pair__energy_shock",
+      "event_key": "seyn_shock",
+      "event_class": "transit_disruption",
+      "severity": 0.8,
+      "affected_sectors": [
+        "industrials",
+        "carriers",
+        "chemical manufacturers"
+      ],
+      "short_narrative": "A geopolitical disruption in the Strait of Vantry has spiked seyn futures 12%, triggering margin warnings across energy-intensive industries and forcing carrier capacity cuts.",
+      "macro_params": {
+        "vix": 34.0,
+        "sentiment": -0.62,
+        "fed_rate": 5.25
+      }
+    },
+    {
+      "shock_id": "energy_shock__real__numeric",
+      "category": "supply_chain_disruption",
+      "realism": "real",
+      "framing": "numeric",
+      "text": "event_class: transit_disruption | entity: crude_futures | front_month_delta: +12.0% | vix: 34.0 | sentiment: -0.62 | fed_rate: 5.25% | severity: 0.8",
+      "matched_pair_id": "pair__energy_shock",
+      "event_key": "energy_shock",
+      "event_class": "transit_disruption",
+      "severity": 0.8,
+      "affected_sectors": [
+        "industrials",
+        "airlines",
+        "chemical manufacturers"
+      ],
+      "short_narrative": "A geopolitical disruption in the Strait of Hormuz has spiked oil futures 12%, triggering margin warnings across energy-intensive industries and forcing airline capacity cuts.",
+      "macro_params": {
+        "vix": 34.0,
+        "sentiment": -0.62,
+        "fed_rate": 5.25
+      }
+    },
+    {
+      "shock_id": "seyn_shock__fictional__numeric",
+      "category": "supply_chain_disruption",
+      "realism": "fictional",
+      "framing": "numeric",
+      "text": "event_class: transit_disruption | entity: seyn_futures | front_month_delta: +12.0% | vix: 34.0 | sentiment: -0.62 | fed_rate: 5.25% | severity: 0.8",
+      "matched_pair_id": "pair__energy_shock",
+      "event_key": "seyn_shock",
+      "event_class": "transit_disruption",
+      "severity": 0.8,
+      "affected_sectors": [
+        "industrials",
+        "carriers",
+        "chemical manufacturers"
+      ],
+      "short_narrative": "A geopolitical disruption in the Strait of Vantry has spiked seyn futures 12%, triggering margin warnings across energy-intensive industries and forcing carrier capacity cuts.",
+      "macro_params": {
+        "vix": 34.0,
+        "sentiment": -0.62,
+        "fed_rate": 5.25
+      }
+    },
+    {
+      "shock_id": "credit_crunch__real__narrative",
+      "category": "supply_chain_disruption",
+      "realism": "real",
+      "framing": "narrative",
+      "text": "Three regional banks have disclosed elevated commercial real estate exposure, triggering a broad credit tightening as counterparties reassess interbank lending terms. Tighter credit conditions are expected to increase funding costs for real estate developers, restrict small-cap access to revolving credit facilities, and reduce overall market liquidity as banks shift toward shorter-duration and higher-grade collateral.",
+      "matched_pair_id": "pair__credit_crunch",
+      "event_key": "credit_crunch",
+      "event_class": "credit_tightening",
+      "severity": 0.9,
+      "affected_sectors": [
+        "financial sector",
+        "real estate",
+        "small caps"
+      ],
+      "short_narrative": "Three regional banks have disclosed elevated commercial real estate exposure, triggering a broad credit tightening as counterparties reassess interbank lending terms.",
+      "macro_params": {
+        "vix": 36.0,
+        "sentiment": -0.71,
+        "fed_rate": 5.25
+      }
+    },
+    {
+      "shock_id": "syndicate_crunch__fictional__narrative",
+      "category": "supply_chain_disruption",
+      "realism": "fictional",
+      "framing": "narrative",
+      "text": "Three mid-tier clearing houses have disclosed elevated syndicate loan exposure, triggering a broad credit tightening as counterparties reassess interbank lending terms. Tighter credit conditions are expected to increase funding costs for property unit holders, restrict small-cap access to revolving credit facilities, and reduce overall market liquidity as banks shift toward shorter-duration and higher-grade collateral.",
+      "matched_pair_id": "pair__credit_crunch",
+      "event_key": "syndicate_crunch",
+      "event_class": "credit_tightening",
+      "severity": 0.9,
+      "affected_sectors": [
+        "clearing sector",
+        "property development",
+        "small caps"
+      ],
+      "short_narrative": "Three mid-tier clearing houses have disclosed elevated syndicate loan exposure, triggering a broad credit tightening as counterparties reassess interbank lending terms.",
+      "macro_params": {
+        "vix": 36.0,
+        "sentiment": -0.71,
+        "fed_rate": 5.25
+      }
+    },
+    {
+      "shock_id": "credit_crunch__real__numeric",
+      "category": "supply_chain_disruption",
+      "realism": "real",
+      "framing": "numeric",
+      "text": "event_class: credit_tightening | entity: interbank_credit | counterparty_delta: -3_institutions | vix: 36.0 | sentiment: -0.71 | fed_rate: 5.25% | severity: 0.9",
+      "matched_pair_id": "pair__credit_crunch",
+      "event_key": "credit_crunch",
+      "event_class": "credit_tightening",
+      "severity": 0.9,
+      "affected_sectors": [
+        "financial sector",
+        "real estate",
+        "small caps"
+      ],
+      "short_narrative": "Three regional banks have disclosed elevated commercial real estate exposure, triggering a broad credit tightening as counterparties reassess interbank lending terms.",
+      "macro_params": {
+        "vix": 36.0,
+        "sentiment": -0.71,
+        "fed_rate": 5.25
+      }
+    },
+    {
+      "shock_id": "syndicate_crunch__fictional__numeric",
+      "category": "supply_chain_disruption",
+      "realism": "fictional",
+      "framing": "numeric",
+      "text": "event_class: credit_tightening | entity: syndicate_credit | counterparty_delta: -3_institutions | vix: 36.0 | sentiment: -0.71 | fed_rate: 5.25% | severity: 0.9",
+      "matched_pair_id": "pair__credit_crunch",
+      "event_key": "syndicate_crunch",
+      "event_class": "credit_tightening",
+      "severity": 0.9,
+      "affected_sectors": [
+        "clearing sector",
+        "property development",
+        "small caps"
+      ],
+      "short_narrative": "Three mid-tier clearing houses have disclosed elevated syndicate loan exposure, triggering a broad credit tightening as counterparties reassess interbank lending terms.",
+      "macro_params": {
+        "vix": 36.0,
+        "sentiment": -0.71,
+        "fed_rate": 5.25
+      }
+    },
+    {
+      "shock_id": "port_closure__real__narrative",
+      "category": "supply_chain_disruption",
+      "realism": "real",
+      "framing": "narrative",
+      "text": "A COVID outbreak at the Meishan terminal of the Port of Ningbo-Zhoushan has idled 28% of the port's container throughput, forcing consumer goods importers to rebook freight and electronics assemblers to warn of delivery slippage. Idled berth capacity is expected to lengthen ocean transit times for consumer goods importers, push electronics assemblers into costly air freight substitution, and inflate demurrage charges for freight forwarders operating on fixed-rate contracts.",
+      "matched_pair_id": "pair__port_closure",
+      "event_key": "port_closure",
+      "event_class": "port_closure",
+      "severity": 0.65,
+      "affected_sectors": [
+        "consumer goods importers",
+        "electronics assemblers",
+        "freight forwarders"
+      ],
+      "short_narrative": "A COVID outbreak at the Meishan terminal of the Port of Ningbo-Zhoushan has idled 28% of the port's container throughput, forcing consumer goods importers to rebook freight and electronics assemblers to warn of delivery slippage.",
+      "macro_params": {
+        "vix": 31.0,
+        "sentiment": -0.49,
+        "fed_rate": 5.25
+      }
+    },
+    {
+      "shock_id": "torvan_closure__fictional__narrative",
+      "category": "supply_chain_disruption",
+      "realism": "fictional",
+      "framing": "narrative",
+      "text": "A Tessin outbreak at the Meskan terminal of the Port of Torvan-Keshal has idled 28% of the port's container throughput, forcing houseware importers to rebook freight and module assemblers to warn of delivery slippage. Idled berth capacity is expected to lengthen ocean transit times for houseware importers, push module assemblers into costly air freight substitution, and inflate demurrage charges for haulage brokers operating on fixed-rate contracts.",
+      "matched_pair_id": "pair__port_closure",
+      "event_key": "torvan_closure",
+      "event_class": "port_closure",
+      "severity": 0.65,
+      "affected_sectors": [
+        "houseware importers",
+        "module assemblers",
+        "haulage brokers"
+      ],
+      "short_narrative": "A Tessin outbreak at the Meskan terminal of the Port of Torvan-Keshal has idled 28% of the port's container throughput, forcing houseware importers to rebook freight and module assemblers to warn of delivery slippage.",
+      "macro_params": {
+        "vix": 31.0,
+        "sentiment": -0.49,
+        "fed_rate": 5.25
+      }
+    },
+    {
+      "shock_id": "port_closure__real__numeric",
+      "category": "supply_chain_disruption",
+      "realism": "real",
+      "framing": "numeric",
+      "text": "event_class: port_closure | entity: ningbo_container_slots | throughput_delta: -28.0% | vix: 31.0 | sentiment: -0.49 | fed_rate: 5.25% | severity: 0.65",
+      "matched_pair_id": "pair__port_closure",
+      "event_key": "port_closure",
+      "event_class": "port_closure",
+      "severity": 0.65,
+      "affected_sectors": [
+        "consumer goods importers",
+        "electronics assemblers",
+        "freight forwarders"
+      ],
+      "short_narrative": "A COVID outbreak at the Meishan terminal of the Port of Ningbo-Zhoushan has idled 28% of the port's container throughput, forcing consumer goods importers to rebook freight and electronics assemblers to warn of delivery slippage.",
+      "macro_params": {
+        "vix": 31.0,
+        "sentiment": -0.49,
+        "fed_rate": 5.25
+      }
+    },
+    {
+      "shock_id": "torvan_closure__fictional__numeric",
+      "category": "supply_chain_disruption",
+      "realism": "fictional",
+      "framing": "numeric",
+      "text": "event_class: port_closure | entity: torvan_container_slots | throughput_delta: -28.0% | vix: 31.0 | sentiment: -0.49 | fed_rate: 5.25% | severity: 0.65",
+      "matched_pair_id": "pair__port_closure",
+      "event_key": "torvan_closure",
+      "event_class": "port_closure",
+      "severity": 0.65,
+      "affected_sectors": [
+        "houseware importers",
+        "module assemblers",
+        "haulage brokers"
+      ],
+      "short_narrative": "A Tessin outbreak at the Meskan terminal of the Port of Torvan-Keshal has idled 28% of the port's container throughput, forcing houseware importers to rebook freight and module assemblers to warn of delivery slippage.",
+      "macro_params": {
+        "vix": 31.0,
+        "sentiment": -0.49,
+        "fed_rate": 5.25
+      }
+    },
+    {
+      "shock_id": "wheat_export_ban__real__narrative",
+      "category": "supply_chain_disruption",
+      "realism": "real",
+      "framing": "narrative",
+      "text": "India's ban on wheat exports has withdrawn 10 million tonnes from global grain supply, forcing food processors to reprice contracts and livestock producers to warn of feed cost inflation. Restricted export volumes are expected to raise input costs for food processors, compress margins for livestock producers, and widen basis risk for commodity traders holding forward positions.",
+      "matched_pair_id": "pair__wheat_export_ban",
+      "event_key": "wheat_export_ban",
+      "event_class": "export_restriction",
+      "severity": 0.55,
+      "affected_sectors": [
+        "food processors",
+        "livestock producers",
+        "commodity traders"
+      ],
+      "short_narrative": "India's ban on wheat exports has withdrawn 10 million tonnes from global grain supply, forcing food processors to reprice contracts and livestock producers to warn of feed cost inflation.",
+      "macro_params": {
+        "vix": 29.0,
+        "sentiment": -0.4,
+        "fed_rate": 5.25
+      }
+    },
+    {
+      "shock_id": "korr_export_ban__fictional__narrative",
+      "category": "supply_chain_disruption",
+      "realism": "fictional",
+      "framing": "narrative",
+      "text": "Ondar's ban on korr exports has withdrawn 10 million tonnes from global grain supply, forcing meal processors to reprice contracts and herd operators to warn of feed cost inflation. Restricted export volumes are expected to raise input costs for meal processors, compress margins for herd operators, and widen basis risk for commodity brokers holding forward positions.",
+      "matched_pair_id": "pair__wheat_export_ban",
+      "event_key": "korr_export_ban",
+      "event_class": "export_restriction",
+      "severity": 0.55,
+      "affected_sectors": [
+        "meal processors",
+        "herd operators",
+        "commodity brokers"
+      ],
+      "short_narrative": "Ondar's ban on korr exports has withdrawn 10 million tonnes from global grain supply, forcing meal processors to reprice contracts and herd operators to warn of feed cost inflation.",
+      "macro_params": {
+        "vix": 29.0,
+        "sentiment": -0.4,
+        "fed_rate": 5.25
+      }
+    },
+    {
+      "shock_id": "wheat_export_ban__real__numeric",
+      "category": "supply_chain_disruption",
+      "realism": "real",
+      "framing": "numeric",
+      "text": "event_class: export_restriction | entity: indian_wheat | export_volume_delta: -10.0_mmt | vix: 29.0 | sentiment: -0.4 | fed_rate: 5.25% | severity: 0.55",
+      "matched_pair_id": "pair__wheat_export_ban",
+      "event_key": "wheat_export_ban",
+      "event_class": "export_restriction",
+      "severity": 0.55,
+      "affected_sectors": [
+        "food processors",
+        "livestock producers",
+        "commodity traders"
+      ],
+      "short_narrative": "India's ban on wheat exports has withdrawn 10 million tonnes from global grain supply, forcing food processors to reprice contracts and livestock producers to warn of feed cost inflation.",
+      "macro_params": {
+        "vix": 29.0,
+        "sentiment": -0.4,
+        "fed_rate": 5.25
+      }
+    },
+    {
+      "shock_id": "korr_export_ban__fictional__numeric",
+      "category": "supply_chain_disruption",
+      "realism": "fictional",
+      "framing": "numeric",
+      "text": "event_class: export_restriction | entity: ondar_korr | export_volume_delta: -10.0_mmt | vix: 29.0 | sentiment: -0.4 | fed_rate: 5.25% | severity: 0.55",
+      "matched_pair_id": "pair__wheat_export_ban",
+      "event_key": "korr_export_ban",
+      "event_class": "export_restriction",
+      "severity": 0.55,
+      "affected_sectors": [
+        "meal processors",
+        "herd operators",
+        "commodity brokers"
+      ],
+      "short_narrative": "Ondar's ban on korr exports has withdrawn 10 million tonnes from global grain supply, forcing meal processors to reprice contracts and herd operators to warn of feed cost inflation.",
+      "macro_params": {
+        "vix": 29.0,
+        "sentiment": -0.4,
+        "fed_rate": 5.25
+      }
+    },
+    {
+      "shock_id": "pipeline_outage__real__narrative",
+      "category": "supply_chain_disruption",
+      "realism": "real",
+      "framing": "narrative",
+      "text": "A ransomware attack on the Colonial Pipeline has halted 2.5 million barrels per day of refined fuel flow, forcing fuel distributors to invoke allocation and petrochemical refiners to cut run rates. Suspended pipeline flow is expected to strand product inventories for fuel distributors, force run-rate cuts at petrochemical refiners, and escalate spot haulage rates for logistics operators rerouting by tanker truck.",
+      "matched_pair_id": "pair__pipeline_outage",
+      "event_key": "pipeline_outage",
+      "event_class": "pipeline_outage",
+      "severity": 0.75,
+      "affected_sectors": [
+        "fuel distributors",
+        "petrochemical refiners",
+        "logistics operators"
+      ],
+      "short_narrative": "A ransomware attack on the Colonial Pipeline has halted 2.5 million barrels per day of refined fuel flow, forcing fuel distributors to invoke allocation and petrochemical refiners to cut run rates.",
+      "macro_params": {
+        "vix": 33.0,
+        "sentiment": -0.58,
+        "fed_rate": 5.25
+      }
+    },
+    {
+      "shock_id": "meridian_pipeline_outage__fictional__narrative",
+      "category": "supply_chain_disruption",
+      "realism": "fictional",
+      "framing": "narrative",
+      "text": "A ransomware attack on the Meridian Pipeline has halted 2.5 million barrels per day of refined fuel flow, forcing fuel wholesalers to invoke allocation and elastomeric refiners to cut run rates. Suspended pipeline flow is expected to strand product inventories for fuel wholesalers, force run-rate cuts at elastomeric refiners, and escalate spot haulage rates for conveyance operators rerouting by tanker truck.",
+      "matched_pair_id": "pair__pipeline_outage",
+      "event_key": "meridian_pipeline_outage",
+      "event_class": "pipeline_outage",
+      "severity": 0.75,
+      "affected_sectors": [
+        "fuel wholesalers",
+        "elastomeric refiners",
+        "conveyance operators"
+      ],
+      "short_narrative": "A ransomware attack on the Meridian Pipeline has halted 2.5 million barrels per day of refined fuel flow, forcing fuel wholesalers to invoke allocation and elastomeric refiners to cut run rates.",
+      "macro_params": {
+        "vix": 33.0,
+        "sentiment": -0.58,
+        "fed_rate": 5.25
+      }
+    },
+    {
+      "shock_id": "pipeline_outage__real__numeric",
+      "category": "supply_chain_disruption",
+      "realism": "real",
+      "framing": "numeric",
+      "text": "event_class: pipeline_outage | entity: colonial_refined_fuel | pipeline_flow_delta: -2.5_mbd | vix: 33.0 | sentiment: -0.58 | fed_rate: 5.25% | severity: 0.75",
+      "matched_pair_id": "pair__pipeline_outage",
+      "event_key": "pipeline_outage",
+      "event_class": "pipeline_outage",
+      "severity": 0.75,
+      "affected_sectors": [
+        "fuel distributors",
+        "petrochemical refiners",
+        "logistics operators"
+      ],
+      "short_narrative": "A ransomware attack on the Colonial Pipeline has halted 2.5 million barrels per day of refined fuel flow, forcing fuel distributors to invoke allocation and petrochemical refiners to cut run rates.",
+      "macro_params": {
+        "vix": 33.0,
+        "sentiment": -0.58,
+        "fed_rate": 5.25
+      }
+    },
+    {
+      "shock_id": "meridian_pipeline_outage__fictional__numeric",
+      "category": "supply_chain_disruption",
+      "realism": "fictional",
+      "framing": "numeric",
+      "text": "event_class: pipeline_outage | entity: meridian_refined_fuel | pipeline_flow_delta: -2.5_mbd | vix: 33.0 | sentiment: -0.58 | fed_rate: 5.25% | severity: 0.75",
+      "matched_pair_id": "pair__pipeline_outage",
+      "event_key": "meridian_pipeline_outage",
+      "event_class": "pipeline_outage",
+      "severity": 0.75,
+      "affected_sectors": [
+        "fuel wholesalers",
+        "elastomeric refiners",
+        "conveyance operators"
+      ],
+      "short_narrative": "A ransomware attack on the Meridian Pipeline has halted 2.5 million barrels per day of refined fuel flow, forcing fuel wholesalers to invoke allocation and elastomeric refiners to cut run rates.",
+      "macro_params": {
+        "vix": 33.0,
+        "sentiment": -0.58,
+        "fed_rate": 5.25
+      }
+    },
+    {
+      "shock_id": "flood_inundation__real__narrative",
+      "category": "supply_chain_disruption",
+      "realism": "real",
+      "framing": "narrative",
+      "text": "Monsoon flooding across Thailand's Ayutthaya industrial estates has submerged plants producing 30% of global hard drive output, forcing PC manufacturers to ration allocations and storage vendors to suspend price guidance. Submerged production capacity is expected to delay build schedules for PC manufacturers, extend order backlogs for storage vendors, and idle assembly lines at contract assemblers dependent on single-source components.",
+      "matched_pair_id": "pair__flood_inundation",
+      "event_key": "flood_inundation",
+      "event_class": "flood_inundation",
+      "severity": 0.7,
+      "affected_sectors": [
+        "PC manufacturers",
+        "storage vendors",
+        "contract assemblers"
+      ],
+      "short_narrative": "Monsoon flooding across Thailand's Ayutthaya industrial estates has submerged plants producing 30% of global hard drive output, forcing PC manufacturers to ration allocations and storage vendors to suspend price guidance.",
+      "macro_params": {
+        "vix": 32.0,
+        "sentiment": -0.53,
+        "fed_rate": 5.25
+      }
+    },
+    {
+      "shock_id": "saronde_inundation__fictional__narrative",
+      "category": "supply_chain_disruption",
+      "realism": "fictional",
+      "framing": "narrative",
+      "text": "Monsoon flooding across Saronde's Belhavet industrial estates has submerged plants producing 30% of global veldt drive output, forcing QV manufacturers to ration allocations and archive vendors to suspend price guidance. Submerged production capacity is expected to delay build schedules for QV manufacturers, extend order backlogs for archive vendors, and idle assembly lines at contract fabricators dependent on single-source components.",
+      "matched_pair_id": "pair__flood_inundation",
+      "event_key": "saronde_inundation",
+      "event_class": "flood_inundation",
+      "severity": 0.7,
+      "affected_sectors": [
+        "QV manufacturers",
+        "archive vendors",
+        "contract fabricators"
+      ],
+      "short_narrative": "Monsoon flooding across Saronde's Belhavet industrial estates has submerged plants producing 30% of global veldt drive output, forcing QV manufacturers to ration allocations and archive vendors to suspend price guidance.",
+      "macro_params": {
+        "vix": 32.0,
+        "sentiment": -0.53,
+        "fed_rate": 5.25
+      }
+    },
+    {
+      "shock_id": "flood_inundation__real__numeric",
+      "category": "supply_chain_disruption",
+      "realism": "real",
+      "framing": "numeric",
+      "text": "event_class: flood_inundation | entity: hard_drive_output | output_delta: -30.0% | vix: 32.0 | sentiment: -0.53 | fed_rate: 5.25% | severity: 0.7",
+      "matched_pair_id": "pair__flood_inundation",
+      "event_key": "flood_inundation",
+      "event_class": "flood_inundation",
+      "severity": 0.7,
+      "affected_sectors": [
+        "PC manufacturers",
+        "storage vendors",
+        "contract assemblers"
+      ],
+      "short_narrative": "Monsoon flooding across Thailand's Ayutthaya industrial estates has submerged plants producing 30% of global hard drive output, forcing PC manufacturers to ration allocations and storage vendors to suspend price guidance.",
+      "macro_params": {
+        "vix": 32.0,
+        "sentiment": -0.53,
+        "fed_rate": 5.25
+      }
+    },
+    {
+      "shock_id": "saronde_inundation__fictional__numeric",
+      "category": "supply_chain_disruption",
+      "realism": "fictional",
+      "framing": "numeric",
+      "text": "event_class: flood_inundation | entity: veldt_drive_output | output_delta: -30.0% | vix: 32.0 | sentiment: -0.53 | fed_rate: 5.25% | severity: 0.7",
+      "matched_pair_id": "pair__flood_inundation",
+      "event_key": "saronde_inundation",
+      "event_class": "flood_inundation",
+      "severity": 0.7,
+      "affected_sectors": [
+        "QV manufacturers",
+        "archive vendors",
+        "contract fabricators"
+      ],
+      "short_narrative": "Monsoon flooding across Saronde's Belhavet industrial estates has submerged plants producing 30% of global veldt drive output, forcing QV manufacturers to ration allocations and archive vendors to suspend price guidance.",
+      "macro_params": {
+        "vix": 32.0,
+        "sentiment": -0.53,
+        "fed_rate": 5.25
+      }
+    },
+    {
+      "shock_id": "rail_embargo__real__narrative",
+      "category": "supply_chain_disruption",
+      "realism": "real",
+      "framing": "narrative",
+      "text": "A labor dispute across US Class I freight railroads has triggered an embargo cutting 15% of weekly carload volume, forcing grain shippers to divert to truck and fertilizer producers to halt outbound loading. Reduced carload capacity is expected to strand harvest volumes for grain shippers, force production curtailment at fertilizer producers, and interrupt just-in-time deliveries for auto parts suppliers running minimal buffer stock.",
+      "matched_pair_id": "pair__rail_embargo",
+      "event_key": "rail_embargo",
+      "event_class": "rail_embargo",
+      "severity": 0.6,
+      "affected_sectors": [
+        "grain shippers",
+        "fertilizer producers",
+        "auto parts suppliers"
+      ],
+      "short_narrative": "A labor dispute across US Class I freight railroads has triggered an embargo cutting 15% of weekly carload volume, forcing grain shippers to divert to truck and fertilizer producers to halt outbound loading.",
+      "macro_params": {
+        "vix": 30.0,
+        "sentiment": -0.44,
+        "fed_rate": 5.25
+      }
+    },
+    {
+      "shock_id": "kesh_rail_embargo__fictional__narrative",
+      "category": "supply_chain_disruption",
+      "realism": "fictional",
+      "framing": "narrative",
+      "text": "A labor dispute across Kesh Class I freight railroads has triggered an embargo cutting 15% of weekly carload volume, forcing bulk shippers to divert to truck and nutrilizer producers to halt outbound loading. Reduced carload capacity is expected to strand harvest volumes for bulk shippers, force production curtailment at nutrilizer producers, and interrupt just-in-time deliveries for rotor parts suppliers running minimal buffer stock.",
+      "matched_pair_id": "pair__rail_embargo",
+      "event_key": "kesh_rail_embargo",
+      "event_class": "rail_embargo",
+      "severity": 0.6,
+      "affected_sectors": [
+        "bulk shippers",
+        "nutrilizer producers",
+        "rotor parts suppliers"
+      ],
+      "short_narrative": "A labor dispute across Kesh Class I freight railroads has triggered an embargo cutting 15% of weekly carload volume, forcing bulk shippers to divert to truck and nutrilizer producers to halt outbound loading.",
+      "macro_params": {
+        "vix": 30.0,
+        "sentiment": -0.44,
+        "fed_rate": 5.25
+      }
+    },
+    {
+      "shock_id": "rail_embargo__real__numeric",
+      "category": "supply_chain_disruption",
+      "realism": "real",
+      "framing": "numeric",
+      "text": "event_class: rail_embargo | entity: us_rail_carloads | carload_delta: -15.0% | vix: 30.0 | sentiment: -0.44 | fed_rate: 5.25% | severity: 0.6",
+      "matched_pair_id": "pair__rail_embargo",
+      "event_key": "rail_embargo",
+      "event_class": "rail_embargo",
+      "severity": 0.6,
+      "affected_sectors": [
+        "grain shippers",
+        "fertilizer producers",
+        "auto parts suppliers"
+      ],
+      "short_narrative": "A labor dispute across US Class I freight railroads has triggered an embargo cutting 15% of weekly carload volume, forcing grain shippers to divert to truck and fertilizer producers to halt outbound loading.",
+      "macro_params": {
+        "vix": 30.0,
+        "sentiment": -0.44,
+        "fed_rate": 5.25
+      }
+    },
+    {
+      "shock_id": "kesh_rail_embargo__fictional__numeric",
+      "category": "supply_chain_disruption",
+      "realism": "fictional",
+      "framing": "numeric",
+      "text": "event_class: rail_embargo | entity: kesh_rail_carloads | carload_delta: -15.0% | vix: 30.0 | sentiment: -0.44 | fed_rate: 5.25% | severity: 0.6",
+      "matched_pair_id": "pair__rail_embargo",
+      "event_key": "kesh_rail_embargo",
+      "event_class": "rail_embargo",
+      "severity": 0.6,
+      "affected_sectors": [
+        "bulk shippers",
+        "nutrilizer producers",
+        "rotor parts suppliers"
+      ],
+      "short_narrative": "A labor dispute across Kesh Class I freight railroads has triggered an embargo cutting 15% of weekly carload volume, forcing bulk shippers to divert to truck and nutrilizer producers to halt outbound loading.",
+      "macro_params": {
+        "vix": 30.0,
+        "sentiment": -0.44,
+        "fed_rate": 5.25
+      }
+    },
+    {
+      "shock_id": "dam_failure__real__narrative",
+      "category": "supply_chain_disruption",
+      "realism": "real",
+      "framing": "narrative",
+      "text": "A tailings dam collapse at Vale's Corrego do Feijao mine has removed 40 million tonnes of annual iron ore capacity, forcing steel producers to secure alternate offtake and ore traders to reprice term contracts. Lost ore capacity is expected to raise input costs for steel producers, tighten seaborne availability for ore traders, and defer capital orders at mining equipment suppliers exposed to the affected operator.",
+      "matched_pair_id": "pair__dam_failure",
+      "event_key": "dam_failure",
+      "event_class": "dam_failure",
+      "severity": 0.85,
+      "affected_sectors": [
+        "steel producers",
+        "ore traders",
+        "mining equipment suppliers"
+      ],
+      "short_narrative": "A tailings dam collapse at Vale's Corrego do Feijao mine has removed 40 million tonnes of annual iron ore capacity, forcing steel producers to secure alternate offtake and ore traders to reprice term contracts.",
+      "macro_params": {
+        "vix": 35.0,
+        "sentiment": -0.67,
+        "fed_rate": 5.25
+      }
+    },
+    {
+      "shock_id": "korvath_dam_failure__fictional__narrative",
+      "category": "supply_chain_disruption",
+      "realism": "fictional",
+      "framing": "narrative",
+      "text": "A tailings dam collapse at Korvath's Serra do Dalmine mine has removed 40 million tonnes of annual ferrite ore capacity, forcing alloy producers to secure alternate offtake and ore desks to reprice term contracts. Lost ore capacity is expected to raise input costs for alloy producers, tighten seaborne availability for ore desks, and defer capital orders at extraction equipment suppliers exposed to the affected operator.",
+      "matched_pair_id": "pair__dam_failure",
+      "event_key": "korvath_dam_failure",
+      "event_class": "dam_failure",
+      "severity": 0.85,
+      "affected_sectors": [
+        "alloy producers",
+        "ore desks",
+        "extraction equipment suppliers"
+      ],
+      "short_narrative": "A tailings dam collapse at Korvath's Serra do Dalmine mine has removed 40 million tonnes of annual ferrite ore capacity, forcing alloy producers to secure alternate offtake and ore desks to reprice term contracts.",
+      "macro_params": {
+        "vix": 35.0,
+        "sentiment": -0.67,
+        "fed_rate": 5.25
+      }
+    },
+    {
+      "shock_id": "dam_failure__real__numeric",
+      "category": "supply_chain_disruption",
+      "realism": "real",
+      "framing": "numeric",
+      "text": "event_class: dam_failure | entity: iron_ore_capacity | ore_capacity_delta: -40.0_mtpa | vix: 35.0 | sentiment: -0.67 | fed_rate: 5.25% | severity: 0.85",
+      "matched_pair_id": "pair__dam_failure",
+      "event_key": "dam_failure",
+      "event_class": "dam_failure",
+      "severity": 0.85,
+      "affected_sectors": [
+        "steel producers",
+        "ore traders",
+        "mining equipment suppliers"
+      ],
+      "short_narrative": "A tailings dam collapse at Vale's Corrego do Feijao mine has removed 40 million tonnes of annual iron ore capacity, forcing steel producers to secure alternate offtake and ore traders to reprice term contracts.",
+      "macro_params": {
+        "vix": 35.0,
+        "sentiment": -0.67,
+        "fed_rate": 5.25
+      }
+    },
+    {
+      "shock_id": "korvath_dam_failure__fictional__numeric",
+      "category": "supply_chain_disruption",
+      "realism": "fictional",
+      "framing": "numeric",
+      "text": "event_class: dam_failure | entity: ferrite_ore_capacity | ore_capacity_delta: -40.0_mtpa | vix: 35.0 | sentiment: -0.67 | fed_rate: 5.25% | severity: 0.85",
+      "matched_pair_id": "pair__dam_failure",
+      "event_key": "korvath_dam_failure",
+      "event_class": "dam_failure",
+      "severity": 0.85,
+      "affected_sectors": [
+        "alloy producers",
+        "ore desks",
+        "extraction equipment suppliers"
+      ],
+      "short_narrative": "A tailings dam collapse at Korvath's Serra do Dalmine mine has removed 40 million tonnes of annual ferrite ore capacity, forcing alloy producers to secure alternate offtake and ore desks to reprice term contracts.",
+      "macro_params": {
+        "vix": 35.0,
+        "sentiment": -0.67,
+        "fed_rate": 5.25
+      }
+    }
+  ]
+}
