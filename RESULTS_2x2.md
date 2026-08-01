@@ -292,8 +292,15 @@ part of the trading-decision prompt (verified: no probe phrasing in `agents.py`
 or any stored run). It is a separate, stateless, post-hoc Ollama call run after
 the sweep; the trading agents never saw it, so it cannot prime later ticks.
 Reactivity is architecturally impossible — no empirical re-run is required to
-establish it. (An empirical probe-free replicate as belt-and-suspenders would be
-~1,200 calls / ~3h and, by the above, would only reproduce the originals.)
+establish it.
+
+This paragraph originally predicted that a probe-free replicate "would only
+reproduce the originals." It was run, and that prediction was **wrong**: at a
+fixed seed, 23-32% of llama/mistral decisions flip (see "Probe Reactivity &
+Reproducibility"). The architectural argument survives — the difference is
+temperature-0.7 sampling, not probe contamination — but the re-run was not
+redundant. It measured a reproducibility floor of the same order as the effects
+being estimated, which is why it now anchors the power discussion.
 
 **3. Statistical power.** See "Statistical Power (n = 4 families)": every observed
 estimate is below its own MDE, so all nulls are underpowered nulls; halving the
@@ -304,8 +311,8 @@ detectable floor needs ~16 families (4x).
 ## Probe Reactivity & Reproducibility (Step 2)
 
 Empirical companion to the architectural argument (`check_probe_reactivity.py`,
-20 stratified replicates, 10/model). A subsample was re-run **probe-free at the
-same seed** and compared tick-by-tick to the originals.
+30 stratified replicates, 10/model across three models). A subsample was re-run
+**probe-free at the same seed** and compared tick-by-tick to the originals.
 
 **Reactivity is impossible at two levels** (both verified in code): (1) the probe
 was never in the trading prompt — it is a separate, stateless, post-hoc call;
@@ -315,17 +322,65 @@ conversation history, so nothing from tick *t* (probe or otherwise) can reach
 only by LLM temperature-0.7 sampling. That is the pipeline's **reproducibility
 floor**:
 
-| model | decision agreement (same seed) | spread-widening mean·\|Δ\| | Kyle's λ Δ mean·\|Δ\| | archetype div. mean·\|Δ\| |
-|---|---|---|---|---|
-| llama3.1:8b | 76.7% | 0.040 | 0.0074 | 0.00014 |
-| mistral:7b | 68.0% | 0.072 | 0.0050 | 0.00007 |
+| model | lineage | agreement | flip rate | κ | spread-widening mean·\|Δ\| | Kyle's λ Δ mean·\|Δ\| | archetype div. mean·\|Δ\| |
+|---|---|---|---|---|---|---|---|
+| llama3.1:8b | llama | 76.7% | 23.3% | 0.303 | 0.040 | 0.0074 | 0.00014 |
+| mistral:7b | llama-adjacent | 68.0% | 32.0% | 0.415 | 0.072 | 0.0050 | 0.00007 |
+| **gemma2:9b** | **gemma** | **94.5%** | **5.5%** | **0.787** | **0.0102** | **0.0012** | **0.00007** |
 
-**Reading.** ~23–32% of LLM decisions flip on a same-seed re-run, so a single
-run's metrics are genuinely noisy. The run-to-run \|Δ\| on spread widening
-(~0.04–0.07) is the **same order as the observed interaction estimate (~0.04)**
-and well below its MDE (~0.12) — i.e. the effects are **noise-dominated at n=4**,
-exactly as the power section implies. This within-run noise is precisely what the
-family-cluster bootstrap resamples over, so the reported CIs already integrate it
-(llama's spread-widening bootstrap SE, 0.044, matches this \|Δ\| floor). Conclusion:
-**no probe reactivity** (impossible by construction, and nothing anomalous
-empirically) — the nulls are honest but noise-limited, not contaminated.
+n = 600 decisions per model. κ is Cohen's kappa — see "why κ" below.
+
+**Reading.** On llama and mistral, 23–32% of LLM decisions flip on a same-seed
+re-run, so a single run's metrics are genuinely noisy. The run-to-run \|Δ\| on
+spread widening (~0.04–0.07) is the **same order as the observed interaction
+estimate (~0.04)** and well below its MDE (~0.12) — i.e. the effects are
+**noise-dominated at n=4**, exactly as the power section implies. This within-run
+noise is precisely what the family-cluster bootstrap resamples over, so the
+reported CIs already integrate it (llama's spread-widening bootstrap SE, 0.044,
+matches this \|Δ\| floor). Conclusion: **no probe reactivity** (impossible by
+construction, and nothing anomalous empirically) — the nulls are honest but
+noise-limited, not contaminated.
+
+### Does the instability generalise across model families? No.
+
+gemma2:9b was added specifically as a **different architecture lineage**, not as
+a third data point — llama3.1 and mistral are close enough that agreement
+between them is weak evidence about LLMs in general. It runs the *identical*
+selection at the *identical* seeds (seeds are model-independent), so all three
+models re-decide the same 20 ticks of the same book.
+
+It flips **5.5%** of decisions against llama's 23.3% and mistral's 32.0% — 4.2x
+and 5.8x lower. The gap is not confined to the decision metric: its spread-widening
+reproducibility floor is **3.9-7x tighter** and its per-tick volume \|Δ\| is 4.43
+against 9.73 / 10.73. Those metrics do not share the decision-agreement
+denominator, so this is not one number restated three ways.
+
+**So run-to-run instability is a property of the llama/mistral lineage as tested
+here, not of local 8B-class models re-deciding a fixed book.** Any claim of the
+latter form should be scoped to the lineage until more architectures are run.
+
+Two artifacts ruled out before believing it:
+
+- **Not degeneracy.** An all-HOLD model would post a low flip rate trivially.
+  gemma2 trades actively — BUY 84.7% / SELL 10.0% / hold 5.3%, close to llama's
+  mix. It is genuinely re-deciding, and re-deciding the same way.
+- **Not a base rate.** *Why κ:* raw agreement is not comparable across models
+  whose action mixes differ, and these differ a lot — mistral holds on 36.5% of
+  decisions and llama on 5.5%, which moves the chance-agreement floor from 45.3%
+  to 66.5%. gemma2's concentrated mix gives it the *highest* chance floor of the
+  three (74.1%), so the raw number flatters it most; chance-corrected it still
+  leads by ~2.6x (κ 0.787 vs 0.303).
+
+**Correction to the earlier framing.** This section previously read "~23-32% of
+LLM decisions flip", which invites reading llama as the stable end of a range.
+Chance-corrected, the ordering **inverts**: mistral (κ 0.415) is *more*
+self-consistent than llama (κ 0.303), and its higher raw flip rate is largely its
+36.5% hold rate depressing its chance floor. Quote κ when comparing models; quote
+the raw flip rate for one model's absolute noise level.
+
+**Caveat on scope.** gemma2's 10 replicates cover 2 event families and 4 cells —
+the same stratified subsample llama and mistral used, so the comparison is
+like-for-like, but it is a reproducibility probe, not a sweep. gemma2 was **not**
+run through the main 2x2 design and contributes nothing to any interaction
+estimate. Its first draw lives in `results_2x2_reactivity_base/`, deliberately
+outside `results_2x2/`, so it cannot be picked up as a third arm of the study.
