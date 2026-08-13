@@ -1,0 +1,1681 @@
+{
+  "model": "mistral:7b",
+  "backend": "ollama:mistral:7b",
+  "shock_id": "rail_embargo__real__narrative",
+  "matched_pair_id": "pair__rail_embargo",
+  "event_key": "rail_embargo",
+  "realism": "real",
+  "framing": "narrative",
+  "rep": 2,
+  "seed": 1435738418,
+  "n_ticks": 20,
+  "shock_tick": 10,
+  "shock_text": "A labor dispute across US Class I freight railroads has triggered an embargo cutting 15% of weekly carload volume, forcing grain shippers to divert to truck and fertilizer producers to halt outbound loading. Reduced carload capacity is expected to strand harvest volumes for grain shippers, force production curtailment at fertilizer producers, and interrupt just-in-time deliveries for auto parts suppliers running minimal buffer stock.",
+  "elapsed_s": 327.81,
+  "metrics": {
+    "spread_pre": 0.04999999999999716,
+    "spread_post": 0.08600000000000278,
+    "spread_widening": 0.036000000000005625,
+    "kyle_lambda_pre": 0.0014122191478217509,
+    "kyle_lambda_post": 0.003115759457933185,
+    "kyle_lambda_delta": 0.001703540310111434,
+    "amihud_post": 3.9092710869213694e-07,
+    "spread_adverse_post": 0.0666537267080741,
+    "archetype_divergence": 7.227906566444176e-05,
+    "archetype_returns": {
+      "retail": 3.1000000000130966e-05,
+      "institutional": 6.300000000046566e-06,
+      "quant": 0.0001419999999999709
+    },
+    "hold_rate": 0.2,
+    "forced_random_rate": 0.05,
+    "api_failure_rate": 0.0,
+    "genuine_hold_rate": 0.2
+  },
+  "trajectory": [
+    {
+      "tick": 8,
+      "clearing_price": 100.0,
+      "mid_price": 99.94,
+      "spread": 0.09999999999999432,
+      "volume": 11.0,
+      "num_trades": 2,
+      "kyles_lambda": -0.001463414634146397,
+      "amihud_illiquidity": 5.454545454545661e-07,
+      "spread_adverse_selection": 0.016097560975610367,
+      "spread_inventory_cost": 0.08390243902438395
+    },
+    {
+      "tick": 9,
+      "clearing_price": null,
+      "mid_price": 99.985,
+      "spread": 0.009999999999990905,
+      "volume": 0,
+      "num_trades": 0,
+      "kyles_lambda": 0.0012857142857143344,
+      "amihud_illiquidity": null,
+      "spread_adverse_selection": null,
+      "spread_inventory_cost": null
+    },
+    {
+      "tick": 10,
+      "clearing_price": 100.08,
+      "mid_price": 100.03,
+      "spread": 0.09999999999999432,
+      "volume": 50.0,
+      "num_trades": 2,
+      "kyles_lambda": 0.0012857142857143344,
+      "amihud_illiquidity": 8.994154878627819e-08,
+      "spread_adverse_selection": 0.06428571428571672,
+      "spread_inventory_cost": 0.035714285714277594
+    },
+    {
+      "tick": 11,
+      "clearing_price": 100.08,
+      "mid_price": 100.235,
+      "spread": 0.009999999999990905,
+      "volume": 40.0,
+      "num_trades": 2,
+      "kyles_lambda": 0.006029411764705832,
+      "amihud_illiquidity": 5.119367467137914e-07,
+      "spread_adverse_selection": 0.009999999999990905,
+      "spread_inventory_cost": 0.0
+    },
+    {
+      "tick": 12,
+      "clearing_price": null,
+      "mid_price": 100.235,
+      "spread": 0.009999999999990905,
+      "volume": 0,
+      "num_trades": 0,
+      "kyles_lambda": 0.0,
+      "amihud_illiquidity": null,
+      "spread_adverse_selection": null,
+      "spread_inventory_cost": null
+    },
+    {
+      "tick": 13,
+      "clearing_price": 100.24,
+      "mid_price": 100.26,
+      "spread": 0.060000000000002274,
+      "volume": 50.0,
+      "num_trades": 1,
+      "kyles_lambda": 0.0007142857142858767,
+      "amihud_illiquidity": 4.9763343453350874e-08,
+      "spread_adverse_selection": 0.060000000000002274,
+      "spread_inventory_cost": 0.0
+    },
+    {
+      "tick": 14,
+      "clearing_price": null,
+      "mid_price": 100.275,
+      "spread": 0.030000000000001137,
+      "volume": 0,
+      "num_trades": 0,
+      "kyles_lambda": 0.00041666666666668247,
+      "amihud_illiquidity": null,
+      "spread_adverse_selection": null,
+      "spread_inventory_cost": null
+    },
+    {
+      "tick": 15,
+      "clearing_price": 100.29,
+      "mid_price": 100.295,
+      "spread": 0.030000000000001137,
+      "volume": 50.0,
+      "num_trades": 1,
+      "kyles_lambda": 0.0007999999999998409,
+      "amihud_illiquidity": 3.9774954302919975e-08,
+      "spread_adverse_selection": 0.030000000000001137,
+      "spread_inventory_cost": 0.0
+    },
+    {
+      "tick": 16,
+      "clearing_price": 100.31,
+      "mid_price": 100.315,
+      "spread": 0.030000000000001137,
+      "volume": 50.0,
+      "num_trades": 1,
+      "kyles_lambda": 0.0005555555555554451,
+      "amihud_illiquidity": 3.975909388507377e-08,
+      "spread_adverse_selection": 0.030000000000001137,
+      "spread_inventory_cost": 0.0
+    },
+    {
+      "tick": 17,
+      "clearing_price": 100.33,
+      "mid_price": 100.37,
+      "spread": 0.12000000000000455,
+      "volume": 50.0,
+      "num_trades": 1,
+      "kyles_lambda": 0.0015714285714287662,
+      "amihud_illiquidity": 1.0929391811787451e-07,
+      "spread_adverse_selection": 0.12000000000000455,
+      "spread_inventory_cost": 0.0
+    },
+    {
+      "tick": 18,
+      "clearing_price": 100.43,
+      "mid_price": 100.42500000000001,
+      "spread": 0.10999999999999943,
+      "volume": 50.0,
+      "num_trades": 1,
+      "kyles_lambda": 0.002750000000000341,
+      "amihud_illiquidity": 1.0912526172331312e-07,
+      "spread_adverse_selection": 0.10999999999999943,
+      "spread_inventory_cost": 0.0
+    },
+    {
+      "tick": 19,
+      "clearing_price": 100.48,
+      "mid_price": 100.465,
+      "spread": 0.06999999999999318,
+      "volume": 50.0,
+      "num_trades": 1,
+      "kyles_lambda": 0.0024999999999995026,
+      "amihud_illiquidity": 7.928089060979697e-08,
+      "spread_adverse_selection": 0.06999999999999318,
+      "spread_inventory_cost": 0.0
+    },
+    {
+      "tick": 20,
+      "clearing_price": 100.58,
+      "mid_price": 100.525,
+      "spread": 0.10999999999999943,
+      "volume": 50.0,
+      "num_trades": 5,
+      "kyles_lambda": 0.0013043478260870058,
+      "amihud_illiquidity": 1.1875579905596912e-07,
+      "spread_adverse_selection": 0.026086956521740118,
+      "spread_inventory_cost": 0.08391304347825931
+    },
+    {
+      "tick": 21,
+      "clearing_price": 100.62,
+      "mid_price": 100.575,
+      "spread": 0.09000000000000341,
+      "volume": 50.0,
+      "num_trades": 2,
+      "kyles_lambda": 0.004545454545454287,
+      "amihud_illiquidity": 9.886478021790324e-08,
+      "spread_adverse_selection": 0.09000000000000341,
+      "spread_inventory_cost": 0.0
+    },
+    {
+      "tick": 22,
+      "clearing_price": 100.76,
+      "mid_price": 100.67,
+      "spread": 0.18000000000000682,
+      "volume": 50.0,
+      "num_trades": 2,
+      "kyles_lambda": 0.008636363636363532,
+      "amihud_illiquidity": 1.8748883084629175e-07,
+      "spread_adverse_selection": 0.18000000000000682,
+      "spread_inventory_cost": 0.0
+    },
+    {
+      "tick": 23,
+      "clearing_price": null,
+      "mid_price": 100.715,
+      "spread": 0.09000000000000341,
+      "volume": 0,
+      "num_trades": 0,
+      "kyles_lambda": 0.003750000000000142,
+      "amihud_illiquidity": null,
+      "spread_adverse_selection": null,
+      "spread_inventory_cost": null
+    },
+    {
+      "tick": 24,
+      "clearing_price": null,
+      "mid_price": 100.745,
+      "spread": 0.030000000000001137,
+      "volume": 0,
+      "num_trades": 0,
+      "kyles_lambda": 0.0006000000000000227,
+      "amihud_illiquidity": null,
+      "spread_adverse_selection": null,
+      "spread_inventory_cost": null
+    },
+    {
+      "tick": 25,
+      "clearing_price": 100.73,
+      "mid_price": 100.745,
+      "spread": 0.030000000000001137,
+      "volume": 50.0,
+      "num_trades": 2,
+      "kyles_lambda": 0.0,
+      "amihud_illiquidity": 0.0,
+      "spread_adverse_selection": 0.0,
+      "spread_inventory_cost": 0.030000000000001137
+    },
+    {
+      "tick": 26,
+      "clearing_price": 100.66,
+      "mid_price": 100.71000000000001,
+      "spread": 0.10000000000000853,
+      "volume": 50.0,
+      "num_trades": 7,
+      "kyles_lambda": -0.0034999999999996588,
+      "amihud_illiquidity": 6.902677969847187e-08,
+      "spread_adverse_selection": 0.049999999999995125,
+      "spread_inventory_cost": 0.0500000000000134
+    },
+    {
+      "tick": 27,
+      "clearing_price": 100.71,
+      "mid_price": 100.735,
+      "spread": 0.05000000000001137,
+      "volume": 1.0,
+      "num_trades": 1,
+      "kyles_lambda": 0.0035714285714273535,
+      "amihud_illiquidity": 2.4648745273853495e-06,
+      "spread_adverse_selection": 0.007142857142854707,
+      "spread_inventory_cost": 0.04285714285715666
+    }
+  ],
+  "decisions": [
+    [
+      {
+        "agent": "Retail",
+        "archetype": "retail",
+        "reasoning": "Default instinct: buy dip",
+        "orders": [
+          {
+            "side": "BUY",
+            "qty": 1.0,
+            "price": 100.0
+          }
+        ],
+        "held": false,
+        "forced_random": false,
+        "api_failed": false
+      },
+      {
+        "agent": "Inst",
+        "archetype": "institutional",
+        "reasoning": "Current price below recent volume-weighted average",
+        "orders": [
+          {
+            "side": "BUY",
+            "qty": 30.0,
+            "price": 100.0
+          }
+        ],
+        "held": false,
+        "forced_random": false,
+        "api_failed": false
+      },
+      {
+        "agent": "Quant",
+        "archetype": "quant",
+        "reasoning": "Upward price movement",
+        "orders": [
+          {
+            "side": "BUY",
+            "qty": 10.0,
+            "price": 100.0
+          }
+        ],
+        "held": false,
+        "forced_random": false,
+        "api_failed": false
+      },
+      {
+        "agent": "MM",
+        "archetype": "market_maker",
+        "reasoning": "MM: quoting 99.89 / 99.99 (qty 50 each)",
+        "orders": [
+          {
+            "side": "BUY",
+            "qty": 50.0,
+            "price": 99.89
+          },
+          {
+            "side": "SELL",
+            "qty": 50.0,
+            "price": 99.99
+          }
+        ],
+        "held": false,
+        "forced_random": false,
+        "api_failed": false
+      }
+    ],
+    [
+      {
+        "agent": "Retail",
+        "archetype": "retail",
+        "reasoning": "Normal baseline conditions with no significant stress",
+        "orders": [],
+        "held": true,
+        "forced_random": false,
+        "api_failed": false
+      },
+      {
+        "agent": "Inst",
+        "archetype": "institutional",
+        "reasoning": "Price is below recent average VWAP",
+        "orders": [
+          {
+            "side": "BUY",
+            "qty": 30.0,
+            "price": 99.94
+          }
+        ],
+        "held": false,
+        "forced_random": false,
+        "api_failed": false
+      },
+      {
+        "agent": "Quant",
+        "archetype": "quant",
+        "reasoning": "Upward momentum on the tape",
+        "orders": [
+          {
+            "side": "BUY",
+            "qty": 5.0,
+            "price": 99.94
+          }
+        ],
+        "held": false,
+        "forced_random": false,
+        "api_failed": false
+      },
+      {
+        "agent": "MM",
+        "archetype": "market_maker",
+        "reasoning": "MM: quoting 99.98 / 100.08 (qty 50 each)",
+        "orders": [
+          {
+            "side": "BUY",
+            "qty": 50.0,
+            "price": 99.98
+          },
+          {
+            "side": "SELL",
+            "qty": 50.0,
+            "price": 100.08
+          }
+        ],
+        "held": false,
+        "forced_random": false,
+        "api_failed": false
+      }
+    ],
+    [
+      {
+        "agent": "Retail",
+        "archetype": "retail",
+        "reasoning": "Markets operating under normal conditions with no significant stress, and current position has been held for only one tick. Recent clearing prices show a slight downtrend but within acceptable limits.",
+        "orders": [],
+        "held": true,
+        "forced_random": false,
+        "api_failed": false
+      },
+      {
+        "agent": "Inst",
+        "archetype": "institutional",
+        "reasoning": "Current price below recent average of clearing prices",
+        "orders": [
+          {
+            "side": "BUY",
+            "qty": 30.0,
+            "price": 99.98
+          }
+        ],
+        "held": false,
+        "forced_random": false,
+        "api_failed": false
+      },
+      {
+        "agent": "Quant",
+        "archetype": "quant",
+        "reasoning": "Uptrend in recent clearing prices",
+        "orders": [
+          {
+            "side": "BUY",
+            "qty": 5.0,
+            "price": 99.98
+          }
+        ],
+        "held": false,
+        "forced_random": false,
+        "api_failed": false
+      },
+      {
+        "agent": "MM",
+        "archetype": "market_maker",
+        "reasoning": "MM: quoting 100.14 / 100.24 (qty 50 each)",
+        "orders": [
+          {
+            "side": "BUY",
+            "qty": 50.0,
+            "price": 100.14
+          },
+          {
+            "side": "SELL",
+            "qty": 50.0,
+            "price": 100.24
+          }
+        ],
+        "held": false,
+        "forced_random": false,
+        "api_failed": false
+      }
+    ],
+    [
+      {
+        "agent": "Retail",
+        "archetype": "retail",
+        "reasoning": "Retail: 3 consecutive HOLDs \u2014 fallback SELL 1 @ 100.03",
+        "orders": [
+          {
+            "side": "SELL",
+            "qty": 1.0,
+            "price": 100.03
+          }
+        ],
+        "held": false,
+        "forced_random": true,
+        "api_failed": false
+      },
+      {
+        "agent": "Inst",
+        "archetype": "institutional",
+        "reasoning": "Current price is below the average of recent clearing prices",
+        "orders": [
+          {
+            "side": "BUY",
+            "qty": 30.0,
+            "price": 100.03
+          }
+        ],
+        "held": false,
+        "forced_random": false,
+        "api_failed": false
+      },
+      {
+        "agent": "Quant",
+        "archetype": "quant",
+        "reasoning": "Upward price movement",
+        "orders": [
+          {
+            "side": "BUY",
+            "qty": 5.0,
+            "price": 100.03
+          }
+        ],
+        "held": false,
+        "forced_random": false,
+        "api_failed": false
+      },
+      {
+        "agent": "MM",
+        "archetype": "market_maker",
+        "reasoning": "MM: quoting 100.23 / 100.33 (qty 50 each)",
+        "orders": [
+          {
+            "side": "BUY",
+            "qty": 50.0,
+            "price": 100.23
+          },
+          {
+            "side": "SELL",
+            "qty": 50.0,
+            "price": 100.33
+          }
+        ],
+        "held": false,
+        "forced_random": false,
+        "api_failed": false
+      }
+    ],
+    [
+      {
+        "agent": "Retail",
+        "archetype": "retail",
+        "reasoning": "Default behaviour with normal baseline conditions",
+        "orders": [
+          {
+            "side": "BUY",
+            "qty": 1.0,
+            "price": 100.23
+          }
+        ],
+        "held": false,
+        "forced_random": false,
+        "api_failed": false
+      },
+      {
+        "agent": "Inst",
+        "archetype": "institutional",
+        "reasoning": "Current price is below recent clearing prices",
+        "orders": [
+          {
+            "side": "BUY",
+            "qty": 29.0,
+            "price": 100.23
+          }
+        ],
+        "held": false,
+        "forced_random": false,
+        "api_failed": false
+      },
+      {
+        "agent": "Quant",
+        "archetype": "quant",
+        "reasoning": "No meaningful context change, following default momentum strategy: flat price",
+        "orders": [],
+        "held": true,
+        "forced_random": false,
+        "api_failed": false
+      },
+      {
+        "agent": "MM",
+        "archetype": "market_maker",
+        "reasoning": "MM: quoting 100.19 / 100.29 (qty 50 each)",
+        "orders": [
+          {
+            "side": "BUY",
+            "qty": 50.0,
+            "price": 100.19
+          },
+          {
+            "side": "SELL",
+            "qty": 50.0,
+            "price": 100.29
+          }
+        ],
+        "held": false,
+        "forced_random": false,
+        "api_failed": false
+      }
+    ],
+    [
+      {
+        "agent": "Retail",
+        "archetype": "retail",
+        "reasoning": "Markets are under normal conditions, no significant stress, and recent price memory shows stability. Default instinct suggests buying dip, but given the routine macro environment, holding is justified.",
+        "orders": [],
+        "held": true,
+        "forced_random": false,
+        "api_failed": false
+      },
+      {
+        "agent": "Inst",
+        "archetype": "institutional",
+        "reasoning": "Current price below recent average",
+        "orders": [
+          {
+            "side": "BUY",
+            "qty": 30.0,
+            "price": 100.23
+          }
+        ],
+        "held": false,
+        "forced_random": false,
+        "api_failed": false
+      },
+      {
+        "agent": "Quant",
+        "archetype": "quant",
+        "reasoning": "Default signal: flat price",
+        "orders": [
+          {
+            "side": "BUY",
+            "qty": 5.0,
+            "price": 100.23
+          }
+        ],
+        "held": false,
+        "forced_random": false,
+        "api_failed": false
+      },
+      {
+        "agent": "MM",
+        "archetype": "market_maker",
+        "reasoning": "MM: quoting 100.38 / 100.48 (qty 50 each)",
+        "orders": [
+          {
+            "side": "BUY",
+            "qty": 50.0,
+            "price": 100.38
+          },
+          {
+            "side": "SELL",
+            "qty": 50.0,
+            "price": 100.48
+          }
+        ],
+        "held": false,
+        "forced_random": false,
+        "api_failed": false
+      }
+    ],
+    [
+      {
+        "agent": "Retail",
+        "archetype": "retail",
+        "reasoning": "Default instinct to buy dip in stable market conditions",
+        "orders": [
+          {
+            "side": "BUY",
+            "qty": 1.0,
+            "price": 100.26
+          }
+        ],
+        "held": false,
+        "forced_random": false,
+        "api_failed": false
+      },
+      {
+        "agent": "Inst",
+        "archetype": "institutional",
+        "reasoning": "Current price is below the average of the last 3 clearing prices",
+        "orders": [
+          {
+            "side": "BUY",
+            "qty": 20.0,
+            "price": 100.26
+          }
+        ],
+        "held": false,
+        "forced_random": false,
+        "api_failed": false
+      },
+      {
+        "agent": "Quant",
+        "archetype": "quant",
+        "reasoning": "Price moving upward",
+        "orders": [
+          {
+            "side": "BUY",
+            "qty": 15.0,
+            "price": 100.26
+          }
+        ],
+        "held": false,
+        "forced_random": false,
+        "api_failed": false
+      },
+      {
+        "agent": "MM",
+        "archetype": "market_maker",
+        "reasoning": "MM: quoting 100.21 / 100.31 (qty 50 each)",
+        "orders": [
+          {
+            "side": "BUY",
+            "qty": 50.0,
+            "price": 100.21
+          },
+          {
+            "side": "SELL",
+            "qty": 50.0,
+            "price": 100.31
+          }
+        ],
+        "held": false,
+        "forced_random": false,
+        "api_failed": false
+      }
+    ],
+    [
+      {
+        "agent": "Retail",
+        "archetype": "retail",
+        "reasoning": "Normal baseline conditions with no significant stress",
+        "orders": [],
+        "held": true,
+        "forced_random": false,
+        "api_failed": false
+      },
+      {
+        "agent": "Inst",
+        "archetype": "institutional",
+        "reasoning": "Current price below average of recent clearing prices",
+        "orders": [
+          {
+            "side": "BUY",
+            "qty": 20.0,
+            "price": 100.28
+          }
+        ],
+        "held": false,
+        "forced_random": false,
+        "api_failed": false
+      },
+      {
+        "agent": "Quant",
+        "archetype": "quant",
+        "reasoning": "Upward price momentum",
+        "orders": [
+          {
+            "side": "BUY",
+            "qty": 5.0,
+            "price": 100.28
+          }
+        ],
+        "held": false,
+        "forced_random": false,
+        "api_failed": false
+      },
+      {
+        "agent": "MM",
+        "archetype": "market_maker",
+        "reasoning": "MM: quoting 100.33 / 100.43 (qty 50 each)",
+        "orders": [
+          {
+            "side": "BUY",
+            "qty": 50.0,
+            "price": 100.33
+          },
+          {
+            "side": "SELL",
+            "qty": 50.0,
+            "price": 100.43
+          }
+        ],
+        "held": false,
+        "forced_random": false,
+        "api_failed": false
+      }
+    ],
+    [
+      {
+        "agent": "Retail",
+        "archetype": "retail",
+        "reasoning": "Recent price dip and normal market conditions",
+        "orders": [
+          {
+            "side": "BUY",
+            "qty": 1.0,
+            "price": 100.3
+          }
+        ],
+        "held": false,
+        "forced_random": false,
+        "api_failed": false
+      },
+      {
+        "agent": "Inst",
+        "archetype": "institutional",
+        "reasoning": "Current price below VWAP",
+        "orders": [
+          {
+            "side": "BUY",
+            "qty": 20.0,
+            "price": 100.3
+          }
+        ],
+        "held": false,
+        "forced_random": false,
+        "api_failed": false
+      },
+      {
+        "agent": "Quant",
+        "archetype": "quant",
+        "reasoning": "Upward momentum on the tape",
+        "orders": [
+          {
+            "side": "BUY",
+            "qty": 15.0,
+            "price": 100.3
+          }
+        ],
+        "held": false,
+        "forced_random": false,
+        "api_failed": false
+      },
+      {
+        "agent": "MM",
+        "archetype": "market_maker",
+        "reasoning": "MM: quoting 100.48 / 100.58 (qty 50 each)",
+        "orders": [
+          {
+            "side": "BUY",
+            "qty": 50.0,
+            "price": 100.48
+          },
+          {
+            "side": "SELL",
+            "qty": 50.0,
+            "price": 100.58
+          }
+        ],
+        "held": false,
+        "forced_random": false,
+        "api_failed": false
+      }
+    ],
+    [
+      {
+        "agent": "Retail",
+        "archetype": "retail",
+        "reasoning": "Markets are normal, no significant change from recent memory, and the risk feels acceptable",
+        "orders": [],
+        "held": true,
+        "forced_random": false,
+        "api_failed": false
+      },
+      {
+        "agent": "Inst",
+        "archetype": "institutional",
+        "reasoning": "Current price below recent clearing average",
+        "orders": [
+          {
+            "side": "BUY",
+            "qty": 20.0,
+            "price": 100.31
+          }
+        ],
+        "held": false,
+        "forced_random": false,
+        "api_failed": false
+      },
+      {
+        "agent": "Quant",
+        "archetype": "quant",
+        "reasoning": "Upward price momentum",
+        "orders": [
+          {
+            "side": "BUY",
+            "qty": 15.0,
+            "price": 100.31
+          }
+        ],
+        "held": false,
+        "forced_random": false,
+        "api_failed": false
+      },
+      {
+        "agent": "MM",
+        "archetype": "market_maker",
+        "reasoning": "MM: quoting 100.52 / 100.62 (qty 50 each)",
+        "orders": [
+          {
+            "side": "BUY",
+            "qty": 50.0,
+            "price": 100.52
+          },
+          {
+            "side": "SELL",
+            "qty": 50.0,
+            "price": 100.62
+          }
+        ],
+        "held": false,
+        "forced_random": false,
+        "api_failed": false
+      }
+    ],
+    [
+      {
+        "agent": "Retail",
+        "archetype": "retail",
+        "reasoning": "Labor dispute affecting grain shippers and fertilizer producers, reducing carload capacity. Potential for price increase due to supply disruption.",
+        "orders": [
+          {
+            "side": "BUY",
+            "qty": 5.0,
+            "price": 100.37
+          }
+        ],
+        "held": false,
+        "forced_random": false,
+        "api_failed": false
+      },
+      {
+        "agent": "Inst",
+        "archetype": "institutional",
+        "reasoning": "Labor dispute disrupts supply chain, altering fair value estimate",
+        "orders": [],
+        "held": true,
+        "forced_random": false,
+        "api_failed": false
+      },
+      {
+        "agent": "Quant",
+        "archetype": "quant",
+        "reasoning": "Macro environment suggests potential supply disruptions, price momentum is upward",
+        "orders": [
+          {
+            "side": "BUY",
+            "qty": 15.0,
+            "price": 100.37
+          }
+        ],
+        "held": false,
+        "forced_random": false,
+        "api_failed": false
+      },
+      {
+        "agent": "MM",
+        "archetype": "market_maker",
+        "reasoning": "MM: quoting 100.70 / 100.80 (qty 50 each)",
+        "orders": [
+          {
+            "side": "BUY",
+            "qty": 50.0,
+            "price": 100.7
+          },
+          {
+            "side": "SELL",
+            "qty": 50.0,
+            "price": 100.8
+          }
+        ],
+        "held": false,
+        "forced_random": false,
+        "api_failed": false
+      }
+    ],
+    [
+      {
+        "agent": "Retail",
+        "archetype": "retail",
+        "reasoning": "Labor dispute affecting rail transportation creates potential for increased demand for trucking services, which could impact this stock positively",
+        "orders": [
+          {
+            "side": "BUY",
+            "qty": 1.0,
+            "price": 100.43
+          }
+        ],
+        "held": false,
+        "forced_random": false,
+        "api_failed": false
+      },
+      {
+        "agent": "Inst",
+        "archetype": "institutional",
+        "reasoning": "Labor dispute disrupts rail transport, affecting grain shippers and fertilizer producers. Current price might not represent fair value due to supply shock.",
+        "orders": [],
+        "held": true,
+        "forced_random": false,
+        "api_failed": false
+      },
+      {
+        "agent": "Quant",
+        "archetype": "quant",
+        "reasoning": "Macro environment suggests potential supply disruptions affecting grain shippers and fertilizer producers, which may lead to price increases. Momentum is upward.",
+        "orders": [
+          {
+            "side": "BUY",
+            "qty": 15.0,
+            "price": 100.43
+          }
+        ],
+        "held": false,
+        "forced_random": false,
+        "api_failed": false
+      },
+      {
+        "agent": "MM",
+        "archetype": "market_maker",
+        "reasoning": "MM: quoting 100.66 / 100.76 (qty 50 each)",
+        "orders": [
+          {
+            "side": "BUY",
+            "qty": 50.0,
+            "price": 100.66
+          },
+          {
+            "side": "SELL",
+            "qty": 50.0,
+            "price": 100.76
+          }
+        ],
+        "held": false,
+        "forced_random": false,
+        "api_failed": false
+      }
+    ],
+    [
+      {
+        "agent": "Retail",
+        "archetype": "retail",
+        "reasoning": "Labor dispute disrupts rail transportation, potentially affecting multiple industries. Buying shares at current price to capture potential recovery.",
+        "orders": [
+          {
+            "side": "BUY",
+            "qty": 1.0,
+            "price": 100.47
+          }
+        ],
+        "held": false,
+        "forced_random": false,
+        "api_failed": false
+      },
+      {
+        "agent": "Inst",
+        "archetype": "institutional",
+        "reasoning": "Labor dispute reduces carload volume by 15%, stranding harvest volumes for grain shippers and interrupting just-in-time deliveries, implying potential price increase",
+        "orders": [
+          {
+            "side": "BUY",
+            "qty": 30.0,
+            "price": 100.47
+          }
+        ],
+        "held": false,
+        "forced_random": false,
+        "api_failed": false
+      },
+      {
+        "agent": "Quant",
+        "archetype": "quant",
+        "reasoning": "Macro environment negatively impacts grain shippers and fertilizer producers, potentially increasing stock price",
+        "orders": [
+          {
+            "side": "BUY",
+            "qty": 15.0,
+            "price": 100.47
+          }
+        ],
+        "held": false,
+        "forced_random": false,
+        "api_failed": false
+      },
+      {
+        "agent": "MM",
+        "archetype": "market_maker",
+        "reasoning": "MM: quoting 100.73 / 100.83 (qty 50 each)",
+        "orders": [
+          {
+            "side": "BUY",
+            "qty": 50.0,
+            "price": 100.73
+          },
+          {
+            "side": "SELL",
+            "qty": 50.0,
+            "price": 100.83
+          }
+        ],
+        "held": false,
+        "forced_random": false,
+        "api_failed": false
+      }
+    ],
+    [
+      {
+        "agent": "Retail",
+        "archetype": "retail",
+        "reasoning": "Labor dispute may impact grain shippers and fertilizer producers, increasing risk of price rise",
+        "orders": [
+          {
+            "side": "BUY",
+            "qty": 1.0,
+            "price": 100.53
+          }
+        ],
+        "held": false,
+        "forced_random": false,
+        "api_failed": false
+      },
+      {
+        "agent": "Inst",
+        "archetype": "institutional",
+        "reasoning": "Labor dispute causing supply disruption, affecting grain shippers, fertilizer producers, auto parts suppliers. Price may continue to rise until situation stabilizes.",
+        "orders": [],
+        "held": true,
+        "forced_random": false,
+        "api_failed": false
+      },
+      {
+        "agent": "Quant",
+        "archetype": "quant",
+        "reasoning": "Macro environment negatively impacts grain shippers, fertilizer producers, and auto parts suppliers. Momentum suggests upward movement despite the negative context, trade with conviction.",
+        "orders": [
+          {
+            "side": "BUY",
+            "qty": 10.0,
+            "price": 100.53
+          }
+        ],
+        "held": false,
+        "forced_random": false,
+        "api_failed": false
+      },
+      {
+        "agent": "MM",
+        "archetype": "market_maker",
+        "reasoning": "MM: quoting 100.73 / 100.83 (qty 50 each)",
+        "orders": [
+          {
+            "side": "BUY",
+            "qty": 50.0,
+            "price": 100.73
+          },
+          {
+            "side": "SELL",
+            "qty": 50.0,
+            "price": 100.83
+          }
+        ],
+        "held": false,
+        "forced_random": false,
+        "api_failed": false
+      }
+    ],
+    [
+      {
+        "agent": "Retail",
+        "archetype": "retail",
+        "reasoning": "Labor dispute reducing carload capacity, potentially impacting grain shippers and auto parts suppliers. Buying dip to hedge against potential price increase.",
+        "orders": [
+          {
+            "side": "BUY",
+            "qty": 1.0,
+            "price": 100.58
+          }
+        ],
+        "held": false,
+        "forced_random": false,
+        "api_failed": false
+      },
+      {
+        "agent": "Inst",
+        "archetype": "institutional",
+        "reasoning": "Labor dispute causing supply shock in US Class I freight railroads affecting grain shippers, fertilizer producers, and auto parts suppliers. Current situation materially changes fair value estimate, requiring a deviation from mean-reversion strategy.",
+        "orders": [],
+        "held": true,
+        "forced_random": false,
+        "api_failed": false
+      },
+      {
+        "agent": "Quant",
+        "archetype": "quant",
+        "reasoning": "Price movement and macro environment suggest buying opportunities",
+        "orders": [
+          {
+            "side": "BUY",
+            "qty": 10.0,
+            "price": 100.58
+          }
+        ],
+        "held": false,
+        "forced_random": false,
+        "api_failed": false
+      },
+      {
+        "agent": "MM",
+        "archetype": "market_maker",
+        "reasoning": "MM: quoting 100.81 / 100.91 (qty 50 each)",
+        "orders": [
+          {
+            "side": "BUY",
+            "qty": 50.0,
+            "price": 100.81
+          },
+          {
+            "side": "SELL",
+            "qty": 50.0,
+            "price": 100.91
+          }
+        ],
+        "held": false,
+        "forced_random": false,
+        "api_failed": false
+      }
+    ],
+    [
+      {
+        "agent": "Retail",
+        "archetype": "retail",
+        "reasoning": "High volatility and reduced capacity in rail transportation may lead to price increases, buying at current price could potentially secure a profit",
+        "orders": [
+          {
+            "side": "BUY",
+            "qty": 1.0,
+            "price": 100.67
+          }
+        ],
+        "held": false,
+        "forced_random": false,
+        "api_failed": false
+      },
+      {
+        "agent": "Inst",
+        "archetype": "institutional",
+        "reasoning": "Inst: 3 consecutive HOLDs \u2014 fallback BUY 1 @ 100.67",
+        "orders": [
+          {
+            "side": "BUY",
+            "qty": 1.0,
+            "price": 100.67
+          }
+        ],
+        "held": false,
+        "forced_random": true,
+        "api_failed": false
+      },
+      {
+        "agent": "Quant",
+        "archetype": "quant",
+        "reasoning": "Price momentum upwards with bearish macro environment",
+        "orders": [
+          {
+            "side": "BUY",
+            "qty": 10.0,
+            "price": 100.67
+          }
+        ],
+        "held": false,
+        "forced_random": false,
+        "api_failed": false
+      },
+      {
+        "agent": "MM",
+        "archetype": "market_maker",
+        "reasoning": "MM: quoting 100.66 / 100.76 (qty 50 each)",
+        "orders": [
+          {
+            "side": "BUY",
+            "qty": 50.0,
+            "price": 100.66
+          },
+          {
+            "side": "SELL",
+            "qty": 50.0,
+            "price": 100.76
+          }
+        ],
+        "held": false,
+        "forced_random": false,
+        "api_failed": false
+      }
+    ],
+    [
+      {
+        "agent": "Retail",
+        "archetype": "retail",
+        "reasoning": "High volatility due to labor dispute impacting freight railroads, may cause price fluctuations but potentially presents an opportunity for short-term gain",
+        "orders": [
+          {
+            "side": "BUY",
+            "qty": 5.0,
+            "price": 100.72
+          }
+        ],
+        "held": false,
+        "forced_random": false,
+        "api_failed": false
+      },
+      {
+        "agent": "Inst",
+        "archetype": "institutional",
+        "reasoning": "Labor dispute reducing carload capacity, causing grain shipment issues and potential supply disruptions",
+        "orders": [
+          {
+            "side": "BUY",
+            "qty": 30.0,
+            "price": 100.72
+          }
+        ],
+        "held": false,
+        "forced_random": false,
+        "api_failed": false
+      },
+      {
+        "agent": "Quant",
+        "archetype": "quant",
+        "reasoning": "Labor dispute disrupts rail transport, causing grain shipment delays and potential supply shortages. Stock price drifting up despite negative news.",
+        "orders": [
+          {
+            "side": "BUY",
+            "qty": 15.0,
+            "price": 100.72
+          }
+        ],
+        "held": false,
+        "forced_random": false,
+        "api_failed": false
+      },
+      {
+        "agent": "MM",
+        "archetype": "market_maker",
+        "reasoning": "MM: quoting 100.73 / 100.83 (qty 50 each)",
+        "orders": [
+          {
+            "side": "BUY",
+            "qty": 50.0,
+            "price": 100.73
+          },
+          {
+            "side": "SELL",
+            "qty": 50.0,
+            "price": 100.83
+          }
+        ],
+        "held": false,
+        "forced_random": false,
+        "api_failed": false
+      }
+    ],
+    [
+      {
+        "agent": "Retail",
+        "archetype": "retail",
+        "reasoning": "Labor dispute disrupts rail transportation, potentially impacting grain shippers, fertilizer producers, and auto parts suppliers. Buying at current price to hedge against potential price increase.",
+        "orders": [
+          {
+            "side": "BUY",
+            "qty": 1.0,
+            "price": 100.75
+          }
+        ],
+        "held": false,
+        "forced_random": false,
+        "api_failed": false
+      },
+      {
+        "agent": "Inst",
+        "archetype": "institutional",
+        "reasoning": "Labor dispute disrupts supply chain, affecting grain shippers, fertilizer producers, and auto parts suppliers. Current price above recent average but market disruption suggests fair value has changed.",
+        "orders": [],
+        "held": true,
+        "forced_random": false,
+        "api_failed": false
+      },
+      {
+        "agent": "Quant",
+        "archetype": "quant",
+        "reasoning": "Price movement upwards in context of labor dispute causing reduced capacity for grain shippers",
+        "orders": [
+          {
+            "side": "BUY",
+            "qty": 5.0,
+            "price": 100.75
+          }
+        ],
+        "held": false,
+        "forced_random": false,
+        "api_failed": false
+      },
+      {
+        "agent": "MM",
+        "archetype": "market_maker",
+        "reasoning": "MM: quoting 100.61 / 100.71 (qty 50 each)",
+        "orders": [
+          {
+            "side": "BUY",
+            "qty": 50.0,
+            "price": 100.61
+          },
+          {
+            "side": "SELL",
+            "qty": 50.0,
+            "price": 100.71
+          }
+        ],
+        "held": false,
+        "forced_random": false,
+        "api_failed": false
+      }
+    ],
+    [
+      {
+        "agent": "Retail",
+        "archetype": "retail",
+        "reasoning": "Labor dispute disrupts rail transport, increasing risk for grain shippers and auto parts suppliers. Buying shares at current price to potentially benefit from potential price increase due to supply disruption.",
+        "orders": [
+          {
+            "side": "BUY",
+            "qty": 5.0,
+            "price": 100.75
+          }
+        ],
+        "held": false,
+        "forced_random": false,
+        "api_failed": false
+      },
+      {
+        "agent": "Inst",
+        "archetype": "institutional",
+        "reasoning": "Labor dispute disrupts rail transportation, affecting grain shippers, fertilizer producers, and auto parts suppliers. This macro event changes the estimate of fair value, necessitating a hold position.",
+        "orders": [],
+        "held": true,
+        "forced_random": false,
+        "api_failed": false
+      },
+      {
+        "agent": "Quant",
+        "archetype": "quant",
+        "reasoning": "Market disruption due to freight rail embargo suggests potential for price increase. Momentum remains bullish.",
+        "orders": [
+          {
+            "side": "BUY",
+            "qty": 5.0,
+            "price": 100.75
+          }
+        ],
+        "held": false,
+        "forced_random": false,
+        "api_failed": false
+      },
+      {
+        "agent": "MM",
+        "archetype": "market_maker",
+        "reasoning": "MM: quoting 100.52 / 100.62 (qty 50 each)",
+        "orders": [
+          {
+            "side": "BUY",
+            "qty": 50.0,
+            "price": 100.52
+          },
+          {
+            "side": "SELL",
+            "qty": 50.0,
+            "price": 100.62
+          }
+        ],
+        "held": false,
+        "forced_random": false,
+        "api_failed": false
+      }
+    ],
+    [
+      {
+        "agent": "Retail",
+        "archetype": "retail",
+        "reasoning": "Railroad embargo disrupts supply chain, increasing risk for grain shippers and auto parts suppliers. Buy before prices rise further.",
+        "orders": [
+          {
+            "side": "BUY",
+            "qty": 3.0,
+            "price": 100.71
+          }
+        ],
+        "held": false,
+        "forced_random": false,
+        "api_failed": false
+      },
+      {
+        "agent": "Inst",
+        "archetype": "institutional",
+        "reasoning": "Inst: 3 consecutive HOLDs \u2014 fallback SELL 1 @ 100.71",
+        "orders": [
+          {
+            "side": "SELL",
+            "qty": 1.0,
+            "price": 100.71
+          }
+        ],
+        "held": false,
+        "forced_random": true,
+        "api_failed": false
+      },
+      {
+        "agent": "Quant",
+        "archetype": "quant",
+        "reasoning": "Labor dispute in US Class I freight railroads disrupts supply chain, potentially affecting grain shippers, fertilizer producers, and auto parts suppliers. Momentum remains bullish despite recent price drop.",
+        "orders": [
+          {
+            "side": "BUY",
+            "qty": 5.0,
+            "price": 100.71
+          }
+        ],
+        "held": false,
+        "forced_random": false,
+        "api_failed": false
+      },
+      {
+        "agent": "MM",
+        "archetype": "market_maker",
+        "reasoning": "MM: quoting 100.71 / 100.81 (qty 50 each)",
+        "orders": [
+          {
+            "side": "BUY",
+            "qty": 50.0,
+            "price": 100.71
+          },
+          {
+            "side": "SELL",
+            "qty": 50.0,
+            "price": 100.81
+          }
+        ],
+        "held": false,
+        "forced_random": false,
+        "api_failed": false
+      }
+    ]
+  ],
+  "wealth_log": [
+    [
+      10000.0,
+      100000.0,
+      50000.0,
+      1100000.0
+    ],
+    [
+      10000.0,
+      100000.0,
+      50000.0,
+      1100000.0
+    ],
+    [
+      10000.08,
+      100000.0,
+      50000.8,
+      1100079.12
+    ],
+    [
+      10000.08,
+      100000.0,
+      50000.8,
+      1100079.12
+    ],
+    [
+      10000.08,
+      100000.0,
+      50000.8,
+      1100079.12
+    ],
+    [
+      10000.08,
+      100000.16,
+      50002.4,
+      1100251.6
+    ],
+    [
+      10000.08,
+      100000.16,
+      50002.4,
+      1100251.6
+    ],
+    [
+      10000.08,
+      100000.20999999999,
+      50002.9,
+      1100308.0
+    ],
+    [
+      10000.08,
+      100000.23,
+      50003.1,
+      1100331.56
+    ],
+    [
+      10000.08,
+      100000.25,
+      50003.3,
+      1100356.12
+    ],
+    [
+      10000.08,
+      100000.34999999999,
+      50004.3,
+      1100483.92
+    ],
+    [
+      10000.08,
+      100000.4,
+      50004.8,
+      1100550.32
+    ],
+    [
+      10000.08,
+      100000.5,
+      50005.8,
+      1100688.12
+    ],
+    [
+      10000.08,
+      100000.54,
+      50006.2,
+      1100745.24
+    ],
+    [
+      10000.08,
+      100000.68,
+      50007.6,
+      1100952.16
+    ],
+    [
+      10000.08,
+      100000.68,
+      50007.6,
+      1100952.16
+    ],
+    [
+      10000.08,
+      100000.68,
+      50007.6,
+      1100952.16
+    ],
+    [
+      10000.08,
+      100000.65,
+      50007.3,
+      1100906.32
+    ],
+    [
+      10000.010000000002,
+      100000.58,
+      50006.6,
+      1100802.8599999999
+    ],
+    [
+      10000.310000000001,
+      100000.63,
+      50007.1,
+      1100874.26
+    ]
+  ],
+  "agent_names": [
+    "Retail",
+    "Inst",
+    "Quant",
+    "MM"
+  ],
+  "agent_archetypes": [
+    "retail",
+    "institutional",
+    "quant",
+    "market_maker"
+  ]
+}

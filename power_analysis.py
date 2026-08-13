@@ -122,6 +122,14 @@ def analyse(results_dir: str, iters: int) -> dict:
             }
             if Mmap:
                 recs = build_records(mruns, Mmap, metric)
+                # The mediator probe is a SEPARATE run from the 2x2 sweep, so it
+                # can cover fewer families than the sweep does — it currently
+                # covers only the original 4. mediation_bootstrap already
+                # resamples just the families it has records for, so the interval
+                # is right; what was wrong was reporting the NIE row under the
+                # sweep's family count and sizing 'n for MDE/2' off it. Both now
+                # use the mediator's own n.
+                nie_fams = [f for f in fams if any(r["fam"] == f for r in recs)]
                 nie_dist = mediation_bootstrap(recs, fams, iters, rng)["NIE"]
                 se_n = _se(nie_dist)
                 mde_n = _mde(se_n)
@@ -130,7 +138,8 @@ def analyse(results_dir: str, iters: int) -> dict:
                 nie_pt = mediation_point(recs)["NIE"]
                 entry["nie"] = {
                     "est": nie_pt, "se": se_n, "mde": mde_n,
-                    "n_half": _n_for_effect(len(fams), mde_n, mde_n / 2),
+                    "n_families": len(nie_fams),
+                    "n_half": _n_for_effect(len(nie_fams), mde_n, mde_n / 2),
                     "detectable": abs(nie_pt) >= mde_n,
                 }
             m_out["metrics"][metric] = entry
@@ -158,7 +167,9 @@ def render(res: dict) -> str:
               f"{i['n_half']:>13.0f}")
             if "nie" in e:
                 n = e["nie"]
-                P(f"    NIE (indirect)      {n['est']:>11.5f}{n['se']:>10.5f}"
+                tag = (f"NIE (n={n['n_families']})" if n.get("n_families") is not None
+                       and n["n_families"] != mo["n_families"] else "NIE (indirect)")
+                P(f"    {tag:<20}{n['est']:>11.5f}{n['se']:>10.5f}"
                   f"{n['mde']:>12.5f}{('yes' if n['detectable'] else 'NO'):>12}"
                   f"{n['n_half']:>13.0f}")
         # variance split (once per model, from first metric)
@@ -225,7 +236,9 @@ def render_markdown(res: dict) -> str:
               f"| {i['n_half']:.0f} |")
             if "nie" in e:
                 n = e["nie"]
-                P(f"| NIE · {metric} | {n['est']:.5f} | {n['se']:.5f} "
+                nf = n.get("n_families")
+                suffix = (f" *(n={nf})*" if nf is not None and nf != mo["n_families"] else "")
+                P(f"| NIE · {metric}{suffix} | {n['est']:.5f} | {n['se']:.5f} "
                   f"| {n['mde']:.5f} | {'yes' if n['detectable'] else '**no**'} "
                   f"| {n['n_half']:.0f} |")
         P("")
@@ -287,8 +300,9 @@ def main(argv: Optional[list] = None) -> int:
     res = analyse(args.results, args.iters)
     print(render(res))
     if args.append:
-        print(f"\n  RESULTS_2x2.md: {append_md(args.md, render_markdown(res))} "
-              f"({SECTION_HEADER!r}).")
+        n_fam = max((mo["n_families"] or 0) for mo in res.values()) if res else 0
+        action = append_md(args.md, render_markdown(res))
+        print(f"\n  RESULTS_2x2.md: {action} ({section_header(n_fam)!r}).")
     return 0
 
 

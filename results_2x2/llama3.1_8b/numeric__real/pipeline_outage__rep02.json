@@ -1,0 +1,1741 @@
+{
+  "model": "llama3.1:8b",
+  "backend": "ollama:llama3.1:8b",
+  "shock_id": "pipeline_outage__real__numeric",
+  "matched_pair_id": "pair__pipeline_outage",
+  "event_key": "pipeline_outage",
+  "realism": "real",
+  "framing": "numeric",
+  "rep": 2,
+  "seed": 1630221674,
+  "n_ticks": 20,
+  "shock_tick": 10,
+  "shock_text": "event_class: pipeline_outage | entity: colonial_refined_fuel | pipeline_flow_delta: -2.5_mbd | vix: 33.0 | sentiment: -0.58 | fed_rate: 5.25% | severity: 0.75",
+  "elapsed_s": 323.52,
+  "metrics": {
+    "spread_pre": 0.04499999999999886,
+    "spread_post": 0.05099999999999909,
+    "spread_widening": 0.006000000000000227,
+    "kyle_lambda_pre": 0.0008805913289608922,
+    "kyle_lambda_post": 0.0017135208592799788,
+    "kyle_lambda_delta": 0.0008329295303190867,
+    "amihud_post": 7.093799453896311e-08,
+    "spread_adverse_post": 0.04564880952380852,
+    "archetype_divergence": 0.00010384644112025974,
+    "archetype_returns": {
+      "retail": -2.000000000007276e-05,
+      "institutional": 1.8500000000058207e-05,
+      "quant": 0.00017600000000005822
+    },
+    "hold_rate": 0.03333333333333333,
+    "forced_random_rate": 0.0,
+    "api_failure_rate": 0.0,
+    "genuine_hold_rate": 0.03333333333333333
+  },
+  "trajectory": [
+    {
+      "tick": 8,
+      "clearing_price": 100.0,
+      "mid_price": 99.86,
+      "spread": 0.09999999999999432,
+      "volume": 12.0,
+      "num_trades": 2,
+      "kyles_lambda": -0.004375000000000018,
+      "amihud_illiquidity": 1.1666666666666714e-06,
+      "spread_adverse_selection": 0.05250000000000021,
+      "spread_inventory_cost": 0.0474999999999941
+    },
+    {
+      "tick": 9,
+      "clearing_price": null,
+      "mid_price": 99.88,
+      "spread": 0.04000000000000625,
+      "volume": 0,
+      "num_trades": 0,
+      "kyles_lambda": 0.0012499999999997513,
+      "amihud_illiquidity": null,
+      "spread_adverse_selection": null,
+      "spread_inventory_cost": null
+    },
+    {
+      "tick": 10,
+      "clearing_price": null,
+      "mid_price": 99.89,
+      "spread": 0.020000000000010232,
+      "volume": 0,
+      "num_trades": 0,
+      "kyles_lambda": 0.0003846153846155814,
+      "amihud_illiquidity": null,
+      "spread_adverse_selection": null,
+      "spread_inventory_cost": null
+    },
+    {
+      "tick": 11,
+      "clearing_price": 99.9,
+      "mid_price": 99.9,
+      "spread": 0.01999999999999602,
+      "volume": 50.0,
+      "num_trades": 1,
+      "kyles_lambda": 0.0004761904761907198,
+      "amihud_illiquidity": 2.004206629295251e-08,
+      "spread_adverse_selection": 0.01999999999999602,
+      "spread_inventory_cost": 0.0
+    },
+    {
+      "tick": 12,
+      "clearing_price": null,
+      "mid_price": 99.905,
+      "spread": 0.009999999999990905,
+      "volume": 0,
+      "num_trades": 0,
+      "kyles_lambda": 0.0001515151515150137,
+      "amihud_illiquidity": null,
+      "spread_adverse_selection": null,
+      "spread_inventory_cost": null
+    },
+    {
+      "tick": 13,
+      "clearing_price": 99.91,
+      "mid_price": 99.905,
+      "spread": 0.009999999999990905,
+      "volume": 16.0,
+      "num_trades": 3,
+      "kyles_lambda": 0.0,
+      "amihud_illiquidity": 0.0,
+      "spread_adverse_selection": 0.0,
+      "spread_inventory_cost": 0.009999999999990905
+    },
+    {
+      "tick": 14,
+      "clearing_price": 99.85,
+      "mid_price": 99.895,
+      "spread": 0.09000000000000341,
+      "volume": 72.0,
+      "num_trades": 12,
+      "kyles_lambda": -0.0004545454545456871,
+      "amihud_illiquidity": 1.392298035050774e-08,
+      "spread_adverse_selection": 0.005454545454548245,
+      "spread_inventory_cost": 0.08454545454545516
+    },
+    {
+      "tick": 15,
+      "clearing_price": 99.84,
+      "mid_price": 99.89,
+      "spread": 0.09999999999999432,
+      "volume": 50.0,
+      "num_trades": 4,
+      "kyles_lambda": -0.0001923076923075174,
+      "amihud_illiquidity": 1.0026553522214858e-08,
+      "spread_adverse_selection": 0.004807692307687935,
+      "spread_inventory_cost": 0.09519230769230638
+    },
+    {
+      "tick": 16,
+      "clearing_price": null,
+      "mid_price": 99.925,
+      "spread": 0.030000000000001137,
+      "volume": 0,
+      "num_trades": 0,
+      "kyles_lambda": 0.0015217391304346343,
+      "amihud_illiquidity": null,
+      "spread_adverse_selection": null,
+      "spread_inventory_cost": null
+    },
+    {
+      "tick": 17,
+      "clearing_price": 99.91,
+      "mid_price": 99.925,
+      "spread": 0.030000000000001137,
+      "volume": 50.0,
+      "num_trades": 3,
+      "kyles_lambda": 0.0,
+      "amihud_illiquidity": 0.0,
+      "spread_adverse_selection": 0.0,
+      "spread_inventory_cost": 0.030000000000001137
+    },
+    {
+      "tick": 18,
+      "clearing_price": 99.89,
+      "mid_price": 99.86,
+      "spread": 0.03999999999999204,
+      "volume": 35.0,
+      "num_trades": 5,
+      "kyles_lambda": -0.003823529411764572,
+      "amihud_illiquidity": 1.860583401454176e-07,
+      "spread_adverse_selection": 0.03999999999999204,
+      "spread_inventory_cost": 0.0
+    },
+    {
+      "tick": 19,
+      "clearing_price": 99.81,
+      "mid_price": 99.845,
+      "spread": 0.06999999999999318,
+      "volume": 55.0,
+      "num_trades": 4,
+      "kyles_lambda": 0.0015000000000000568,
+      "amihud_illiquidity": 2.7362952229633166e-08,
+      "spread_adverse_selection": 0.04125000000000156,
+      "spread_inventory_cost": 0.028749999999991616
+    },
+    {
+      "tick": 20,
+      "clearing_price": 99.84,
+      "mid_price": 99.875,
+      "spread": 0.009999999999990905,
+      "volume": 25.0,
+      "num_trades": 3,
+      "kyles_lambda": -0.002307692307692395,
+      "amihud_illiquidity": 1.203788949795305e-07,
+      "spread_adverse_selection": 0.009999999999990905,
+      "spread_inventory_cost": 0.0
+    },
+    {
+      "tick": 21,
+      "clearing_price": 99.88,
+      "mid_price": 99.875,
+      "spread": 0.009999999999990905,
+      "volume": 15.0,
+      "num_trades": 1,
+      "kyles_lambda": 0.0,
+      "amihud_illiquidity": 0.0,
+      "spread_adverse_selection": 0.0,
+      "spread_inventory_cost": 0.009999999999990905
+    },
+    {
+      "tick": 22,
+      "clearing_price": 99.94,
+      "mid_price": 99.91499999999999,
+      "spread": 0.07000000000000739,
+      "volume": 58.0,
+      "num_trades": 3,
+      "kyles_lambda": 0.0014285714285711443,
+      "amihud_illiquidity": 6.909328800420737e-08,
+      "spread_adverse_selection": 0.05523809523808424,
+      "spread_inventory_cost": 0.014761904761923149
+    },
+    {
+      "tick": 23,
+      "clearing_price": 99.95,
+      "mid_price": 99.94,
+      "spread": 0.060000000000002274,
+      "volume": 50.0,
+      "num_trades": 1,
+      "kyles_lambda": 0.0022727272727277896,
+      "amihud_illiquidity": 5.006756994071411e-08,
+      "spread_adverse_selection": 0.060000000000002274,
+      "spread_inventory_cost": 0.0
+    },
+    {
+      "tick": 24,
+      "clearing_price": 99.97,
+      "mid_price": 99.96000000000001,
+      "spread": 0.04000000000000625,
+      "volume": 55.0,
+      "num_trades": 2,
+      "kyles_lambda": -0.0013333333333340155,
+      "amihud_illiquidity": 3.639638656020957e-08,
+      "spread_adverse_selection": 0.04000000000000625,
+      "spread_inventory_cost": 0.0
+    },
+    {
+      "tick": 25,
+      "clearing_price": 99.98,
+      "mid_price": 99.97999999999999,
+      "spread": 0.04000000000000625,
+      "volume": 50.0,
+      "num_trades": 1,
+      "kyles_lambda": 0.0007999999999992724,
+      "amihud_illiquidity": 4.002401120476558e-08,
+      "spread_adverse_selection": 0.04000000000000625,
+      "spread_inventory_cost": 0.0
+    },
+    {
+      "tick": 26,
+      "clearing_price": 100.0,
+      "mid_price": 99.995,
+      "spread": 0.030000000000001137,
+      "volume": 50.0,
+      "num_trades": 1,
+      "kyles_lambda": 0.0012500000000012317,
+      "amihud_illiquidity": 3.000600120026961e-08,
+      "spread_adverse_selection": 0.030000000000001137,
+      "spread_inventory_cost": 0.0
+    },
+    {
+      "tick": 27,
+      "clearing_price": 100.01,
+      "mid_price": 100.07,
+      "spread": 0.14000000000000057,
+      "volume": 50.0,
+      "num_trades": 1,
+      "kyles_lambda": 0.0024193548387093106,
+      "amihud_illiquidity": 1.4999250112488352e-07,
+      "spread_adverse_selection": 0.14000000000000057,
+      "spread_inventory_cost": 0.0
+    }
+  ],
+  "decisions": [
+    [
+      {
+        "agent": "Retail",
+        "archetype": "retail",
+        "reasoning": "Follow default behavior in normal market conditions",
+        "orders": [
+          {
+            "side": "BUY",
+            "qty": 2.0,
+            "price": 100.0
+          }
+        ],
+        "held": false,
+        "forced_random": false,
+        "api_failed": false
+      },
+      {
+        "agent": "Inst",
+        "archetype": "institutional",
+        "reasoning": "Price below VWAP; market operating under normal conditions.",
+        "orders": [
+          {
+            "side": "BUY",
+            "qty": 20.0,
+            "price": 100.0
+          }
+        ],
+        "held": false,
+        "forced_random": false,
+        "api_failed": false
+      },
+      {
+        "agent": "Quant",
+        "archetype": "quant",
+        "reasoning": "Price trending higher on consecutive ticks.",
+        "orders": [
+          {
+            "side": "BUY",
+            "qty": 10.0,
+            "price": 100.0
+          }
+        ],
+        "held": false,
+        "forced_random": false,
+        "api_failed": false
+      },
+      {
+        "agent": "MM",
+        "archetype": "market_maker",
+        "reasoning": "MM: quoting 99.81 / 99.91 (qty 50 each)",
+        "orders": [
+          {
+            "side": "BUY",
+            "qty": 50.0,
+            "price": 99.81
+          },
+          {
+            "side": "SELL",
+            "qty": 50.0,
+            "price": 99.91
+          }
+        ],
+        "held": false,
+        "forced_random": false,
+        "api_failed": false
+      }
+    ],
+    [
+      {
+        "agent": "Retail",
+        "archetype": "retail",
+        "reasoning": "Dip at previous price of $100.00",
+        "orders": [
+          {
+            "side": "BUY",
+            "qty": 1.0,
+            "price": 99.86
+          }
+        ],
+        "held": false,
+        "forced_random": false,
+        "api_failed": false
+      },
+      {
+        "agent": "Inst",
+        "archetype": "institutional",
+        "reasoning": "Price below VWAP, initiating buy position",
+        "orders": [
+          {
+            "side": "BUY",
+            "qty": 10.0,
+            "price": 99.86
+          }
+        ],
+        "held": false,
+        "forced_random": false,
+        "api_failed": false
+      },
+      {
+        "agent": "Quant",
+        "archetype": "quant",
+        "reasoning": "Recent clearing prices indicate upward momentum.",
+        "orders": [
+          {
+            "side": "BUY",
+            "qty": 5.0,
+            "price": 99.86
+          }
+        ],
+        "held": false,
+        "forced_random": false,
+        "api_failed": false
+      },
+      {
+        "agent": "MM",
+        "archetype": "market_maker",
+        "reasoning": "MM: quoting 99.80 / 99.90 (qty 50 each)",
+        "orders": [
+          {
+            "side": "BUY",
+            "qty": 50.0,
+            "price": 99.8
+          },
+          {
+            "side": "SELL",
+            "qty": 50.0,
+            "price": 99.9
+          }
+        ],
+        "held": false,
+        "forced_random": false,
+        "api_failed": false
+      }
+    ],
+    [
+      {
+        "agent": "Retail",
+        "archetype": "retail",
+        "reasoning": "Recent price memory suggests buying the dip",
+        "orders": [
+          {
+            "side": "BUY",
+            "qty": 1.0,
+            "price": 99.88
+          }
+        ],
+        "held": false,
+        "forced_random": false,
+        "api_failed": false
+      },
+      {
+        "agent": "Inst",
+        "archetype": "institutional",
+        "reasoning": "Price below recent VWAP mean reversion threshold",
+        "orders": [
+          {
+            "side": "BUY",
+            "qty": 20.0,
+            "price": 99.88
+          }
+        ],
+        "held": false,
+        "forced_random": false,
+        "api_failed": false
+      },
+      {
+        "agent": "Quant",
+        "archetype": "quant",
+        "reasoning": "Price momentum remains up, default signal is buy",
+        "orders": [
+          {
+            "side": "BUY",
+            "qty": 5.0,
+            "price": 99.88
+          }
+        ],
+        "held": false,
+        "forced_random": false,
+        "api_failed": false
+      },
+      {
+        "agent": "MM",
+        "archetype": "market_maker",
+        "reasoning": "MM: quoting 99.84 / 99.94 (qty 50 each)",
+        "orders": [
+          {
+            "side": "BUY",
+            "qty": 50.0,
+            "price": 99.84
+          },
+          {
+            "side": "SELL",
+            "qty": 50.0,
+            "price": 99.94
+          }
+        ],
+        "held": false,
+        "forced_random": false,
+        "api_failed": false
+      }
+    ],
+    [
+      {
+        "agent": "Retail",
+        "archetype": "retail",
+        "reasoning": "Recent clearing prices indicate a dip from recent highs.",
+        "orders": [
+          {
+            "side": "BUY",
+            "qty": 1.0,
+            "price": 99.89
+          }
+        ],
+        "held": false,
+        "forced_random": false,
+        "api_failed": false
+      },
+      {
+        "agent": "Inst",
+        "archetype": "institutional",
+        "reasoning": "Below VWAP, mean-reversion opportunity",
+        "orders": [
+          {
+            "side": "BUY",
+            "qty": 15.0,
+            "price": 99.89
+          }
+        ],
+        "held": false,
+        "forced_random": false,
+        "api_failed": false
+      },
+      {
+        "agent": "Quant",
+        "archetype": "quant",
+        "reasoning": "Recent clearing prices show upward momentum",
+        "orders": [
+          {
+            "side": "BUY",
+            "qty": 5.0,
+            "price": 99.89
+          }
+        ],
+        "held": false,
+        "forced_random": false,
+        "api_failed": false
+      },
+      {
+        "agent": "MM",
+        "archetype": "market_maker",
+        "reasoning": "MM: quoting 99.90 / 100.00 (qty 50 each)",
+        "orders": [
+          {
+            "side": "BUY",
+            "qty": 50.0,
+            "price": 99.9
+          },
+          {
+            "side": "SELL",
+            "qty": 50.0,
+            "price": 100.0
+          }
+        ],
+        "held": false,
+        "forced_random": false,
+        "api_failed": false
+      }
+    ],
+    [
+      {
+        "agent": "Retail",
+        "archetype": "retail",
+        "reasoning": "Follow recent price memory and default to buying the dip",
+        "orders": [
+          {
+            "side": "BUY",
+            "qty": 3.0,
+            "price": 99.9
+          }
+        ],
+        "held": false,
+        "forced_random": false,
+        "api_failed": false
+      },
+      {
+        "agent": "Inst",
+        "archetype": "institutional",
+        "reasoning": "Price below VWAP average; mean-reversion strategy suggests buying",
+        "orders": [
+          {
+            "side": "BUY",
+            "qty": 20.0,
+            "price": 99.9
+          }
+        ],
+        "held": false,
+        "forced_random": false,
+        "api_failed": false
+      },
+      {
+        "agent": "Quant",
+        "archetype": "quant",
+        "reasoning": "Price momentum still in an uptrend with a recent clearing price of $100.45",
+        "orders": [
+          {
+            "side": "BUY",
+            "qty": 10.0,
+            "price": 99.9
+          }
+        ],
+        "held": false,
+        "forced_random": false,
+        "api_failed": false
+      },
+      {
+        "agent": "MM",
+        "archetype": "market_maker",
+        "reasoning": "MM: quoting 99.88 / 99.98 (qty 50 each)",
+        "orders": [
+          {
+            "side": "BUY",
+            "qty": 50.0,
+            "price": 99.88
+          },
+          {
+            "side": "SELL",
+            "qty": 50.0,
+            "price": 99.98
+          }
+        ],
+        "held": false,
+        "forced_random": false,
+        "api_failed": false
+      }
+    ],
+    [
+      {
+        "agent": "Retail",
+        "archetype": "retail",
+        "reasoning": "Following default behavior, buying on dip with normal context",
+        "orders": [
+          {
+            "side": "BUY",
+            "qty": 1.0,
+            "price": 99.91
+          }
+        ],
+        "held": false,
+        "forced_random": false,
+        "api_failed": false
+      },
+      {
+        "agent": "Inst",
+        "archetype": "institutional",
+        "reasoning": "Price below VWAP due to recent clearing prices",
+        "orders": [
+          {
+            "side": "BUY",
+            "qty": 10.0,
+            "price": 99.91
+          }
+        ],
+        "held": false,
+        "forced_random": false,
+        "api_failed": false
+      },
+      {
+        "agent": "Quant",
+        "archetype": "quant",
+        "reasoning": "Price has ticked down on a relatively in-line macro environment.",
+        "orders": [
+          {
+            "side": "BUY",
+            "qty": 5.0,
+            "price": 99.91
+          }
+        ],
+        "held": false,
+        "forced_random": false,
+        "api_failed": false
+      },
+      {
+        "agent": "MM",
+        "archetype": "market_maker",
+        "reasoning": "MM: quoting 99.85 / 99.95 (qty 50 each)",
+        "orders": [
+          {
+            "side": "BUY",
+            "qty": 50.0,
+            "price": 99.85
+          },
+          {
+            "side": "SELL",
+            "qty": 50.0,
+            "price": 99.95
+          }
+        ],
+        "held": false,
+        "forced_random": false,
+        "api_failed": false
+      }
+    ],
+    [
+      {
+        "agent": "Retail",
+        "archetype": "retail",
+        "reasoning": "Following my default behavior in a stable market",
+        "orders": [
+          {
+            "side": "BUY",
+            "qty": 2.0,
+            "price": 99.91
+          }
+        ],
+        "held": false,
+        "forced_random": false,
+        "api_failed": false
+      },
+      {
+        "agent": "Inst",
+        "archetype": "institutional",
+        "reasoning": "Price is below VWAP, triggering mean-reversion default",
+        "orders": [
+          {
+            "side": "BUY",
+            "qty": 10.0,
+            "price": 99.91
+          }
+        ],
+        "held": false,
+        "forced_random": false,
+        "api_failed": false
+      },
+      {
+        "agent": "Quant",
+        "archetype": "quant",
+        "reasoning": "The price momentum remains strong with consecutive ticks at $99.90 and $99.91.",
+        "orders": [
+          {
+            "side": "BUY",
+            "qty": 10.0,
+            "price": 99.91
+          }
+        ],
+        "held": false,
+        "forced_random": false,
+        "api_failed": false
+      },
+      {
+        "agent": "MM",
+        "archetype": "market_maker",
+        "reasoning": "MM: quoting 99.67 / 99.77 (qty 50 each)",
+        "orders": [
+          {
+            "side": "BUY",
+            "qty": 50.0,
+            "price": 99.67
+          },
+          {
+            "side": "SELL",
+            "qty": 50.0,
+            "price": 99.77
+          }
+        ],
+        "held": false,
+        "forced_random": false,
+        "api_failed": false
+      }
+    ],
+    [
+      {
+        "agent": "Retail",
+        "archetype": "retail",
+        "reasoning": "Prices have dipped slightly from recent clearing prices, so I'll buy the dip.",
+        "orders": [
+          {
+            "side": "BUY",
+            "qty": 1.0,
+            "price": 99.89
+          }
+        ],
+        "held": false,
+        "forced_random": false,
+        "api_failed": false
+      },
+      {
+        "agent": "Inst",
+        "archetype": "institutional",
+        "reasoning": "Price is below recent VWAP, triggering mean-reversion buy signal",
+        "orders": [
+          {
+            "side": "BUY",
+            "qty": 15.0,
+            "price": 99.89
+          }
+        ],
+        "held": false,
+        "forced_random": false,
+        "api_failed": false
+      },
+      {
+        "agent": "Quant",
+        "archetype": "quant",
+        "reasoning": "The tape indicates an upward momentum with a higher recent clearing price.",
+        "orders": [
+          {
+            "side": "BUY",
+            "qty": 10.0,
+            "price": 99.89
+          }
+        ],
+        "held": false,
+        "forced_random": false,
+        "api_failed": false
+      },
+      {
+        "agent": "MM",
+        "archetype": "market_maker",
+        "reasoning": "MM: quoting 99.73 / 99.83 (qty 50 each)",
+        "orders": [
+          {
+            "side": "BUY",
+            "qty": 50.0,
+            "price": 99.73
+          },
+          {
+            "side": "SELL",
+            "qty": 50.0,
+            "price": 99.83
+          }
+        ],
+        "held": false,
+        "forced_random": false,
+        "api_failed": false
+      }
+    ],
+    [
+      {
+        "agent": "Retail",
+        "archetype": "retail",
+        "reasoning": "Recent prices have been trending upwards, so I'll buy into the trend",
+        "orders": [
+          {
+            "side": "BUY",
+            "qty": 3.0,
+            "price": 99.89
+          }
+        ],
+        "held": false,
+        "forced_random": false,
+        "api_failed": false
+      },
+      {
+        "agent": "Inst",
+        "archetype": "institutional",
+        "reasoning": "Current price is below VWAP, triggering mean-reversion buy signal.",
+        "orders": [
+          {
+            "side": "BUY",
+            "qty": 10.0,
+            "price": 99.89
+          }
+        ],
+        "held": false,
+        "forced_random": false,
+        "api_failed": false
+      },
+      {
+        "agent": "Quant",
+        "archetype": "quant",
+        "reasoning": "The recent clearing prices show a clear upward momentum",
+        "orders": [
+          {
+            "side": "BUY",
+            "qty": 10.0,
+            "price": 99.89
+          }
+        ],
+        "held": false,
+        "forced_random": false,
+        "api_failed": false
+      },
+      {
+        "agent": "MM",
+        "archetype": "market_maker",
+        "reasoning": "MM: quoting 99.91 / 100.01 (qty 50 each)",
+        "orders": [
+          {
+            "side": "BUY",
+            "qty": 50.0,
+            "price": 99.91
+          },
+          {
+            "side": "SELL",
+            "qty": 50.0,
+            "price": 100.01
+          }
+        ],
+        "held": false,
+        "forced_random": false,
+        "api_failed": false
+      }
+    ],
+    [
+      {
+        "agent": "Retail",
+        "archetype": "retail",
+        "reasoning": "Following recent price trend as no significant stress in the market",
+        "orders": [
+          {
+            "side": "BUY",
+            "qty": 2.0,
+            "price": 99.92
+          }
+        ],
+        "held": false,
+        "forced_random": false,
+        "api_failed": false
+      },
+      {
+        "agent": "Inst",
+        "archetype": "institutional",
+        "reasoning": "Current price is below the average of the last 3 clearing prices.",
+        "orders": [
+          {
+            "side": "BUY",
+            "qty": 15.0,
+            "price": 99.92
+          }
+        ],
+        "held": false,
+        "forced_random": false,
+        "api_failed": false
+      },
+      {
+        "agent": "Quant",
+        "archetype": "quant",
+        "reasoning": "Normal market conditions with a slight price dip after upward movement",
+        "orders": [
+          {
+            "side": "BUY",
+            "qty": 10.0,
+            "price": 99.92
+          }
+        ],
+        "held": false,
+        "forced_random": false,
+        "api_failed": false
+      },
+      {
+        "agent": "MM",
+        "archetype": "market_maker",
+        "reasoning": "MM: quoting 99.81 / 99.91 (qty 50 each)",
+        "orders": [
+          {
+            "side": "BUY",
+            "qty": 50.0,
+            "price": 99.81
+          },
+          {
+            "side": "SELL",
+            "qty": 50.0,
+            "price": 99.91
+          }
+        ],
+        "held": false,
+        "forced_random": false,
+        "api_failed": false
+      }
+    ],
+    [
+      {
+        "agent": "Retail",
+        "archetype": "retail",
+        "reasoning": "The pipeline outage context makes this risk unattractive at current prices",
+        "orders": [
+          {
+            "side": "SELL",
+            "qty": 3.0,
+            "price": 99.92
+          }
+        ],
+        "held": false,
+        "forced_random": false,
+        "api_failed": false
+      },
+      {
+        "agent": "Inst",
+        "archetype": "institutional",
+        "reasoning": "Pipeline outage has caused a significant drop in price, warranting mean-reversion buy at VWAP",
+        "orders": [
+          {
+            "side": "BUY",
+            "qty": 10.0,
+            "price": 99.92
+          }
+        ],
+        "held": false,
+        "forced_random": false,
+        "api_failed": false
+      },
+      {
+        "agent": "Quant",
+        "archetype": "quant",
+        "reasoning": "The market's slight dip in the context of a bearish macro environment indicates an attractive entry point",
+        "orders": [
+          {
+            "side": "BUY",
+            "qty": 10.0,
+            "price": 99.92
+          }
+        ],
+        "held": false,
+        "forced_random": false,
+        "api_failed": false
+      },
+      {
+        "agent": "MM",
+        "archetype": "market_maker",
+        "reasoning": "MM: quoting 99.78 / 99.88 (qty 50 each)",
+        "orders": [
+          {
+            "side": "BUY",
+            "qty": 50.0,
+            "price": 99.78
+          },
+          {
+            "side": "SELL",
+            "qty": 50.0,
+            "price": 99.88
+          }
+        ],
+        "held": false,
+        "forced_random": false,
+        "api_failed": false
+      }
+    ],
+    [
+      {
+        "agent": "Retail",
+        "archetype": "retail",
+        "reasoning": "Recent clearing prices suggest a potential reversal in Colonial Refined Fuel",
+        "orders": [
+          {
+            "side": "SELL",
+            "qty": 5.0,
+            "price": 99.86
+          }
+        ],
+        "held": false,
+        "forced_random": false,
+        "api_failed": false
+      },
+      {
+        "agent": "Inst",
+        "archetype": "institutional",
+        "reasoning": "Pipeline outage reduces demand for Colonial Refined Fuel, implying lower fair value.",
+        "orders": [
+          {
+            "side": "SELL",
+            "qty": 15.0,
+            "price": 99.86
+          }
+        ],
+        "held": false,
+        "forced_random": false,
+        "api_failed": false
+      },
+      {
+        "agent": "Quant",
+        "archetype": "quant",
+        "reasoning": "Market momentum is strong despite bearish macro environment, trading on tape signal",
+        "orders": [
+          {
+            "side": "BUY",
+            "qty": 10.0,
+            "price": 99.86
+          }
+        ],
+        "held": false,
+        "forced_random": false,
+        "api_failed": false
+      },
+      {
+        "agent": "MM",
+        "archetype": "market_maker",
+        "reasoning": "MM: quoting 99.67 / 99.77 (qty 50 each)",
+        "orders": [
+          {
+            "side": "BUY",
+            "qty": 50.0,
+            "price": 99.67
+          },
+          {
+            "side": "SELL",
+            "qty": 50.0,
+            "price": 99.77
+          }
+        ],
+        "held": false,
+        "forced_random": false,
+        "api_failed": false
+      }
+    ],
+    [
+      {
+        "agent": "Retail",
+        "archetype": "retail",
+        "reasoning": "Recent clearing prices have been dropping and I'm buying the dip",
+        "orders": [
+          {
+            "side": "BUY",
+            "qty": 2.0,
+            "price": 99.84
+          }
+        ],
+        "held": false,
+        "forced_random": false,
+        "api_failed": false
+      },
+      {
+        "agent": "Inst",
+        "archetype": "institutional",
+        "reasoning": "Pipeline outage and negative sentiment imply lower fair value",
+        "orders": [
+          {
+            "side": "SELL",
+            "qty": 25.0,
+            "price": 99.84
+          }
+        ],
+        "held": false,
+        "forced_random": false,
+        "api_failed": false
+      },
+      {
+        "agent": "Quant",
+        "archetype": "quant",
+        "reasoning": "The tape indicates momentum up with a higher high on the clearing price, context is bearish but corroborates the momentum signal.",
+        "orders": [
+          {
+            "side": "BUY",
+            "qty": 10.0,
+            "price": 99.84
+          }
+        ],
+        "held": false,
+        "forced_random": false,
+        "api_failed": false
+      },
+      {
+        "agent": "MM",
+        "archetype": "market_maker",
+        "reasoning": "MM: quoting 99.87 / 99.97 (qty 50 each)",
+        "orders": [
+          {
+            "side": "BUY",
+            "qty": 50.0,
+            "price": 99.87
+          },
+          {
+            "side": "SELL",
+            "qty": 50.0,
+            "price": 99.97
+          }
+        ],
+        "held": false,
+        "forced_random": false,
+        "api_failed": false
+      }
+    ],
+    [
+      {
+        "agent": "Retail",
+        "archetype": "retail",
+        "reasoning": "Pipeline outage decreases risk appetite.",
+        "orders": [
+          {
+            "side": "SELL",
+            "qty": 2.0,
+            "price": 99.88
+          }
+        ],
+        "held": false,
+        "forced_random": false,
+        "api_failed": false
+      },
+      {
+        "agent": "Inst",
+        "archetype": "institutional",
+        "reasoning": "Pipeline outage increases demand, pushing price above recent VWAP.",
+        "orders": [
+          {
+            "side": "BUY",
+            "qty": 15.0,
+            "price": 99.88
+          }
+        ],
+        "held": false,
+        "forced_random": false,
+        "api_failed": false
+      },
+      {
+        "agent": "Quant",
+        "archetype": "quant",
+        "reasoning": "The pipeline outage in Colonial Refined Fuel weighs against continued momentum.",
+        "orders": [
+          {
+            "side": "SELL",
+            "qty": 5.0,
+            "price": 99.88
+          }
+        ],
+        "held": false,
+        "forced_random": false,
+        "api_failed": false
+      },
+      {
+        "agent": "MM",
+        "archetype": "market_maker",
+        "reasoning": "MM: quoting 99.85 / 99.95 (qty 50 each)",
+        "orders": [
+          {
+            "side": "BUY",
+            "qty": 50.0,
+            "price": 99.85
+          },
+          {
+            "side": "SELL",
+            "qty": 50.0,
+            "price": 99.95
+          }
+        ],
+        "held": false,
+        "forced_random": false,
+        "api_failed": false
+      }
+    ],
+    [
+      {
+        "agent": "Retail",
+        "archetype": "retail",
+        "reasoning": "pipeline outage news makes me fearful of higher losses",
+        "orders": [
+          {
+            "side": "BUY",
+            "qty": 3.0,
+            "price": 99.88
+          }
+        ],
+        "held": false,
+        "forced_random": false,
+        "api_failed": false
+      },
+      {
+        "agent": "Inst",
+        "archetype": "institutional",
+        "reasoning": "Pipeline outage reduces fuel supply, likely increasing demand and fair value.",
+        "orders": [
+          {
+            "side": "BUY",
+            "qty": 15.0,
+            "price": 99.88
+          }
+        ],
+        "held": false,
+        "forced_random": false,
+        "api_failed": false
+      },
+      {
+        "agent": "Quant",
+        "archetype": "quant",
+        "reasoning": "Price has broken above recent clearing prices with a pipeline outage event driving negative sentiment",
+        "orders": [
+          {
+            "side": "BUY",
+            "qty": 10.0,
+            "price": 99.88
+          }
+        ],
+        "held": false,
+        "forced_random": false,
+        "api_failed": false
+      },
+      {
+        "agent": "MM",
+        "archetype": "market_maker",
+        "reasoning": "MM: quoting 100.04 / 100.14 (qty 50 each)",
+        "orders": [
+          {
+            "side": "BUY",
+            "qty": 50.0,
+            "price": 100.04
+          },
+          {
+            "side": "SELL",
+            "qty": 50.0,
+            "price": 100.14
+          }
+        ],
+        "held": false,
+        "forced_random": false,
+        "api_failed": false
+      }
+    ],
+    [
+      {
+        "agent": "Retail",
+        "archetype": "retail",
+        "reasoning": "Buy the dip as price has rebounded from previous tick's low",
+        "orders": [
+          {
+            "side": "BUY",
+            "qty": 1.0,
+            "price": 99.91
+          }
+        ],
+        "held": false,
+        "forced_random": false,
+        "api_failed": false
+      },
+      {
+        "agent": "Inst",
+        "archetype": "institutional",
+        "reasoning": "Pipeline outage severity is high and VIX is elevated, re-pricing may continue",
+        "orders": [],
+        "held": true,
+        "forced_random": false,
+        "api_failed": false
+      },
+      {
+        "agent": "Quant",
+        "archetype": "quant",
+        "reasoning": "Price momentum suggests buying Colonial Refined Fuel despite pipeline outage, with VIX below 35.",
+        "orders": [
+          {
+            "side": "BUY",
+            "qty": 10.0,
+            "price": 99.91
+          }
+        ],
+        "held": false,
+        "forced_random": false,
+        "api_failed": false
+      },
+      {
+        "agent": "MM",
+        "archetype": "market_maker",
+        "reasoning": "MM: quoting 100.19 / 100.29 (qty 50 each)",
+        "orders": [
+          {
+            "side": "BUY",
+            "qty": 50.0,
+            "price": 100.19
+          },
+          {
+            "side": "SELL",
+            "qty": 50.0,
+            "price": 100.29
+          }
+        ],
+        "held": false,
+        "forced_random": false,
+        "api_failed": false
+      }
+    ],
+    [
+      {
+        "agent": "Retail",
+        "archetype": "retail",
+        "reasoning": "Recent price drop in Colonial Refined Fuel due to pipeline outage makes me uncomfortable holding shares",
+        "orders": [
+          {
+            "side": "SELL",
+            "qty": 5.0,
+            "price": 99.94
+          }
+        ],
+        "held": false,
+        "forced_random": false,
+        "api_failed": false
+      },
+      {
+        "agent": "Inst",
+        "archetype": "institutional",
+        "reasoning": "pipeline outage impacts Colonial Refined Fuel, increasing supply shock, which may re-price the asset above current VWAP",
+        "orders": [
+          {
+            "side": "SELL",
+            "qty": 20.0,
+            "price": 99.94
+          }
+        ],
+        "held": false,
+        "forced_random": false,
+        "api_failed": false
+      },
+      {
+        "agent": "Quant",
+        "archetype": "quant",
+        "reasoning": "Tape shows upward movement with recent clearing prices at $99.94 and $99.95.",
+        "orders": [
+          {
+            "side": "BUY",
+            "qty": 10.0,
+            "price": 99.94
+          }
+        ],
+        "held": false,
+        "forced_random": false,
+        "api_failed": false
+      },
+      {
+        "agent": "MM",
+        "archetype": "market_maker",
+        "reasoning": "MM: quoting 100.17 / 100.27 (qty 50 each)",
+        "orders": [
+          {
+            "side": "BUY",
+            "qty": 50.0,
+            "price": 100.17
+          },
+          {
+            "side": "SELL",
+            "qty": 50.0,
+            "price": 100.27
+          }
+        ],
+        "held": false,
+        "forced_random": false,
+        "api_failed": false
+      }
+    ],
+    [
+      {
+        "agent": "Retail",
+        "archetype": "retail",
+        "reasoning": "The recent clearing prices indicate a slight dip in Colonial Refined Fuel's stock.",
+        "orders": [
+          {
+            "side": "BUY",
+            "qty": 5.0,
+            "price": 99.96
+          }
+        ],
+        "held": false,
+        "forced_random": false,
+        "api_failed": false
+      },
+      {
+        "agent": "Inst",
+        "archetype": "institutional",
+        "reasoning": "Pipeline outage reduces supply, likely pushing price above VWAP",
+        "orders": [
+          {
+            "side": "BUY",
+            "qty": 10.0,
+            "price": 99.96
+          }
+        ],
+        "held": false,
+        "forced_random": false,
+        "api_failed": false
+      },
+      {
+        "agent": "Quant",
+        "archetype": "quant",
+        "reasoning": "The price is trending up despite a bearish macro environment.",
+        "orders": [
+          {
+            "side": "BUY",
+            "qty": 10.0,
+            "price": 99.96
+          }
+        ],
+        "held": false,
+        "forced_random": false,
+        "api_failed": false
+      },
+      {
+        "agent": "MM",
+        "archetype": "market_maker",
+        "reasoning": "MM: quoting 100.26 / 100.36 (qty 50 each)",
+        "orders": [
+          {
+            "side": "BUY",
+            "qty": 50.0,
+            "price": 100.26
+          },
+          {
+            "side": "SELL",
+            "qty": 50.0,
+            "price": 100.36
+          }
+        ],
+        "held": false,
+        "forced_random": false,
+        "api_failed": false
+      }
+    ],
+    [
+      {
+        "agent": "Retail",
+        "archetype": "retail",
+        "reasoning": "Recent price dip in Colonial Refined Fuel amidst pipeline outage looks like a buying opportunity",
+        "orders": [
+          {
+            "side": "BUY",
+            "qty": 2.0,
+            "price": 99.98
+          }
+        ],
+        "held": false,
+        "forced_random": false,
+        "api_failed": false
+      },
+      {
+        "agent": "Inst",
+        "archetype": "institutional",
+        "reasoning": "Pipeline outage may re-price asset, reducing likelihood of mean reversion",
+        "orders": [],
+        "held": true,
+        "forced_random": false,
+        "api_failed": false
+      },
+      {
+        "agent": "Quant",
+        "archetype": "quant",
+        "reasoning": "Tape is up on pipeline outage news.",
+        "orders": [
+          {
+            "side": "BUY",
+            "qty": 10.0,
+            "price": 99.98
+          }
+        ],
+        "held": false,
+        "forced_random": false,
+        "api_failed": false
+      },
+      {
+        "agent": "MM",
+        "archetype": "market_maker",
+        "reasoning": "MM: quoting 100.26 / 100.36 (qty 50 each)",
+        "orders": [
+          {
+            "side": "BUY",
+            "qty": 50.0,
+            "price": 100.26
+          },
+          {
+            "side": "SELL",
+            "qty": 50.0,
+            "price": 100.36
+          }
+        ],
+        "held": false,
+        "forced_random": false,
+        "api_failed": false
+      }
+    ],
+    [
+      {
+        "agent": "Retail",
+        "archetype": "retail",
+        "reasoning": "Following default behavior to buy dip in Colonial Refined Fuel",
+        "orders": [
+          {
+            "side": "BUY",
+            "qty": 1.0,
+            "price": 100.0
+          }
+        ],
+        "held": false,
+        "forced_random": false,
+        "api_failed": false
+      },
+      {
+        "agent": "Inst",
+        "archetype": "institutional",
+        "reasoning": "Pipeline outage causes supply shock, re-pricing below VWAP",
+        "orders": [
+          {
+            "side": "BUY",
+            "qty": 20.0,
+            "price": 100.0
+          }
+        ],
+        "held": false,
+        "forced_random": false,
+        "api_failed": false
+      },
+      {
+        "agent": "Quant",
+        "archetype": "quant",
+        "reasoning": "Upward momentum in Colonial Refined Fuel stock amidst bearish macro environment warrants a cautious buy.",
+        "orders": [
+          {
+            "side": "BUY",
+            "qty": 10.0,
+            "price": 100.0
+          }
+        ],
+        "held": false,
+        "forced_random": false,
+        "api_failed": false
+      },
+      {
+        "agent": "MM",
+        "archetype": "market_maker",
+        "reasoning": "MM: quoting 100.26 / 100.36 (qty 50 each)",
+        "orders": [
+          {
+            "side": "BUY",
+            "qty": 50.0,
+            "price": 100.26
+          },
+          {
+            "side": "SELL",
+            "qty": 50.0,
+            "price": 100.36
+          }
+        ],
+        "held": false,
+        "forced_random": false,
+        "api_failed": false
+      }
+    ]
+  ],
+  "wealth_log": [
+    [
+      10000.0,
+      100000.0,
+      50000.0,
+      1100000.0
+    ],
+    [
+      10000.0,
+      100000.0,
+      50000.0,
+      1100000.0
+    ],
+    [
+      10000.0,
+      100000.0,
+      50000.0,
+      1100000.0
+    ],
+    [
+      9999.8,
+      100000.0,
+      49999.0,
+      1099901.2
+    ],
+    [
+      9999.8,
+      100000.0,
+      49999.0,
+      1099901.2
+    ],
+    [
+      9999.82,
+      100000.0,
+      49999.1,
+      1099911.58
+    ],
+    [
+      9999.64,
+      99999.4,
+      49998.2,
+      1099849.3
+    ],
+    [
+      9999.59,
+      99999.2,
+      49997.95,
+      1099839.42
+    ],
+    [
+      9999.59,
+      99999.2,
+      49997.95,
+      1099839.42
+    ],
+    [
+      10000.01,
+      100000.59999999999,
+      50000.399999999994,
+      1099905.08
+    ],
+    [
+      9999.85,
+      100000.2,
+      49999.5,
+      1099887.32
+    ],
+    [
+      9999.449999999999,
+      99997.8,
+      49995.9,
+      1099818.84
+    ],
+    [
+      9999.449999999999,
+      99998.7,
+      49997.549999999996,
+      1099843.02
+    ],
+    [
+      9999.529999999999,
+      99998.90000000001,
+      50000.149999999994,
+      1099875.78
+    ],
+    [
+      9999.65,
+      100000.1,
+      50004.049999999996,
+      1099924.92
+    ],
+    [
+      9999.699999999999,
+      100000.35,
+      50004.7,
+      1099933.6099999999
+    ],
+    [
+      9999.8,
+      100000.85,
+      50006.0,
+      1099951.99
+    ],
+    [
+      9999.8,
+      100001.1,
+      50006.7,
+      1099961.68
+    ],
+    [
+      9999.8,
+      100001.6,
+      50008.1,
+      1099982.06
+    ],
+    [
+      9999.8,
+      100001.85,
+      50008.8,
+      1099992.75
+    ]
+  ],
+  "agent_names": [
+    "Retail",
+    "Inst",
+    "Quant",
+    "MM"
+  ],
+  "agent_archetypes": [
+    "retail",
+    "institutional",
+    "quant",
+    "market_maker"
+  ]
+}

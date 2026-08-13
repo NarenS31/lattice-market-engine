@@ -1,0 +1,1735 @@
+{
+  "model": "llama3.1:8b",
+  "backend": "ollama:llama3.1:8b",
+  "shock_id": "wheat_export_ban__real__numeric",
+  "matched_pair_id": "pair__wheat_export_ban",
+  "event_key": "wheat_export_ban",
+  "realism": "real",
+  "framing": "numeric",
+  "rep": 4,
+  "seed": 1086864406,
+  "n_ticks": 20,
+  "shock_tick": 10,
+  "shock_text": "event_class: export_restriction | entity: indian_wheat | export_volume_delta: -10.0_mmt | vix: 29.0 | sentiment: -0.4 | fed_rate: 5.25% | severity: 0.55",
+  "elapsed_s": 17208.86,
+  "metrics": {
+    "spread_pre": 0.0339999999999975,
+    "spread_post": 0.07999999999999971,
+    "spread_widening": 0.04600000000000221,
+    "kyle_lambda_pre": 0.0005221703458116228,
+    "kyle_lambda_post": 0.0013195360195359588,
+    "kyle_lambda_delta": 0.000797365673724336,
+    "amihud_post": 5.3101084446458196e-08,
+    "spread_adverse_post": 0.03441773504272923,
+    "archetype_divergence": 0.0002305927145423991,
+    "archetype_returns": {
+      "retail": -0.0001459999999999127,
+      "institutional": -3.899999999994179e-05,
+      "quant": -0.0004810000000000582
+    },
+    "hold_rate": 0.05,
+    "forced_random_rate": 0.0,
+    "api_failure_rate": 0.0,
+    "genuine_hold_rate": 0.05
+  },
+  "trajectory": [
+    {
+      "tick": 8,
+      "clearing_price": null,
+      "mid_price": 100.005,
+      "spread": 0.010000000000005116,
+      "volume": 0,
+      "num_trades": 0,
+      "kyles_lambda": 0.00022727272727252057,
+      "amihud_illiquidity": null,
+      "spread_adverse_selection": null,
+      "spread_inventory_cost": null
+    },
+    {
+      "tick": 9,
+      "clearing_price": null,
+      "mid_price": 100.005,
+      "spread": 0.010000000000005116,
+      "volume": 0,
+      "num_trades": 0,
+      "kyles_lambda": 0.0,
+      "amihud_illiquidity": null,
+      "spread_adverse_selection": null,
+      "spread_inventory_cost": null
+    },
+    {
+      "tick": 10,
+      "clearing_price": 100.01,
+      "mid_price": 100.025,
+      "spread": 0.04999999999999716,
+      "volume": 50.0,
+      "num_trades": 1,
+      "kyles_lambda": 0.0009090909090913742,
+      "amihud_illiquidity": 3.999400069994547e-08,
+      "spread_adverse_selection": 0.04999999999999716,
+      "spread_inventory_cost": 0.0
+    },
+    {
+      "tick": 11,
+      "clearing_price": null,
+      "mid_price": 100.03999999999999,
+      "spread": 0.01999999999999602,
+      "volume": 0,
+      "num_trades": 0,
+      "kyles_lambda": 0.0004999999999995453,
+      "amihud_illiquidity": null,
+      "spread_adverse_selection": null,
+      "spread_inventory_cost": null
+    },
+    {
+      "tick": 12,
+      "clearing_price": 100.03,
+      "mid_price": 100.00999999999999,
+      "spread": 0.01999999999999602,
+      "volume": 27.0,
+      "num_trades": 4,
+      "kyles_lambda": -0.0009375000000000355,
+      "amihud_illiquidity": 1.110333744250129e-07,
+      "spread_adverse_selection": 0.01265625000000048,
+      "spread_inventory_cost": 0.007343749999995541
+    },
+    {
+      "tick": 13,
+      "clearing_price": null,
+      "mid_price": 100.015,
+      "spread": 0.009999999999990905,
+      "volume": 0,
+      "num_trades": 0,
+      "kyles_lambda": 0.0001351351351353963,
+      "amihud_illiquidity": null,
+      "spread_adverse_selection": null,
+      "spread_inventory_cost": null
+    },
+    {
+      "tick": 14,
+      "clearing_price": 100.0,
+      "mid_price": 100.025,
+      "spread": 0.04999999999999716,
+      "volume": 73.0,
+      "num_trades": 10,
+      "kyles_lambda": 0.0004347826086958746,
+      "amihud_illiquidity": 1.3696575650645713e-08,
+      "spread_adverse_selection": 0.006347826086959769,
+      "spread_inventory_cost": 0.04365217391303739
+    },
+    {
+      "tick": 15,
+      "clearing_price": null,
+      "mid_price": 100.03999999999999,
+      "spread": 0.01999999999999602,
+      "volume": 0,
+      "num_trades": 0,
+      "kyles_lambda": 0.0007142857142850646,
+      "amihud_illiquidity": null,
+      "spread_adverse_selection": null,
+      "spread_inventory_cost": null
+    },
+    {
+      "tick": 16,
+      "clearing_price": 99.98,
+      "mid_price": 100.015,
+      "spread": 0.06999999999999318,
+      "volume": 50.0,
+      "num_trades": 6,
+      "kyles_lambda": -0.0011363636363632488,
+      "amihud_illiquidity": 4.999000599798383e-08,
+      "spread_adverse_selection": 0.018939393939387483,
+      "spread_inventory_cost": 0.051060606060605696
+    },
+    {
+      "tick": 17,
+      "clearing_price": 99.97,
+      "mid_price": 100.00999999999999,
+      "spread": 0.0799999999999983,
+      "volume": 50.0,
+      "num_trades": 4,
+      "kyles_lambda": -0.0002272727272731665,
+      "amihud_illiquidity": 1.0001500675188136e-08,
+      "spread_adverse_selection": 0.005681818181829163,
+      "spread_inventory_cost": 0.07431818181816913
+    },
+    {
+      "tick": 18,
+      "clearing_price": 99.96,
+      "mid_price": 100.005,
+      "spread": 0.09000000000000341,
+      "volume": 51.0,
+      "num_trades": 4,
+      "kyles_lambda": -0.0005555555555550503,
+      "amihud_illiquidity": 9.806864020099125e-09,
+      "spread_adverse_selection": 0.014166666666653784,
+      "spread_inventory_cost": 0.07583333333334963
+    },
+    {
+      "tick": 19,
+      "clearing_price": 100.0,
+      "mid_price": 99.965,
+      "spread": 0.010000000000005116,
+      "volume": 13.0,
+      "num_trades": 2,
+      "kyles_lambda": -0.0014285714285711443,
+      "amihud_illiquidity": 3.076769238460542e-07,
+      "spread_adverse_selection": 0.010000000000005116,
+      "spread_inventory_cost": 0.0
+    },
+    {
+      "tick": 20,
+      "clearing_price": 99.95,
+      "mid_price": 99.96000000000001,
+      "spread": 0.01999999999999602,
+      "volume": 60.0,
+      "num_trades": 4,
+      "kyles_lambda": -0.0004999999999995453,
+      "amihud_illiquidity": 8.340421231799069e-09,
+      "spread_adverse_selection": 0.01499999999998636,
+      "spread_inventory_cost": 0.005000000000009662
+    },
+    {
+      "tick": 21,
+      "clearing_price": 99.95,
+      "mid_price": 99.96000000000001,
+      "spread": 0.01999999999999602,
+      "volume": 53.0,
+      "num_trades": 3,
+      "kyles_lambda": -0.0,
+      "amihud_illiquidity": 0.0,
+      "spread_adverse_selection": 0.0,
+      "spread_inventory_cost": 0.01999999999999602
+    },
+    {
+      "tick": 22,
+      "clearing_price": 99.92,
+      "mid_price": 99.945,
+      "spread": 0.04999999999999716,
+      "volume": 52.0,
+      "num_trades": 4,
+      "kyles_lambda": 0.002142857142859254,
+      "amihud_illiquidity": 2.888080156620521e-08,
+      "spread_adverse_selection": 0.04999999999999716,
+      "spread_inventory_cost": 0.0
+    },
+    {
+      "tick": 23,
+      "clearing_price": 99.91,
+      "mid_price": 99.94,
+      "spread": 0.060000000000002274,
+      "volume": 55.0,
+      "num_trades": 4,
+      "kyles_lambda": 0.0009999999999990906,
+      "amihud_illiquidity": 9.104105537397809e-09,
+      "spread_adverse_selection": 0.027499999999974992,
+      "spread_inventory_cost": 0.032500000000027285
+    },
+    {
+      "tick": 24,
+      "clearing_price": 99.88,
+      "mid_price": 99.925,
+      "spread": 0.09000000000000341,
+      "volume": 50.0,
+      "num_trades": 4,
+      "kyles_lambda": -0.0005555555555555766,
+      "amihud_illiquidity": 3.005407569732182e-08,
+      "spread_adverse_selection": 0.013888888888889415,
+      "spread_inventory_cost": 0.07611111111111399
+    },
+    {
+      "tick": 25,
+      "clearing_price": 99.87,
+      "mid_price": 99.92,
+      "spread": 0.09999999999999432,
+      "volume": 53.0,
+      "num_trades": 4,
+      "kyles_lambda": 0.0016666666666651508,
+      "amihud_illiquidity": 9.453332378519258e-09,
+      "spread_adverse_selection": 0.0441666666666265,
+      "spread_inventory_cost": 0.05583333333336782
+    },
+    {
+      "tick": 26,
+      "clearing_price": 99.84,
+      "mid_price": 99.905,
+      "spread": 0.12999999999999545,
+      "volume": 55.0,
+      "num_trades": 4,
+      "kyles_lambda": 0.0015000000000000568,
+      "amihud_illiquidity": 2.7338304209802442e-08,
+      "spread_adverse_selection": 0.04125000000000156,
+      "spread_inventory_cost": 0.08874999999999389
+    },
+    {
+      "tick": 27,
+      "clearing_price": 99.74,
+      "mid_price": 99.85499999999999,
+      "spread": 0.23000000000000398,
+      "volume": 50.0,
+      "num_trades": 3,
+      "kyles_lambda": -0.0038461538461547207,
+      "amihud_illiquidity": 1.0035601597738298e-07,
+      "spread_adverse_selection": 0.12820512820515736,
+      "spread_inventory_cost": 0.10179487179484661
+    }
+  ],
+  "decisions": [
+    [
+      {
+        "agent": "Retail",
+        "archetype": "retail",
+        "reasoning": "Recent price trend suggests buying the dip.",
+        "orders": [
+          {
+            "side": "BUY",
+            "qty": 2.0,
+            "price": 100.0
+          }
+        ],
+        "held": false,
+        "forced_random": false,
+        "api_failed": false
+      },
+      {
+        "agent": "Inst",
+        "archetype": "institutional",
+        "reasoning": "Price below VWAP mean-reversion default",
+        "orders": [
+          {
+            "side": "BUY",
+            "qty": 10.0,
+            "price": 100.0
+          }
+        ],
+        "held": false,
+        "forced_random": false,
+        "api_failed": false
+      },
+      {
+        "agent": "Quant",
+        "archetype": "quant",
+        "reasoning": "The recent clearing prices show a clear upward momentum",
+        "orders": [
+          {
+            "side": "BUY",
+            "qty": 10.0,
+            "price": 100.0
+          }
+        ],
+        "held": false,
+        "forced_random": false,
+        "api_failed": false
+      },
+      {
+        "agent": "MM",
+        "archetype": "market_maker",
+        "reasoning": "MM: quoting 99.91 / 100.01 (qty 50 each)",
+        "orders": [
+          {
+            "side": "BUY",
+            "qty": 50.0,
+            "price": 99.91
+          },
+          {
+            "side": "SELL",
+            "qty": 50.0,
+            "price": 100.01
+          }
+        ],
+        "held": false,
+        "forced_random": false,
+        "api_failed": false
+      }
+    ],
+    [
+      {
+        "agent": "Retail",
+        "archetype": "retail",
+        "reasoning": "The recent clearing prices show a slight uptrend, so I'll buy the dip.",
+        "orders": [
+          {
+            "side": "BUY",
+            "qty": 2.0,
+            "price": 100.0
+          }
+        ],
+        "held": false,
+        "forced_random": false,
+        "api_failed": false
+      },
+      {
+        "agent": "Inst",
+        "archetype": "institutional",
+        "reasoning": "Price below recent VWAP.",
+        "orders": [
+          {
+            "side": "BUY",
+            "qty": 20.0,
+            "price": 100.0
+          }
+        ],
+        "held": false,
+        "forced_random": false,
+        "api_failed": false
+      },
+      {
+        "agent": "Quant",
+        "archetype": "quant",
+        "reasoning": "Tape shows uptick momentum",
+        "orders": [
+          {
+            "side": "BUY",
+            "qty": 10.0,
+            "price": 100.0
+          }
+        ],
+        "held": false,
+        "forced_random": false,
+        "api_failed": false
+      },
+      {
+        "agent": "MM",
+        "archetype": "market_maker",
+        "reasoning": "MM: quoting 99.95 / 100.05 (qty 50 each)",
+        "orders": [
+          {
+            "side": "BUY",
+            "qty": 50.0,
+            "price": 99.95
+          },
+          {
+            "side": "SELL",
+            "qty": 50.0,
+            "price": 100.05
+          }
+        ],
+        "held": false,
+        "forced_random": false,
+        "api_failed": false
+      }
+    ],
+    [
+      {
+        "agent": "Retail",
+        "archetype": "retail",
+        "reasoning": "Follow default instinct on a rising price with no significant stress",
+        "orders": [
+          {
+            "side": "BUY",
+            "qty": 2.0,
+            "price": 100.0
+          }
+        ],
+        "held": false,
+        "forced_random": false,
+        "api_failed": false
+      },
+      {
+        "agent": "Inst",
+        "archetype": "institutional",
+        "reasoning": "Current price below VWAP mean-reversion threshold",
+        "orders": [
+          {
+            "side": "BUY",
+            "qty": 10.0,
+            "price": 100.0
+          }
+        ],
+        "held": false,
+        "forced_random": false,
+        "api_failed": false
+      },
+      {
+        "agent": "Quant",
+        "archetype": "quant",
+        "reasoning": "Price momentum is up with no significant stress in the macro environment.",
+        "orders": [
+          {
+            "side": "BUY",
+            "qty": 10.0,
+            "price": 100.0
+          }
+        ],
+        "held": false,
+        "forced_random": false,
+        "api_failed": false
+      },
+      {
+        "agent": "MM",
+        "archetype": "market_maker",
+        "reasoning": "MM: quoting 100.06 / 100.16 (qty 50 each)",
+        "orders": [
+          {
+            "side": "BUY",
+            "qty": 50.0,
+            "price": 100.06
+          },
+          {
+            "side": "SELL",
+            "qty": 50.0,
+            "price": 100.16
+          }
+        ],
+        "held": false,
+        "forced_random": false,
+        "api_failed": false
+      }
+    ],
+    [
+      {
+        "agent": "Retail",
+        "archetype": "retail",
+        "reasoning": "Recent price dip from $100.40 to $100.01 indicates a potential buying opportunity",
+        "orders": [
+          {
+            "side": "BUY",
+            "qty": 5.0,
+            "price": 100.03
+          }
+        ],
+        "held": false,
+        "forced_random": false,
+        "api_failed": false
+      },
+      {
+        "agent": "Inst",
+        "archetype": "institutional",
+        "reasoning": "Price below recent VWAP",
+        "orders": [
+          {
+            "side": "BUY",
+            "qty": 15.0,
+            "price": 100.03
+          }
+        ],
+        "held": false,
+        "forced_random": false,
+        "api_failed": false
+      },
+      {
+        "agent": "Quant",
+        "archetype": "quant",
+        "reasoning": "Upward momentum on a flat macro environment warrants an entry",
+        "orders": [
+          {
+            "side": "BUY",
+            "qty": 10.0,
+            "price": 100.03
+          }
+        ],
+        "held": false,
+        "forced_random": false,
+        "api_failed": false
+      },
+      {
+        "agent": "MM",
+        "archetype": "market_maker",
+        "reasoning": "MM: quoting 99.96 / 100.06 (qty 50 each)",
+        "orders": [
+          {
+            "side": "BUY",
+            "qty": 50.0,
+            "price": 99.96
+          },
+          {
+            "side": "SELL",
+            "qty": 50.0,
+            "price": 100.06
+          }
+        ],
+        "held": false,
+        "forced_random": false,
+        "api_failed": false
+      }
+    ],
+    [
+      {
+        "agent": "Retail",
+        "archetype": "retail",
+        "reasoning": "Recent clearing price was lower so I'll buy at current ask",
+        "orders": [
+          {
+            "side": "BUY",
+            "qty": 2.0,
+            "price": 100.04
+          }
+        ],
+        "held": false,
+        "forced_random": false,
+        "api_failed": false
+      },
+      {
+        "agent": "Inst",
+        "archetype": "institutional",
+        "reasoning": "Price below VWAP of recent clearing prices.",
+        "orders": [
+          {
+            "side": "BUY",
+            "qty": 20.0,
+            "price": 100.04
+          }
+        ],
+        "held": false,
+        "forced_random": false,
+        "api_failed": false
+      },
+      {
+        "agent": "Quant",
+        "archetype": "quant",
+        "reasoning": "Price still drifting up despite recent fluctuations.",
+        "orders": [
+          {
+            "side": "BUY",
+            "qty": 10.0,
+            "price": 100.04
+          }
+        ],
+        "held": false,
+        "forced_random": false,
+        "api_failed": false
+      },
+      {
+        "agent": "MM",
+        "archetype": "market_maker",
+        "reasoning": "MM: quoting 99.92 / 100.02 (qty 50 each)",
+        "orders": [
+          {
+            "side": "BUY",
+            "qty": 50.0,
+            "price": 99.92
+          },
+          {
+            "side": "SELL",
+            "qty": 50.0,
+            "price": 100.02
+          }
+        ],
+        "held": false,
+        "forced_random": false,
+        "api_failed": false
+      }
+    ],
+    [
+      {
+        "agent": "Retail",
+        "archetype": "retail",
+        "reasoning": "Default to buying the dip as price has decreased from last tick",
+        "orders": [
+          {
+            "side": "BUY",
+            "qty": 2.0,
+            "price": 100.01
+          }
+        ],
+        "held": false,
+        "forced_random": false,
+        "api_failed": false
+      },
+      {
+        "agent": "Inst",
+        "archetype": "institutional",
+        "reasoning": "Price is below VWAP, triggering mean-reversion default",
+        "orders": [
+          {
+            "side": "BUY",
+            "qty": 25.0,
+            "price": 100.01
+          }
+        ],
+        "held": false,
+        "forced_random": false,
+        "api_failed": false
+      },
+      {
+        "agent": "Quant",
+        "archetype": "quant",
+        "reasoning": "Upward momentum on a normal macro day warrants buying into the trend.",
+        "orders": [
+          {
+            "side": "BUY",
+            "qty": 10.0,
+            "price": 100.01
+          }
+        ],
+        "held": false,
+        "forced_random": false,
+        "api_failed": false
+      },
+      {
+        "agent": "MM",
+        "archetype": "market_maker",
+        "reasoning": "MM: quoting 99.98 / 100.08 (qty 50 each)",
+        "orders": [
+          {
+            "side": "BUY",
+            "qty": 50.0,
+            "price": 99.98
+          },
+          {
+            "side": "SELL",
+            "qty": 50.0,
+            "price": 100.08
+          }
+        ],
+        "held": false,
+        "forced_random": false,
+        "api_failed": false
+      }
+    ],
+    [
+      {
+        "agent": "Retail",
+        "archetype": "retail",
+        "reasoning": "Markets are stable; I should take advantage of this dip",
+        "orders": [
+          {
+            "side": "BUY",
+            "qty": 3.0,
+            "price": 100.02
+          }
+        ],
+        "held": false,
+        "forced_random": false,
+        "api_failed": false
+      },
+      {
+        "agent": "Inst",
+        "archetype": "institutional",
+        "reasoning": "Price is below the recent clearing average.",
+        "orders": [
+          {
+            "side": "BUY",
+            "qty": 15.0,
+            "price": 100.02
+          }
+        ],
+        "held": false,
+        "forced_random": false,
+        "api_failed": false
+      },
+      {
+        "agent": "Quant",
+        "archetype": "quant",
+        "reasoning": "The recent clearing price indicates upward momentum",
+        "orders": [
+          {
+            "side": "BUY",
+            "qty": 5.0,
+            "price": 100.02
+          }
+        ],
+        "held": false,
+        "forced_random": false,
+        "api_failed": false
+      },
+      {
+        "agent": "MM",
+        "archetype": "market_maker",
+        "reasoning": "MM: quoting 99.88 / 99.98 (qty 50 each)",
+        "orders": [
+          {
+            "side": "BUY",
+            "qty": 50.0,
+            "price": 99.88
+          },
+          {
+            "side": "SELL",
+            "qty": 50.0,
+            "price": 99.98
+          }
+        ],
+        "held": false,
+        "forced_random": false,
+        "api_failed": false
+      }
+    ],
+    [
+      {
+        "agent": "Retail",
+        "archetype": "retail",
+        "reasoning": "Price has dipped slightly from the previous tick.",
+        "orders": [
+          {
+            "side": "BUY",
+            "qty": 1.0,
+            "price": 100.03
+          }
+        ],
+        "held": false,
+        "forced_random": false,
+        "api_failed": false
+      },
+      {
+        "agent": "Inst",
+        "archetype": "institutional",
+        "reasoning": "Current price below VWAP, triggering mean-reversion buy signal",
+        "orders": [
+          {
+            "side": "BUY",
+            "qty": 15.0,
+            "price": 100.03
+          }
+        ],
+        "held": false,
+        "forced_random": false,
+        "api_failed": false
+      },
+      {
+        "agent": "Quant",
+        "archetype": "quant",
+        "reasoning": "Momentum default applied in normal market conditions with no significant stress.",
+        "orders": [
+          {
+            "side": "BUY",
+            "qty": 5.0,
+            "price": 100.03
+          }
+        ],
+        "held": false,
+        "forced_random": false,
+        "api_failed": false
+      },
+      {
+        "agent": "MM",
+        "archetype": "market_maker",
+        "reasoning": "MM: quoting 99.97 / 100.07 (qty 50 each)",
+        "orders": [
+          {
+            "side": "BUY",
+            "qty": 50.0,
+            "price": 99.97
+          },
+          {
+            "side": "SELL",
+            "qty": 50.0,
+            "price": 100.07
+          }
+        ],
+        "held": false,
+        "forced_random": false,
+        "api_failed": false
+      }
+    ],
+    [
+      {
+        "agent": "Retail",
+        "archetype": "retail",
+        "reasoning": "price has dipped from previous tick",
+        "orders": [
+          {
+            "side": "BUY",
+            "qty": 2.0,
+            "price": 100.04
+          }
+        ],
+        "held": false,
+        "forced_random": false,
+        "api_failed": false
+      },
+      {
+        "agent": "Inst",
+        "archetype": "institutional",
+        "reasoning": "Price is below recent clearing average, triggering mean-reversion buy signal.",
+        "orders": [
+          {
+            "side": "BUY",
+            "qty": 10.0,
+            "price": 100.04
+          }
+        ],
+        "held": false,
+        "forced_random": false,
+        "api_failed": false
+      },
+      {
+        "agent": "Quant",
+        "archetype": "quant",
+        "reasoning": "Price momentum suggests a slight upward bias",
+        "orders": [
+          {
+            "side": "BUY",
+            "qty": 10.0,
+            "price": 100.04
+          }
+        ],
+        "held": false,
+        "forced_random": false,
+        "api_failed": false
+      },
+      {
+        "agent": "MM",
+        "archetype": "market_maker",
+        "reasoning": "MM: quoting 99.84 / 99.94 (qty 50 each)",
+        "orders": [
+          {
+            "side": "BUY",
+            "qty": 50.0,
+            "price": 99.84
+          },
+          {
+            "side": "SELL",
+            "qty": 50.0,
+            "price": 99.94
+          }
+        ],
+        "held": false,
+        "forced_random": false,
+        "api_failed": false
+      }
+    ],
+    [
+      {
+        "agent": "Retail",
+        "archetype": "retail",
+        "reasoning": "Dip at reference price; recent clearing prices indicate downward momentum",
+        "orders": [
+          {
+            "side": "BUY",
+            "qty": 2.0,
+            "price": 100.02
+          }
+        ],
+        "held": false,
+        "forced_random": false,
+        "api_failed": false
+      },
+      {
+        "agent": "Inst",
+        "archetype": "institutional",
+        "reasoning": "Price below VWAP; initiating buy signal",
+        "orders": [
+          {
+            "side": "BUY",
+            "qty": 10.0,
+            "price": 100.02
+          }
+        ],
+        "held": false,
+        "forced_random": false,
+        "api_failed": false
+      },
+      {
+        "agent": "Quant",
+        "archetype": "quant",
+        "reasoning": "Tape momentum up with no significant stress in the macro environment",
+        "orders": [
+          {
+            "side": "BUY",
+            "qty": 10.0,
+            "price": 100.02
+          }
+        ],
+        "held": false,
+        "forced_random": false,
+        "api_failed": false
+      },
+      {
+        "agent": "MM",
+        "archetype": "market_maker",
+        "reasoning": "MM: quoting 99.65 / 99.75 (qty 50 each)",
+        "orders": [
+          {
+            "side": "BUY",
+            "qty": 50.0,
+            "price": 99.65
+          },
+          {
+            "side": "SELL",
+            "qty": 50.0,
+            "price": 99.75
+          }
+        ],
+        "held": false,
+        "forced_random": false,
+        "api_failed": false
+      }
+    ],
+    [
+      {
+        "agent": "Retail",
+        "archetype": "retail",
+        "reasoning": "Export restrictions on Indian wheat are alarming and I don't want to hold shares at this price.",
+        "orders": [
+          {
+            "side": "SELL",
+            "qty": 1.0,
+            "price": 100.01
+          }
+        ],
+        "held": false,
+        "forced_random": false,
+        "api_failed": false
+      },
+      {
+        "agent": "Inst",
+        "archetype": "institutional",
+        "reasoning": "Export restriction on Indian wheat invalidates mean-reversion assumption.",
+        "orders": [],
+        "held": true,
+        "forced_random": false,
+        "api_failed": false
+      },
+      {
+        "agent": "Quant",
+        "archetype": "quant",
+        "reasoning": "Price momentum suggests buying as it has been drifting up over the last 5 ticks.",
+        "orders": [
+          {
+            "side": "BUY",
+            "qty": 10.0,
+            "price": 100.01
+          }
+        ],
+        "held": false,
+        "forced_random": false,
+        "api_failed": false
+      },
+      {
+        "agent": "MM",
+        "archetype": "market_maker",
+        "reasoning": "MM: quoting 99.74 / 99.84 (qty 50 each)",
+        "orders": [
+          {
+            "side": "BUY",
+            "qty": 50.0,
+            "price": 99.74
+          },
+          {
+            "side": "SELL",
+            "qty": 50.0,
+            "price": 99.84
+          }
+        ],
+        "held": false,
+        "forced_random": false,
+        "api_failed": false
+      }
+    ],
+    [
+      {
+        "agent": "Retail",
+        "archetype": "retail",
+        "reasoning": "Following default behaviour on recent price dip",
+        "orders": [
+          {
+            "side": "BUY",
+            "qty": 3.0,
+            "price": 100.0
+          }
+        ],
+        "held": false,
+        "forced_random": false,
+        "api_failed": false
+      },
+      {
+        "agent": "Inst",
+        "archetype": "institutional",
+        "reasoning": "VWAP below current price; recent export restriction may drive prices higher",
+        "orders": [
+          {
+            "side": "BUY",
+            "qty": 15.0,
+            "price": 100.0
+          }
+        ],
+        "held": false,
+        "forced_random": false,
+        "api_failed": false
+      },
+      {
+        "agent": "Quant",
+        "archetype": "quant",
+        "reasoning": "Momentum up on decreasing export restriction severity",
+        "orders": [
+          {
+            "side": "BUY",
+            "qty": 10.0,
+            "price": 100.0
+          }
+        ],
+        "held": false,
+        "forced_random": false,
+        "api_failed": false
+      },
+      {
+        "agent": "MM",
+        "archetype": "market_maker",
+        "reasoning": "MM: quoting 99.87 / 99.97 (qty 50 each)",
+        "orders": [
+          {
+            "side": "BUY",
+            "qty": 50.0,
+            "price": 99.87
+          },
+          {
+            "side": "SELL",
+            "qty": 50.0,
+            "price": 99.97
+          }
+        ],
+        "held": false,
+        "forced_random": false,
+        "api_failed": false
+      }
+    ],
+    [
+      {
+        "agent": "Retail",
+        "archetype": "retail",
+        "reasoning": "Price has dipped slightly from previous tick, and given recent price memory.",
+        "orders": [
+          {
+            "side": "BUY",
+            "qty": 5.0,
+            "price": 99.97
+          }
+        ],
+        "held": false,
+        "forced_random": false,
+        "api_failed": false
+      },
+      {
+        "agent": "Inst",
+        "archetype": "institutional",
+        "reasoning": "Export restriction on Indian wheat invalidates VWAP mean-reversion assumption",
+        "orders": [],
+        "held": true,
+        "forced_random": false,
+        "api_failed": false
+      },
+      {
+        "agent": "Quant",
+        "archetype": "quant",
+        "reasoning": "Tape suggests slight price increase on low volume",
+        "orders": [
+          {
+            "side": "BUY",
+            "qty": 5.0,
+            "price": 99.97
+          }
+        ],
+        "held": false,
+        "forced_random": false,
+        "api_failed": false
+      },
+      {
+        "agent": "MM",
+        "archetype": "market_maker",
+        "reasoning": "MM: quoting 99.72 / 99.82 (qty 50 each)",
+        "orders": [
+          {
+            "side": "BUY",
+            "qty": 50.0,
+            "price": 99.72
+          },
+          {
+            "side": "SELL",
+            "qty": 50.0,
+            "price": 99.82
+          }
+        ],
+        "held": false,
+        "forced_random": false,
+        "api_failed": false
+      }
+    ],
+    [
+      {
+        "agent": "Retail",
+        "archetype": "retail",
+        "reasoning": "Market is trending down based on recent clearing prices.",
+        "orders": [
+          {
+            "side": "SELL",
+            "qty": 3.0,
+            "price": 99.96
+          }
+        ],
+        "held": false,
+        "forced_random": false,
+        "api_failed": false
+      },
+      {
+        "agent": "Inst",
+        "archetype": "institutional",
+        "reasoning": "Indian wheat export restriction event triggers negative sentiment",
+        "orders": [
+          {
+            "side": "SELL",
+            "qty": 15.0,
+            "price": 99.96
+          }
+        ],
+        "held": false,
+        "forced_random": false,
+        "api_failed": false
+      },
+      {
+        "agent": "Quant",
+        "archetype": "quant",
+        "reasoning": "The tape is up, price just made a new high, and the context supports this strength.",
+        "orders": [
+          {
+            "side": "BUY",
+            "qty": 10.0,
+            "price": 99.96
+          }
+        ],
+        "held": false,
+        "forced_random": false,
+        "api_failed": false
+      },
+      {
+        "agent": "MM",
+        "archetype": "market_maker",
+        "reasoning": "MM: quoting 99.74 / 99.84 (qty 50 each)",
+        "orders": [
+          {
+            "side": "BUY",
+            "qty": 50.0,
+            "price": 99.74
+          },
+          {
+            "side": "SELL",
+            "qty": 50.0,
+            "price": 99.84
+          }
+        ],
+        "held": false,
+        "forced_random": false,
+        "api_failed": false
+      }
+    ],
+    [
+      {
+        "agent": "Retail",
+        "archetype": "retail",
+        "reasoning": "Recent clearing prices show a slight downtrend",
+        "orders": [
+          {
+            "side": "SELL",
+            "qty": 2.0,
+            "price": 99.96
+          }
+        ],
+        "held": false,
+        "forced_random": false,
+        "api_failed": false
+      },
+      {
+        "agent": "Inst",
+        "archetype": "institutional",
+        "reasoning": "Export restriction news invalidates VWAP mean-reversion thesis.",
+        "orders": [
+          {
+            "side": "SELL",
+            "qty": 15.0,
+            "price": 99.96
+          }
+        ],
+        "held": false,
+        "forced_random": false,
+        "api_failed": false
+      },
+      {
+        "agent": "Quant",
+        "archetype": "quant",
+        "reasoning": "The tape shows a slight drift up despite bearish macro context, following the momentum default.",
+        "orders": [
+          {
+            "side": "BUY",
+            "qty": 10.0,
+            "price": 99.96
+          }
+        ],
+        "held": false,
+        "forced_random": false,
+        "api_failed": false
+      },
+      {
+        "agent": "MM",
+        "archetype": "market_maker",
+        "reasoning": "MM: quoting 99.66 / 99.76 (qty 50 each)",
+        "orders": [
+          {
+            "side": "BUY",
+            "qty": 50.0,
+            "price": 99.66
+          },
+          {
+            "side": "SELL",
+            "qty": 50.0,
+            "price": 99.76
+          }
+        ],
+        "held": false,
+        "forced_random": false,
+        "api_failed": false
+      }
+    ],
+    [
+      {
+        "agent": "Retail",
+        "archetype": "retail",
+        "reasoning": "Recent clearing prices have been falling, making a sale at current price a prudent decision.",
+        "orders": [
+          {
+            "side": "SELL",
+            "qty": 5.0,
+            "price": 99.94
+          }
+        ],
+        "held": false,
+        "forced_random": false,
+        "api_failed": false
+      },
+      {
+        "agent": "Inst",
+        "archetype": "institutional",
+        "reasoning": "Export restriction on Indian wheat invalidates VWAP mean-reversion assumption",
+        "orders": [
+          {
+            "side": "SELL",
+            "qty": 10.0,
+            "price": 99.94
+          }
+        ],
+        "held": false,
+        "forced_random": false,
+        "api_failed": false
+      },
+      {
+        "agent": "Quant",
+        "archetype": "quant",
+        "reasoning": "The tape indicates upward momentum with a rising reference price and clearing prices.",
+        "orders": [
+          {
+            "side": "BUY",
+            "qty": 10.0,
+            "price": 99.94
+          }
+        ],
+        "held": false,
+        "forced_random": false,
+        "api_failed": false
+      },
+      {
+        "agent": "MM",
+        "archetype": "market_maker",
+        "reasoning": "MM: quoting 99.70 / 99.80 (qty 50 each)",
+        "orders": [
+          {
+            "side": "BUY",
+            "qty": 50.0,
+            "price": 99.7
+          },
+          {
+            "side": "SELL",
+            "qty": 50.0,
+            "price": 99.8
+          }
+        ],
+        "held": false,
+        "forced_random": false,
+        "api_failed": false
+      }
+    ],
+    [
+      {
+        "agent": "Retail",
+        "archetype": "retail",
+        "reasoning": "Dip buying instinct triggered by recent clearing prices",
+        "orders": [
+          {
+            "side": "BUY",
+            "qty": 2.0,
+            "price": 99.94
+          }
+        ],
+        "held": false,
+        "forced_random": false,
+        "api_failed": false
+      },
+      {
+        "agent": "Inst",
+        "archetype": "institutional",
+        "reasoning": "Export restriction on Indian wheat negatively impacts price, indicating a buying opportunity below the VWAP.",
+        "orders": [
+          {
+            "side": "BUY",
+            "qty": 15.0,
+            "price": 99.94
+          }
+        ],
+        "held": false,
+        "forced_random": false,
+        "api_failed": false
+      },
+      {
+        "agent": "Quant",
+        "archetype": "quant",
+        "reasoning": "Price momentum up with recent clearing prices above reference price",
+        "orders": [
+          {
+            "side": "BUY",
+            "qty": 10.0,
+            "price": 99.94
+          }
+        ],
+        "held": false,
+        "forced_random": false,
+        "api_failed": false
+      },
+      {
+        "agent": "MM",
+        "archetype": "market_maker",
+        "reasoning": "MM: quoting 99.54 / 99.64 (qty 50 each)",
+        "orders": [
+          {
+            "side": "BUY",
+            "qty": 50.0,
+            "price": 99.54
+          },
+          {
+            "side": "SELL",
+            "qty": 50.0,
+            "price": 99.64
+          }
+        ],
+        "held": false,
+        "forced_random": false,
+        "api_failed": false
+      }
+    ],
+    [
+      {
+        "agent": "Retail",
+        "archetype": "retail",
+        "reasoning": "Recent price drop from $99.95 to $99.88 indicates a potential trend reversal.",
+        "orders": [
+          {
+            "side": "SELL",
+            "qty": 3.0,
+            "price": 99.92
+          }
+        ],
+        "held": false,
+        "forced_random": false,
+        "api_failed": false
+      },
+      {
+        "agent": "Inst",
+        "archetype": "institutional",
+        "reasoning": "Export restriction on Indian wheat creates supply shock, re-pricing the asset above recent VWAP",
+        "orders": [
+          {
+            "side": "SELL",
+            "qty": 10.0,
+            "price": 99.92
+          }
+        ],
+        "held": false,
+        "forced_random": false,
+        "api_failed": false
+      },
+      {
+        "agent": "Quant",
+        "archetype": "quant",
+        "reasoning": "Momentum up on recent clearing prices",
+        "orders": [
+          {
+            "side": "BUY",
+            "qty": 10.0,
+            "price": 99.92
+          }
+        ],
+        "held": false,
+        "forced_random": false,
+        "api_failed": false
+      },
+      {
+        "agent": "MM",
+        "archetype": "market_maker",
+        "reasoning": "MM: quoting 99.36 / 99.46 (qty 50 each)",
+        "orders": [
+          {
+            "side": "BUY",
+            "qty": 50.0,
+            "price": 99.36
+          },
+          {
+            "side": "SELL",
+            "qty": 50.0,
+            "price": 99.46
+          }
+        ],
+        "held": false,
+        "forced_random": false,
+        "api_failed": false
+      }
+    ],
+    [
+      {
+        "agent": "Retail",
+        "archetype": "retail",
+        "reasoning": "Indian wheat export restrictions are tightening, triggering a spike in VIX.",
+        "orders": [
+          {
+            "side": "SELL",
+            "qty": 5.0,
+            "price": 99.92
+          }
+        ],
+        "held": false,
+        "forced_random": false,
+        "api_failed": false
+      },
+      {
+        "agent": "Inst",
+        "archetype": "institutional",
+        "reasoning": "Export restriction on Indian wheat indicates reduced global supply, which could justify a price above the recent clearing average.",
+        "orders": [
+          {
+            "side": "SELL",
+            "qty": 15.0,
+            "price": 99.92
+          }
+        ],
+        "held": false,
+        "forced_random": false,
+        "api_failed": false
+      },
+      {
+        "agent": "Quant",
+        "archetype": "quant",
+        "reasoning": "The tape suggests buying on the small dip",
+        "orders": [
+          {
+            "side": "BUY",
+            "qty": 10.0,
+            "price": 99.92
+          }
+        ],
+        "held": false,
+        "forced_random": false,
+        "api_failed": false
+      },
+      {
+        "agent": "MM",
+        "archetype": "market_maker",
+        "reasoning": "MM: quoting 99.34 / 99.44 (qty 50 each)",
+        "orders": [
+          {
+            "side": "BUY",
+            "qty": 50.0,
+            "price": 99.34
+          },
+          {
+            "side": "SELL",
+            "qty": 50.0,
+            "price": 99.44
+          }
+        ],
+        "held": false,
+        "forced_random": false,
+        "api_failed": false
+      }
+    ],
+    [
+      {
+        "agent": "Retail",
+        "archetype": "retail",
+        "reasoning": "Recent price dip looks like a buying opportunity",
+        "orders": [
+          {
+            "side": "BUY",
+            "qty": 3.0,
+            "price": 99.91
+          }
+        ],
+        "held": false,
+        "forced_random": false,
+        "api_failed": false
+      },
+      {
+        "agent": "Inst",
+        "archetype": "institutional",
+        "reasoning": "Export restriction and negative sentiment on Indian wheat justify caution at current price",
+        "orders": [],
+        "held": true,
+        "forced_random": false,
+        "api_failed": false
+      },
+      {
+        "agent": "Quant",
+        "archetype": "quant",
+        "reasoning": "The tape is drifting up with increasing volume.",
+        "orders": [
+          {
+            "side": "BUY",
+            "qty": 10.0,
+            "price": 99.91
+          }
+        ],
+        "held": false,
+        "forced_random": false,
+        "api_failed": false
+      },
+      {
+        "agent": "MM",
+        "archetype": "market_maker",
+        "reasoning": "MM: quoting 99.46 / 99.56 (qty 50 each)",
+        "orders": [
+          {
+            "side": "BUY",
+            "qty": 50.0,
+            "price": 99.46
+          },
+          {
+            "side": "SELL",
+            "qty": 50.0,
+            "price": 99.56
+          }
+        ],
+        "held": false,
+        "forced_random": false,
+        "api_failed": false
+      }
+    ]
+  ],
+  "wealth_log": [
+    [
+      10000.0,
+      100000.0,
+      50000.0,
+      1100450.0
+    ],
+    [
+      10000.0,
+      100000.0,
+      50000.0,
+      1100450.0
+    ],
+    [
+      10000.0,
+      100000.0,
+      50000.0,
+      1100010.0
+    ],
+    [
+      10000.0,
+      100000.0,
+      50000.0,
+      1100010.0
+    ],
+    [
+      10000.0,
+      100000.0,
+      50000.0,
+      1100031.0
+    ],
+    [
+      10000.0,
+      100000.0,
+      50000.0,
+      1100031.0
+    ],
+    [
+      9999.94,
+      100000.0,
+      49999.7,
+      1100000.31
+    ],
+    [
+      9999.94,
+      100000.0,
+      49999.7,
+      1100000.31
+    ],
+    [
+      9999.840000000002,
+      99999.7,
+      49999.399999999994,
+      1099980.85
+    ],
+    [
+      9999.77,
+      99999.55,
+      49999.149999999994,
+      1099971.62
+    ],
+    [
+      9999.68,
+      99999.4,
+      49998.799999999996,
+      1099962.8900000001
+    ],
+    [
+      10000.0,
+      100000.0,
+      50000.6,
+      1099995.81
+    ],
+    [
+      9999.45,
+      99999.25,
+      49997.85,
+      1099955.31
+    ],
+    [
+      9999.45,
+      99999.25,
+      49997.85,
+      1099955.31
+    ],
+    [
+      9999.060000000001,
+      99998.8,
+      49995.75,
+      1099934.01
+    ],
+    [
+      9998.95,
+      99998.65,
+      49994.950000000004,
+      1099927.4100000001
+    ],
+    [
+      9998.77,
+      99998.2,
+      49992.25,
+      1099909.11
+    ],
+    [
+      9998.69,
+      99998.05,
+      49991.25,
+      1099903.51
+    ],
+    [
+      9998.54,
+      99997.6,
+      49987.950000000004,
+      1099888.21
+    ],
+    [
+      9998.54,
+      99996.1,
+      49975.95,
+      1099842.21
+    ]
+  ],
+  "agent_names": [
+    "Retail",
+    "Inst",
+    "Quant",
+    "MM"
+  ],
+  "agent_archetypes": [
+    "retail",
+    "institutional",
+    "quant",
+    "market_maker"
+  ]
+}

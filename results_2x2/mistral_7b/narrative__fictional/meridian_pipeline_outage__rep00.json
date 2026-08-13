@@ -1,0 +1,1675 @@
+{
+  "model": "mistral:7b",
+  "backend": "ollama:mistral:7b",
+  "shock_id": "meridian_pipeline_outage__fictional__narrative",
+  "matched_pair_id": "pair__pipeline_outage",
+  "event_key": "meridian_pipeline_outage",
+  "realism": "fictional",
+  "framing": "narrative",
+  "rep": 0,
+  "seed": 1630205836,
+  "n_ticks": 20,
+  "shock_tick": 10,
+  "shock_text": "A ransomware attack on the Meridian Pipeline has halted 2.5 million barrels per day of refined fuel flow, forcing fuel wholesalers to invoke allocation and elastomeric refiners to cut run rates. Suspended pipeline flow is expected to strand product inventories for fuel wholesalers, force run-rate cuts at elastomeric refiners, and escalate spot haulage rates for conveyance operators rerouting by tanker truck.",
+  "elapsed_s": 320.44,
+  "metrics": {
+    "spread_pre": 0.14100000000000107,
+    "spread_post": 0.13300000000000267,
+    "spread_widening": -0.007999999999998397,
+    "kyle_lambda_pre": 0.002799719887955196,
+    "kyle_lambda_post": 0.002612715636853496,
+    "kyle_lambda_delta": -0.00018700425110169993,
+    "amihud_post": 2.4509719552186513e-07,
+    "spread_adverse_post": 0.023243870008236,
+    "archetype_divergence": 9.598630110582067e-05,
+    "archetype_returns": {
+      "retail": 2.199999999975262e-05,
+      "institutional": -0.00011490000000005238,
+      "quant": -0.00016300000000002912
+    },
+    "hold_rate": 0.21666666666666667,
+    "forced_random_rate": 0.08333333333333333,
+    "api_failure_rate": 0.0,
+    "genuine_hold_rate": 0.21666666666666667
+  },
+  "trajectory": [
+    {
+      "tick": 8,
+      "clearing_price": 100.0,
+      "mid_price": 99.91,
+      "spread": 0.09999999999999432,
+      "volume": 6.0,
+      "num_trades": 2,
+      "kyles_lambda": -0.0025000000000000946,
+      "amihud_illiquidity": 1.5000000000000568e-06,
+      "spread_adverse_selection": 0.015000000000000568,
+      "spread_inventory_cost": 0.08499999999999375
+    },
+    {
+      "tick": 9,
+      "clearing_price": null,
+      "mid_price": 99.935,
+      "spread": 0.04999999999999716,
+      "volume": 0,
+      "num_trades": 0,
+      "kyles_lambda": 0.0006250000000001422,
+      "amihud_illiquidity": null,
+      "spread_adverse_selection": null,
+      "spread_inventory_cost": null
+    },
+    {
+      "tick": 10,
+      "clearing_price": 99.97,
+      "mid_price": 99.955,
+      "spread": 0.030000000000001137,
+      "volume": 50.0,
+      "num_trades": 2,
+      "kyles_lambda": 0.0004999999999999005,
+      "amihud_illiquidity": 4.003802831948002e-08,
+      "spread_adverse_selection": 0.024999999999995023,
+      "spread_inventory_cost": 0.005000000000006114
+    },
+    {
+      "tick": 11,
+      "clearing_price": 100.16,
+      "mid_price": 100.055,
+      "spread": 0.20999999999999375,
+      "volume": 50.0,
+      "num_trades": 2,
+      "kyles_lambda": 0.004761904761905168,
+      "amihud_illiquidity": 1.9977040786566523e-07,
+      "spread_adverse_selection": 0.20999999999999375,
+      "spread_inventory_cost": 0.0
+    },
+    {
+      "tick": 12,
+      "clearing_price": 100.27,
+      "mid_price": 100.16499999999999,
+      "spread": 0.20999999999999375,
+      "volume": 50.0,
+      "num_trades": 2,
+      "kyles_lambda": 0.0027499999999996303,
+      "amihud_illiquidity": 2.1928699163597094e-07,
+      "spread_adverse_selection": 0.13749999999998153,
+      "spread_inventory_cost": 0.07250000000001222
+    },
+    {
+      "tick": 13,
+      "clearing_price": 100.27,
+      "mid_price": 100.35,
+      "spread": 0.10000000000000853,
+      "volume": 44.0,
+      "num_trades": 1,
+      "kyles_lambda": 0.004625000000000057,
+      "amihud_illiquidity": 4.1863163284773866e-07,
+      "spread_adverse_selection": 0.10000000000000853,
+      "spread_inventory_cost": 0.0
+    },
+    {
+      "tick": 14,
+      "clearing_price": 100.3,
+      "mid_price": 100.24000000000001,
+      "spread": 0.10000000000000853,
+      "volume": 36.0,
+      "num_trades": 3,
+      "kyles_lambda": -0.0032352941176466243,
+      "amihud_illiquidity": 3.035791038002232e-07,
+      "spread_adverse_selection": 0.07764705882351898,
+      "spread_inventory_cost": 0.022352941176489546
+    },
+    {
+      "tick": 15,
+      "clearing_price": 100.19,
+      "mid_price": 100.24000000000001,
+      "spread": 0.10000000000000853,
+      "volume": 50.0,
+      "num_trades": 2,
+      "kyles_lambda": 0.0,
+      "amihud_illiquidity": 0.0,
+      "spread_adverse_selection": 0.0,
+      "spread_inventory_cost": 0.10000000000000853
+    },
+    {
+      "tick": 16,
+      "clearing_price": 100.16,
+      "mid_price": 100.17500000000001,
+      "spread": 0.23000000000000398,
+      "volume": 50.0,
+      "num_trades": 3,
+      "kyles_lambda": -0.0064999999999997725,
+      "amihud_illiquidity": 1.2948157648480253e-07,
+      "spread_adverse_selection": 0.2166666666666591,
+      "spread_inventory_cost": 0.013333333333344882
+    },
+    {
+      "tick": 17,
+      "clearing_price": 100.01,
+      "mid_price": 100.15,
+      "spread": 0.28000000000000114,
+      "volume": 51.0,
+      "num_trades": 4,
+      "kyles_lambda": -0.0025000000000005686,
+      "amihud_illiquidity": 4.8929080481668224e-08,
+      "spread_adverse_selection": 0.0637500000000145,
+      "spread_inventory_cost": 0.21624999999998662
+    },
+    {
+      "tick": 18,
+      "clearing_price": 99.95,
+      "mid_price": 100.12,
+      "spread": 0.3400000000000034,
+      "volume": 50.0,
+      "num_trades": 4,
+      "kyles_lambda": -0.002000000000000076,
+      "amihud_illiquidity": 5.994010485023068e-08,
+      "spread_adverse_selection": 0.0500000000000019,
+      "spread_inventory_cost": 0.29000000000000153
+    },
+    {
+      "tick": 19,
+      "clearing_price": 99.91,
+      "mid_price": 100.1,
+      "spread": 0.38000000000000966,
+      "volume": 50.0,
+      "num_trades": 4,
+      "kyles_lambda": -0.0018181818181827484,
+      "amihud_illiquidity": 3.998804677307905e-08,
+      "spread_adverse_selection": 0.04545454545456871,
+      "spread_inventory_cost": 0.33454545454544093
+    },
+    {
+      "tick": 20,
+      "clearing_price": 99.87,
+      "mid_price": 100.08000000000001,
+      "spread": 0.4200000000000017,
+      "volume": 51.0,
+      "num_trades": 4,
+      "kyles_lambda": -0.0013333333333321207,
+      "amihud_illiquidity": 3.9227505521887886e-08,
+      "spread_adverse_selection": 0.033999999999969076,
+      "spread_inventory_cost": 0.38600000000003265
+    },
+    {
+      "tick": 21,
+      "clearing_price": 100.08,
+      "mid_price": 99.885,
+      "spread": 0.030000000000001137,
+      "volume": 10.0,
+      "num_trades": 1,
+      "kyles_lambda": -0.0177272727272734,
+      "amihud_illiquidity": 1.9468837400104632e-06,
+      "spread_adverse_selection": 0.030000000000001137,
+      "spread_inventory_cost": 0.0
+    },
+    {
+      "tick": 22,
+      "clearing_price": 99.87,
+      "mid_price": 99.86500000000001,
+      "spread": 0.010000000000005116,
+      "volume": 35.0,
+      "num_trades": 2,
+      "kyles_lambda": -0.0015384615384612323,
+      "amihud_illiquidity": 5.728311513667349e-08,
+      "spread_adverse_selection": 0.010000000000005116,
+      "spread_inventory_cost": 0.0
+    },
+    {
+      "tick": 23,
+      "clearing_price": 99.87,
+      "mid_price": 99.86500000000001,
+      "spread": 0.010000000000005116,
+      "volume": 12.0,
+      "num_trades": 3,
+      "kyles_lambda": 0.0,
+      "amihud_illiquidity": 0.0,
+      "spread_adverse_selection": 0.0,
+      "spread_inventory_cost": 0.010000000000005116
+    },
+    {
+      "tick": 24,
+      "clearing_price": 99.86,
+      "mid_price": 99.88,
+      "spread": 0.04000000000000625,
+      "volume": 53.0,
+      "num_trades": 4,
+      "kyles_lambda": 0.0005555555555550503,
+      "amihud_illiquidity": 2.837987781845877e-08,
+      "spread_adverse_selection": 0.014722222222208833,
+      "spread_inventory_cost": 0.025277777777797418
+    },
+    {
+      "tick": 25,
+      "clearing_price": 99.84,
+      "mid_price": 99.87,
+      "spread": 0.060000000000002274,
+      "volume": 50.0,
+      "num_trades": 3,
+      "kyles_lambda": -0.0003448275862065829,
+      "amihud_illiquidity": 2.0056118624382322e-08,
+      "spread_adverse_selection": 0.011494252873552765,
+      "spread_inventory_cost": 0.048505747126449505
+    },
+    {
+      "tick": 26,
+      "clearing_price": null,
+      "mid_price": 99.875,
+      "spread": 0.009999999999990905,
+      "volume": 0,
+      "num_trades": 0,
+      "kyles_lambda": 0.0003333333333330302,
+      "amihud_illiquidity": null,
+      "spread_adverse_selection": null,
+      "spread_inventory_cost": null
+    },
+    {
+      "tick": 27,
+      "clearing_price": 99.9,
+      "mid_price": 99.885,
+      "spread": 0.030000000000001137,
+      "volume": 71.0,
+      "num_trades": 5,
+      "kyles_lambda": 0.0004761904761907198,
+      "amihud_illiquidity": 1.4116250961610648e-08,
+      "spread_adverse_selection": 0.013523809523816441,
+      "spread_inventory_cost": 0.016476190476184698
+    }
+  ],
+  "decisions": [
+    [
+      {
+        "agent": "Retail",
+        "archetype": "retail",
+        "reasoning": "Default instinct to buy dip in normal market conditions",
+        "orders": [
+          {
+            "side": "BUY",
+            "qty": 1.0,
+            "price": 100.0
+          }
+        ],
+        "held": false,
+        "forced_random": false,
+        "api_failed": false
+      },
+      {
+        "agent": "Inst",
+        "archetype": "institutional",
+        "reasoning": "Current price is below the recent average clearing prices",
+        "orders": [
+          {
+            "side": "BUY",
+            "qty": 30.0,
+            "price": 100.0
+          }
+        ],
+        "held": false,
+        "forced_random": false,
+        "api_failed": false
+      },
+      {
+        "agent": "Quant",
+        "archetype": "quant",
+        "reasoning": "Upward price movement on the tape",
+        "orders": [
+          {
+            "side": "BUY",
+            "qty": 5.0,
+            "price": 100.0
+          }
+        ],
+        "held": false,
+        "forced_random": false,
+        "api_failed": false
+      },
+      {
+        "agent": "MM",
+        "archetype": "market_maker",
+        "reasoning": "MM: quoting 99.86 / 99.96 (qty 50 each)",
+        "orders": [
+          {
+            "side": "BUY",
+            "qty": 50.0,
+            "price": 99.86
+          },
+          {
+            "side": "SELL",
+            "qty": 50.0,
+            "price": 99.96
+          }
+        ],
+        "held": false,
+        "forced_random": false,
+        "api_failed": false
+      }
+    ],
+    [
+      {
+        "agent": "Retail",
+        "archetype": "retail",
+        "reasoning": "Normal baseline conditions, recent P&L context is positive, no significant stress in the market.",
+        "orders": [],
+        "held": true,
+        "forced_random": false,
+        "api_failed": false
+      },
+      {
+        "agent": "Inst",
+        "archetype": "institutional",
+        "reasoning": "Price below recent VWAP",
+        "orders": [
+          {
+            "side": "BUY",
+            "qty": 30.0,
+            "price": 99.91
+          }
+        ],
+        "held": false,
+        "forced_random": false,
+        "api_failed": false
+      },
+      {
+        "agent": "Quant",
+        "archetype": "quant",
+        "reasoning": "Price momentum is upward",
+        "orders": [
+          {
+            "side": "BUY",
+            "qty": 10.0,
+            "price": 99.91
+          }
+        ],
+        "held": false,
+        "forced_random": false,
+        "api_failed": false
+      },
+      {
+        "agent": "MM",
+        "archetype": "market_maker",
+        "reasoning": "MM: quoting 99.87 / 99.97 (qty 50 each)",
+        "orders": [
+          {
+            "side": "BUY",
+            "qty": 50.0,
+            "price": 99.87
+          },
+          {
+            "side": "SELL",
+            "qty": 50.0,
+            "price": 99.97
+          }
+        ],
+        "held": false,
+        "forced_random": false,
+        "api_failed": false
+      }
+    ],
+    [
+      {
+        "agent": "Retail",
+        "archetype": "retail",
+        "reasoning": "Markets are operating under normal conditions and the recent clearing prices indicate a slight dip from the reference price, but holding for now as there is no significant change in risk level.",
+        "orders": [],
+        "held": true,
+        "forced_random": false,
+        "api_failed": false
+      },
+      {
+        "agent": "Inst",
+        "archetype": "institutional",
+        "reasoning": "Price is below recent clearing average",
+        "orders": [
+          {
+            "side": "BUY",
+            "qty": 30.0,
+            "price": 99.94
+          }
+        ],
+        "held": false,
+        "forced_random": false,
+        "api_failed": false
+      },
+      {
+        "agent": "Quant",
+        "archetype": "quant",
+        "reasoning": "Upward price movement",
+        "orders": [
+          {
+            "side": "BUY",
+            "qty": 10.0,
+            "price": 99.94
+          }
+        ],
+        "held": false,
+        "forced_random": false,
+        "api_failed": false
+      },
+      {
+        "agent": "MM",
+        "archetype": "market_maker",
+        "reasoning": "MM: quoting 100.06 / 100.16 (qty 50 each)",
+        "orders": [
+          {
+            "side": "BUY",
+            "qty": 50.0,
+            "price": 100.06
+          },
+          {
+            "side": "SELL",
+            "qty": 50.0,
+            "price": 100.16
+          }
+        ],
+        "held": false,
+        "forced_random": false,
+        "api_failed": false
+      }
+    ],
+    [
+      {
+        "agent": "Retail",
+        "archetype": "retail",
+        "reasoning": "Retail: 3 consecutive HOLDs \u2014 fallback BUY 1 @ 99.95",
+        "orders": [
+          {
+            "side": "BUY",
+            "qty": 1.0,
+            "price": 99.95
+          }
+        ],
+        "held": false,
+        "forced_random": true,
+        "api_failed": false
+      },
+      {
+        "agent": "Inst",
+        "archetype": "institutional",
+        "reasoning": "Current price is below the recent average of clearing prices",
+        "orders": [
+          {
+            "side": "BUY",
+            "qty": 10.0,
+            "price": 99.95
+          }
+        ],
+        "held": false,
+        "forced_random": false,
+        "api_failed": false
+      },
+      {
+        "agent": "Quant",
+        "archetype": "quant",
+        "reasoning": "Upward momentum on the tape",
+        "orders": [
+          {
+            "side": "BUY",
+            "qty": 10.0,
+            "price": 99.95
+          }
+        ],
+        "held": false,
+        "forced_random": false,
+        "api_failed": false
+      },
+      {
+        "agent": "MM",
+        "archetype": "market_maker",
+        "reasoning": "MM: quoting 100.17 / 100.27 (qty 50 each)",
+        "orders": [
+          {
+            "side": "BUY",
+            "qty": 50.0,
+            "price": 100.17
+          },
+          {
+            "side": "SELL",
+            "qty": 50.0,
+            "price": 100.27
+          }
+        ],
+        "held": false,
+        "forced_random": false,
+        "api_failed": false
+      }
+    ],
+    [
+      {
+        "agent": "Retail",
+        "archetype": "retail",
+        "reasoning": "Normal baseline conditions, no significant stress",
+        "orders": [],
+        "held": true,
+        "forced_random": false,
+        "api_failed": false
+      },
+      {
+        "agent": "Inst",
+        "archetype": "institutional",
+        "reasoning": "Current price below recent clearing prices",
+        "orders": [
+          {
+            "side": "BUY",
+            "qty": 30.0,
+            "price": 100.06
+          }
+        ],
+        "held": false,
+        "forced_random": false,
+        "api_failed": false
+      },
+      {
+        "agent": "Quant",
+        "archetype": "quant",
+        "reasoning": "Price upward momentum",
+        "orders": [
+          {
+            "side": "BUY",
+            "qty": 10.0,
+            "price": 100.06
+          }
+        ],
+        "held": false,
+        "forced_random": false,
+        "api_failed": false
+      },
+      {
+        "agent": "MM",
+        "archetype": "market_maker",
+        "reasoning": "MM: quoting 100.34 / 100.44 (qty 50 each)",
+        "orders": [
+          {
+            "side": "BUY",
+            "qty": 50.0,
+            "price": 100.34
+          },
+          {
+            "side": "SELL",
+            "qty": 50.0,
+            "price": 100.44
+          }
+        ],
+        "held": false,
+        "forced_random": false,
+        "api_failed": false
+      }
+    ],
+    [
+      {
+        "agent": "Retail",
+        "archetype": "retail",
+        "reasoning": "Normal baseline conditions, no significant stress, and recent price stability. No need to act.",
+        "orders": [],
+        "held": true,
+        "forced_random": false,
+        "api_failed": false
+      },
+      {
+        "agent": "Inst",
+        "archetype": "institutional",
+        "reasoning": "Price below recent volume-weighted average",
+        "orders": [
+          {
+            "side": "BUY",
+            "qty": 30.0,
+            "price": 100.16
+          }
+        ],
+        "held": false,
+        "forced_random": false,
+        "api_failed": false
+      },
+      {
+        "agent": "Quant",
+        "archetype": "quant",
+        "reasoning": "Price momentum upward, no significant context change",
+        "orders": [
+          {
+            "side": "BUY",
+            "qty": 10.0,
+            "price": 100.16
+          }
+        ],
+        "held": false,
+        "forced_random": false,
+        "api_failed": false
+      },
+      {
+        "agent": "MM",
+        "archetype": "market_maker",
+        "reasoning": "MM: quoting 100.30 / 100.40 (qty 50 each)",
+        "orders": [
+          {
+            "side": "BUY",
+            "qty": 50.0,
+            "price": 100.3
+          },
+          {
+            "side": "SELL",
+            "qty": 50.0,
+            "price": 100.4
+          }
+        ],
+        "held": false,
+        "forced_random": false,
+        "api_failed": false
+      }
+    ],
+    [
+      {
+        "agent": "Retail",
+        "archetype": "retail",
+        "reasoning": "Retail: 3 consecutive HOLDs \u2014 fallback SELL 1 @ 100.35",
+        "orders": [
+          {
+            "side": "SELL",
+            "qty": 1.0,
+            "price": 100.35
+          }
+        ],
+        "held": false,
+        "forced_random": true,
+        "api_failed": false
+      },
+      {
+        "agent": "Inst",
+        "archetype": "institutional",
+        "reasoning": "Current price is below the recent average of clearing prices",
+        "orders": [
+          {
+            "side": "BUY",
+            "qty": 30.0,
+            "price": 100.35
+          }
+        ],
+        "held": false,
+        "forced_random": false,
+        "api_failed": false
+      },
+      {
+        "agent": "Quant",
+        "archetype": "quant",
+        "reasoning": "Upward momentum on the tape",
+        "orders": [
+          {
+            "side": "BUY",
+            "qty": 5.0,
+            "price": 100.35
+          }
+        ],
+        "held": false,
+        "forced_random": false,
+        "api_failed": false
+      },
+      {
+        "agent": "MM",
+        "archetype": "market_maker",
+        "reasoning": "MM: quoting 100.19 / 100.29 (qty 50 each)",
+        "orders": [
+          {
+            "side": "BUY",
+            "qty": 50.0,
+            "price": 100.19
+          },
+          {
+            "side": "SELL",
+            "qty": 50.0,
+            "price": 100.29
+          }
+        ],
+        "held": false,
+        "forced_random": false,
+        "api_failed": false
+      }
+    ],
+    [
+      {
+        "agent": "Retail",
+        "archetype": "retail",
+        "reasoning": "Markets are normal, no significant changes in recent P&L context, and no recent price movement justifies action.",
+        "orders": [],
+        "held": true,
+        "forced_random": false,
+        "api_failed": false
+      },
+      {
+        "agent": "Inst",
+        "archetype": "institutional",
+        "reasoning": "Current price within recent clearing prices, no need for action",
+        "orders": [],
+        "held": true,
+        "forced_random": false,
+        "api_failed": false
+      },
+      {
+        "agent": "Quant",
+        "archetype": "quant",
+        "reasoning": "Uptrend in price",
+        "orders": [
+          {
+            "side": "BUY",
+            "qty": 10.0,
+            "price": 100.24
+          }
+        ],
+        "held": false,
+        "forced_random": false,
+        "api_failed": false
+      },
+      {
+        "agent": "MM",
+        "archetype": "market_maker",
+        "reasoning": "MM: quoting 100.01 / 100.11 (qty 50 each)",
+        "orders": [
+          {
+            "side": "BUY",
+            "qty": 50.0,
+            "price": 100.01
+          },
+          {
+            "side": "SELL",
+            "qty": 50.0,
+            "price": 100.11
+          }
+        ],
+        "held": false,
+        "forced_random": false,
+        "api_failed": false
+      }
+    ],
+    [
+      {
+        "agent": "Retail",
+        "archetype": "retail",
+        "reasoning": "Macro environment is normal and recent price memory does not indicate a clear buy or sell signal. Holding cash at reference price of $100.24.",
+        "orders": [],
+        "held": true,
+        "forced_random": false,
+        "api_failed": false
+      },
+      {
+        "agent": "Inst",
+        "archetype": "institutional",
+        "reasoning": "Current price within range of recent clearing prices under normal conditions",
+        "orders": [],
+        "held": true,
+        "forced_random": false,
+        "api_failed": false
+      },
+      {
+        "agent": "Quant",
+        "archetype": "quant",
+        "reasoning": "Upward price momentum",
+        "orders": [
+          {
+            "side": "BUY",
+            "qty": 10.0,
+            "price": 100.24
+          }
+        ],
+        "held": false,
+        "forced_random": false,
+        "api_failed": false
+      },
+      {
+        "agent": "MM",
+        "archetype": "market_maker",
+        "reasoning": "MM: quoting 99.84 / 99.94 (qty 50 each)",
+        "orders": [
+          {
+            "side": "BUY",
+            "qty": 50.0,
+            "price": 99.84
+          },
+          {
+            "side": "SELL",
+            "qty": 50.0,
+            "price": 99.94
+          }
+        ],
+        "held": false,
+        "forced_random": false,
+        "api_failed": false
+      }
+    ],
+    [
+      {
+        "agent": "Retail",
+        "archetype": "retail",
+        "reasoning": "Default instinct triggered by recent price dip",
+        "orders": [
+          {
+            "side": "BUY",
+            "qty": 1.0,
+            "price": 100.18
+          }
+        ],
+        "held": false,
+        "forced_random": false,
+        "api_failed": false
+      },
+      {
+        "agent": "Inst",
+        "archetype": "institutional",
+        "reasoning": "Inst: 3 consecutive HOLDs \u2014 fallback SELL 1 @ 100.18",
+        "orders": [
+          {
+            "side": "SELL",
+            "qty": 1.0,
+            "price": 100.18
+          }
+        ],
+        "held": false,
+        "forced_random": true,
+        "api_failed": false
+      },
+      {
+        "agent": "Quant",
+        "archetype": "quant",
+        "reasoning": "Upward momentum and normal macro environment",
+        "orders": [
+          {
+            "side": "BUY",
+            "qty": 10.0,
+            "price": 100.18
+          }
+        ],
+        "held": false,
+        "forced_random": false,
+        "api_failed": false
+      },
+      {
+        "agent": "MM",
+        "archetype": "market_maker",
+        "reasoning": "MM: quoting 99.71 / 99.81 (qty 50 each)",
+        "orders": [
+          {
+            "side": "BUY",
+            "qty": 50.0,
+            "price": 99.71
+          },
+          {
+            "side": "SELL",
+            "qty": 50.0,
+            "price": 99.81
+          }
+        ],
+        "held": false,
+        "forced_random": false,
+        "api_failed": false
+      }
+    ],
+    [
+      {
+        "agent": "Retail",
+        "archetype": "retail",
+        "reasoning": "Ransomware attack on Meridian Pipeline causing supply disruption, increasing potential for price increase",
+        "orders": [
+          {
+            "side": "BUY",
+            "qty": 5.0,
+            "price": 100.15
+          }
+        ],
+        "held": false,
+        "forced_random": false,
+        "api_failed": false
+      },
+      {
+        "agent": "Inst",
+        "archetype": "institutional",
+        "reasoning": "Ransomware attack on Meridian Pipeline disrupts fuel supply, affecting fair value estimate",
+        "orders": [],
+        "held": true,
+        "forced_random": false,
+        "api_failed": false
+      },
+      {
+        "agent": "Quant",
+        "archetype": "quant",
+        "reasoning": "Upward price movement in a bearish macro environment suggests a short-term overshoot, presents an opportunity for reentry",
+        "orders": [
+          {
+            "side": "BUY",
+            "qty": 10.0,
+            "price": 100.15
+          }
+        ],
+        "held": false,
+        "forced_random": false,
+        "api_failed": false
+      },
+      {
+        "agent": "MM",
+        "archetype": "market_maker",
+        "reasoning": "MM: quoting 99.63 / 99.73 (qty 50 each)",
+        "orders": [
+          {
+            "side": "BUY",
+            "qty": 50.0,
+            "price": 99.63
+          },
+          {
+            "side": "SELL",
+            "qty": 50.0,
+            "price": 99.73
+          }
+        ],
+        "held": false,
+        "forced_random": false,
+        "api_failed": false
+      }
+    ],
+    [
+      {
+        "agent": "Retail",
+        "archetype": "retail",
+        "reasoning": "Market disruption due to pipeline halt may cause price volatility, buying a single share at the best bid to take advantage of potential price swings",
+        "orders": [
+          {
+            "side": "BUY",
+            "qty": 1.0,
+            "price": 100.12
+          }
+        ],
+        "held": false,
+        "forced_random": false,
+        "api_failed": false
+      },
+      {
+        "agent": "Inst",
+        "archetype": "institutional",
+        "reasoning": "Macro environment indicates supply shock causing a re-pricing of the asset, deviating from mean-reversion default",
+        "orders": [],
+        "held": true,
+        "forced_random": false,
+        "api_failed": false
+      },
+      {
+        "agent": "Quant",
+        "archetype": "quant",
+        "reasoning": "Rising price in a bearish macro environment suggests short-term oversell, taking advantage of the momentum with a smaller position.",
+        "orders": [
+          {
+            "side": "BUY",
+            "qty": 10.0,
+            "price": 100.12
+          }
+        ],
+        "held": false,
+        "forced_random": false,
+        "api_failed": false
+      },
+      {
+        "agent": "MM",
+        "archetype": "market_maker",
+        "reasoning": "MM: quoting 99.58 / 99.68 (qty 50 each)",
+        "orders": [
+          {
+            "side": "BUY",
+            "qty": 50.0,
+            "price": 99.58
+          },
+          {
+            "side": "SELL",
+            "qty": 50.0,
+            "price": 99.68
+          }
+        ],
+        "held": false,
+        "forced_random": false,
+        "api_failed": false
+      }
+    ],
+    [
+      {
+        "agent": "Retail",
+        "archetype": "retail",
+        "reasoning": "Ransomware attack disrupts fuel supply, escalating spot haulage rates. Buying dip to capitalize on increased transportation costs.",
+        "orders": [
+          {
+            "side": "BUY",
+            "qty": 1.0,
+            "price": 100.1
+          }
+        ],
+        "held": false,
+        "forced_random": false,
+        "api_failed": false
+      },
+      {
+        "agent": "Inst",
+        "archetype": "institutional",
+        "reasoning": "Inst: 3 consecutive HOLDs \u2014 fallback SELL 1 @ 100.10",
+        "orders": [
+          {
+            "side": "SELL",
+            "qty": 1.0,
+            "price": 100.1
+          }
+        ],
+        "held": false,
+        "forced_random": true,
+        "api_failed": false
+      },
+      {
+        "agent": "Quant",
+        "archetype": "quant",
+        "reasoning": "Price movement upwards despite bearish macro environment",
+        "orders": [
+          {
+            "side": "BUY",
+            "qty": 15.0,
+            "price": 100.1
+          }
+        ],
+        "held": false,
+        "forced_random": false,
+        "api_failed": false
+      },
+      {
+        "agent": "MM",
+        "archetype": "market_maker",
+        "reasoning": "MM: quoting 99.63 / 99.73 (qty 50 each)",
+        "orders": [
+          {
+            "side": "BUY",
+            "qty": 50.0,
+            "price": 99.63
+          },
+          {
+            "side": "SELL",
+            "qty": 50.0,
+            "price": 99.73
+          }
+        ],
+        "held": false,
+        "forced_random": false,
+        "api_failed": false
+      }
+    ],
+    [
+      {
+        "agent": "Retail",
+        "archetype": "retail",
+        "reasoning": "High volatility in refined fuel market due to pipeline halt, best ask price near reference price",
+        "orders": [
+          {
+            "side": "BUY",
+            "qty": 1.0,
+            "price": 99.87
+          }
+        ],
+        "held": false,
+        "forced_random": false,
+        "api_failed": false
+      },
+      {
+        "agent": "Inst",
+        "archetype": "institutional",
+        "reasoning": "Macro environment indicates supply shock affecting fuel market, re-pricing the asset. Wait for clarity before trading.",
+        "orders": [],
+        "held": true,
+        "forced_random": false,
+        "api_failed": false
+      },
+      {
+        "agent": "Quant",
+        "archetype": "quant",
+        "reasoning": "Price momentum is upward while the macro environment suggests potential supply disruptions in fuel markets, creating a bullish sentiment.",
+        "orders": [
+          {
+            "side": "BUY",
+            "qty": 10.0,
+            "price": 100.08
+          }
+        ],
+        "held": false,
+        "forced_random": false,
+        "api_failed": false
+      },
+      {
+        "agent": "MM",
+        "archetype": "market_maker",
+        "reasoning": "MM: quoting 99.80 / 99.90 (qty 50 each)",
+        "orders": [
+          {
+            "side": "BUY",
+            "qty": 50.0,
+            "price": 99.8
+          },
+          {
+            "side": "SELL",
+            "qty": 50.0,
+            "price": 99.9
+          }
+        ],
+        "held": false,
+        "forced_random": false,
+        "api_failed": false
+      }
+    ],
+    [
+      {
+        "agent": "Retail",
+        "archetype": "retail",
+        "reasoning": "Ransomware attack on Meridian Pipeline causing fuel shortage and price spike",
+        "orders": [
+          {
+            "side": "BUY",
+            "qty": 3.0,
+            "price": 99.89
+          }
+        ],
+        "held": false,
+        "forced_random": false,
+        "api_failed": false
+      },
+      {
+        "agent": "Inst",
+        "archetype": "institutional",
+        "reasoning": "Macro environment indicates supply shock affecting refined fuel prices, deviating from mean-reversion default due to changed fair value estimate",
+        "orders": [],
+        "held": true,
+        "forced_random": false,
+        "api_failed": false
+      },
+      {
+        "agent": "Quant",
+        "archetype": "quant",
+        "reasoning": "Upward momentum with macro environment corroboration",
+        "orders": [
+          {
+            "side": "BUY",
+            "qty": 10.0,
+            "price": 99.89
+          }
+        ],
+        "held": false,
+        "forced_random": false,
+        "api_failed": false
+      },
+      {
+        "agent": "MM",
+        "archetype": "market_maker",
+        "reasoning": "MM: quoting 99.77 / 99.87 (qty 50 each)",
+        "orders": [
+          {
+            "side": "BUY",
+            "qty": 50.0,
+            "price": 99.77
+          },
+          {
+            "side": "SELL",
+            "qty": 50.0,
+            "price": 99.87
+          }
+        ],
+        "held": false,
+        "forced_random": false,
+        "api_failed": false
+      }
+    ],
+    [
+      {
+        "agent": "Retail",
+        "archetype": "retail",
+        "reasoning": "Ransomware attack on Meridian Pipeline causing fuel shortage and price volatility, presenting a buying opportunity",
+        "orders": [
+          {
+            "side": "BUY",
+            "qty": 1.0,
+            "price": 99.87
+          }
+        ],
+        "held": false,
+        "forced_random": false,
+        "api_failed": false
+      },
+      {
+        "agent": "Inst",
+        "archetype": "institutional",
+        "reasoning": "Inst: 3 consecutive HOLDs \u2014 fallback BUY 1 @ 99.87",
+        "orders": [
+          {
+            "side": "BUY",
+            "qty": 1.0,
+            "price": 99.87
+          }
+        ],
+        "held": false,
+        "forced_random": true,
+        "api_failed": false
+      },
+      {
+        "agent": "Quant",
+        "archetype": "quant",
+        "reasoning": "Uptrend amidst bearish macro environment",
+        "orders": [
+          {
+            "side": "BUY",
+            "qty": 10.0,
+            "price": 99.87
+          }
+        ],
+        "held": false,
+        "forced_random": false,
+        "api_failed": false
+      },
+      {
+        "agent": "MM",
+        "archetype": "market_maker",
+        "reasoning": "MM: quoting 99.83 / 99.93 (qty 50 each)",
+        "orders": [
+          {
+            "side": "BUY",
+            "qty": 50.0,
+            "price": 99.83
+          },
+          {
+            "side": "SELL",
+            "qty": 50.0,
+            "price": 99.93
+          }
+        ],
+        "held": false,
+        "forced_random": false,
+        "api_failed": false
+      }
+    ],
+    [
+      {
+        "agent": "Retail",
+        "archetype": "retail",
+        "reasoning": "Ransomware attack causing supply disruption, increasing potential for price increase",
+        "orders": [
+          {
+            "side": "BUY",
+            "qty": 2.0,
+            "price": 99.87
+          }
+        ],
+        "held": false,
+        "forced_random": false,
+        "api_failed": false
+      },
+      {
+        "agent": "Inst",
+        "archetype": "institutional",
+        "reasoning": "Supply shock due to pipeline halt may cause price increase",
+        "orders": [
+          {
+            "side": "BUY",
+            "qty": 10.0,
+            "price": 99.87
+          }
+        ],
+        "held": false,
+        "forced_random": false,
+        "api_failed": false
+      },
+      {
+        "agent": "Quant",
+        "archetype": "quant",
+        "reasoning": "Upward momentum with bearish macro environment",
+        "orders": [
+          {
+            "side": "BUY",
+            "qty": 15.0,
+            "price": 99.87
+          }
+        ],
+        "held": false,
+        "forced_random": false,
+        "api_failed": false
+      },
+      {
+        "agent": "MM",
+        "archetype": "market_maker",
+        "reasoning": "MM: quoting 99.70 / 99.80 (qty 50 each)",
+        "orders": [
+          {
+            "side": "BUY",
+            "qty": 50.0,
+            "price": 99.7
+          },
+          {
+            "side": "SELL",
+            "qty": 50.0,
+            "price": 99.8
+          }
+        ],
+        "held": false,
+        "forced_random": false,
+        "api_failed": false
+      }
+    ],
+    [
+      {
+        "agent": "Retail",
+        "archetype": "retail",
+        "reasoning": "Ransomware attack on Meridian Pipeline causing fuel shortage and increased spot haulage rates",
+        "orders": [
+          {
+            "side": "BUY",
+            "qty": 1.0,
+            "price": 99.88
+          }
+        ],
+        "held": false,
+        "forced_random": false,
+        "api_failed": false
+      },
+      {
+        "agent": "Inst",
+        "archetype": "institutional",
+        "reasoning": "Pipeline disruption creates demand shock, pushing price above recent average",
+        "orders": [
+          {
+            "side": "BUY",
+            "qty": 20.0,
+            "price": 99.86
+          }
+        ],
+        "held": false,
+        "forced_random": false,
+        "api_failed": false
+      },
+      {
+        "agent": "Quant",
+        "archetype": "quant",
+        "reasoning": "Uptrend in price and bearish macro environment",
+        "orders": [
+          {
+            "side": "BUY",
+            "qty": 8.0,
+            "price": 99.88
+          }
+        ],
+        "held": false,
+        "forced_random": false,
+        "api_failed": false
+      },
+      {
+        "agent": "MM",
+        "archetype": "market_maker",
+        "reasoning": "MM: quoting 99.65 / 99.75 (qty 50 each)",
+        "orders": [
+          {
+            "side": "BUY",
+            "qty": 50.0,
+            "price": 99.65
+          },
+          {
+            "side": "SELL",
+            "qty": 50.0,
+            "price": 99.75
+          }
+        ],
+        "held": false,
+        "forced_random": false,
+        "api_failed": false
+      }
+    ],
+    [
+      {
+        "agent": "Retail",
+        "archetype": "retail",
+        "reasoning": "Ransomware attack disrupts fuel supply, potentially leading to price increase",
+        "orders": [
+          {
+            "side": "BUY",
+            "qty": 5.0,
+            "price": 99.87
+          }
+        ],
+        "held": false,
+        "forced_random": false,
+        "api_failed": false
+      },
+      {
+        "agent": "Inst",
+        "archetype": "institutional",
+        "reasoning": "Ransomware attack on Meridian Pipeline disrupts fuel flow, affecting fair value estimate",
+        "orders": [],
+        "held": true,
+        "forced_random": false,
+        "api_failed": false
+      },
+      {
+        "agent": "Quant",
+        "archetype": "quant",
+        "reasoning": "Upward momentum in price and bearish macro environment suggests buying with caution",
+        "orders": [
+          {
+            "side": "BUY",
+            "qty": 10.0,
+            "price": 99.87
+          }
+        ],
+        "held": false,
+        "forced_random": false,
+        "api_failed": false
+      },
+      {
+        "agent": "MM",
+        "archetype": "market_maker",
+        "reasoning": "MM: quoting 99.78 / 99.88 (qty 50 each)",
+        "orders": [
+          {
+            "side": "BUY",
+            "qty": 50.0,
+            "price": 99.78
+          },
+          {
+            "side": "SELL",
+            "qty": 50.0,
+            "price": 99.88
+          }
+        ],
+        "held": false,
+        "forced_random": false,
+        "api_failed": false
+      }
+    ],
+    [
+      {
+        "agent": "Retail",
+        "archetype": "retail",
+        "reasoning": "Ransomware attack on Meridian Pipeline causing fuel shortage, increasing potential for price increase",
+        "orders": [
+          {
+            "side": "BUY",
+            "qty": 1.0,
+            "price": 99.88
+          }
+        ],
+        "held": false,
+        "forced_random": false,
+        "api_failed": false
+      },
+      {
+        "agent": "Inst",
+        "archetype": "institutional",
+        "reasoning": "Ransomware attack disrupts fuel supply, potentially causing price increase. Disciplined mean reversion strategy suggests buying",
+        "orders": [
+          {
+            "side": "BUY",
+            "qty": 10.0,
+            "price": 99.88
+          }
+        ],
+        "held": false,
+        "forced_random": false,
+        "api_failed": false
+      },
+      {
+        "agent": "Quant",
+        "archetype": "quant",
+        "reasoning": "Upward movement in price and bearish macro context calls for a cautious entry",
+        "orders": [
+          {
+            "side": "BUY",
+            "qty": 10.0,
+            "price": 99.88
+          }
+        ],
+        "held": false,
+        "forced_random": false,
+        "api_failed": false
+      },
+      {
+        "agent": "MM",
+        "archetype": "market_maker",
+        "reasoning": "MM: quoting 99.91 / 100.01 (qty 50 each)",
+        "orders": [
+          {
+            "side": "BUY",
+            "qty": 50.0,
+            "price": 99.91
+          },
+          {
+            "side": "SELL",
+            "qty": 50.0,
+            "price": 100.01
+          }
+        ],
+        "held": false,
+        "forced_random": false,
+        "api_failed": false
+      }
+    ]
+  ],
+  "wealth_log": [
+    [
+      10000.0,
+      100000.0,
+      50000.0,
+      1100000.0
+    ],
+    [
+      10000.0,
+      100000.0,
+      50000.0,
+      1100000.0
+    ],
+    [
+      9999.97,
+      100000.0,
+      49999.85,
+      1099970.18
+    ],
+    [
+      10000.16,
+      100000.0,
+      50000.8,
+      1100168.54
+    ],
+    [
+      10000.27,
+      100000.0,
+      50001.35,
+      1100288.88
+    ],
+    [
+      10000.27,
+      100000.0,
+      50001.35,
+      1100288.88
+    ],
+    [
+      10000.3,
+      100000.0,
+      50001.5,
+      1100324.52
+    ],
+    [
+      10000.3,
+      99996.7,
+      50000.95,
+      1100197.69
+    ],
+    [
+      10000.3,
+      99995.8,
+      50000.5,
+      1100164.6
+    ],
+    [
+      10000.3,
+      99991.29999999999,
+      49996.75,
+      1100006.65
+    ],
+    [
+      10000.24,
+      99989.56,
+      49994.65,
+      1099946.47
+    ],
+    [
+      10000.0,
+      99988.4,
+      49993.25,
+      1099908.35
+    ],
+    [
+      9999.719999999998,
+      99987.23999999999,
+      49991.85,
+      1099872.23
+    ],
+    [
+      10001.399999999998,
+      99993.12,
+      50002.35,
+      1100051.36
+    ],
+    [
+      9999.719999999998,
+      99987.23999999999,
+      49989.75,
+      1099874.33
+    ],
+    [
+      9999.719999999998,
+      99987.23999999999,
+      49989.75,
+      1099874.33
+    ],
+    [
+      9999.599999999999,
+      99986.94999999998,
+      49989.049999999996,
+      1099866.25
+    ],
+    [
+      9999.319999999998,
+      99986.16999999998,
+      49987.65,
+      1099851.09
+    ],
+    [
+      9999.319999999998,
+      99986.16999999998,
+      49987.65,
+      1099851.09
+    ],
+    [
+      10000.219999999998,
+      99988.51,
+      49991.85,
+      1099893.57
+    ]
+  ],
+  "agent_names": [
+    "Retail",
+    "Inst",
+    "Quant",
+    "MM"
+  ],
+  "agent_archetypes": [
+    "retail",
+    "institutional",
+    "quant",
+    "market_maker"
+  ]
+}

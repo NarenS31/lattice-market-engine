@@ -1,16 +1,18 @@
 # 2×2 Framing × Realism — Results
 
 **Design.** Framing (narrative / numeric) × Realism (real / fictional), run on two
-local Ollama models (`llama3.1:8b`, `mistral:7b`). 4 matched event families
-(lithium, semiconductor, energy, credit) × 4 cells × 5 reps × 2 models =
-**160 runs**, all completed, 0 failures. The interaction is the standard 2×2
+local Ollama models (`llama3.1:8b`, `mistral:7b`). 10 matched event families
+(lithium, semiconductor, energy, credit, port closure, wheat export ban, pipeline
+outage, flood, rail embargo, dam failure) × 4 cells × 5 reps × 2 models =
+**400 runs**, all completed, 0 failures. The design was extended from 4 to 10
+families; see "Extension to 10 families" below for what changed. The interaction is the standard 2×2
 contrast, estimated per family and bootstrapped over families:
 
 ```
 interaction = (narrative_real − numeric_real) − (narrative_fictional − numeric_fictional)
 ```
 
-The primary CI is a **cluster bootstrap that resamples the 4 event families**
+The primary CI is a **cluster bootstrap that resamples the 10 event families**
 (the unit of independent replication), 1000 iterations, percentile 95% CI.
 
 ## Headline
@@ -21,28 +23,94 @@ cross-model difference spans zero. For a study built to detect whether the model
 treat *real* shocks differently from structurally-matched *fictional* ones, this
 is a clean, consistent null — not evidence of a memorization back-door.
 
-## Per-metric interaction (95% CI over 4 families)
+## Per-metric interaction (95% CI over 10 families)
 
 | Metric | llama3.1:8b | mistral:7b | Paired diff (llama − mistral) |
 |---|---|---|---|
-| **spread widening** (primary) | −0.04335 [−0.14477, 0.02490] · spans | +0.01775 [−0.06722, 0.10686] · spans | −0.06110 [−0.17741, 0.05322] · spans |
-| **Kyle's λ change** (primary) | +0.00364 [−0.00063, 0.00845] · spans | −0.00014 [−0.00894, 0.00800] · spans | +0.00379 [−0.00490, 0.01375] · spans |
-| **archetype divergence** (primary) | −0.00012 [−0.00032, 0.00003] · spans | −0.00005 [−0.00012, 0.00001] · spans | −0.00007 [−0.00028, 0.00011] · spans |
-| Kyle's λ post-level | **+0.00477 [0.00079, 0.00987] · excludes** | −0.00124 [−0.00761, 0.00396] · spans | +0.00601 [−0.00068, 0.01323] · spans |
-| spread post-level | −0.06245 [−0.16833, 0.01070] · spans | +0.01015 [−0.09305, 0.10526] · spans | −0.07260 [−0.18951, 0.02811] · spans |
+| **spread widening** (primary) | −0.02194 [−0.06729, 0.01181] · spans | −0.00876 [−0.06094, 0.04268] · spans | −0.01318 [−0.08292, 0.05343] · spans |
+| **Kyle's λ change** (primary) | +0.00200 [−0.00048, 0.00465] · spans | +0.00161 [−0.00209, 0.00557] · spans | +0.00039 [−0.00454, 0.00543] · spans |
+| **archetype divergence** (primary) | −0.00004 [−0.00014, 0.00004] · spans | −0.00003 [−0.00007, 0.00001] · spans | −0.00001 [−0.00012, 0.00009] · spans |
+| Kyle's λ post-level | +0.00244 [−0.00013, 0.00512] · spans | +0.00044 [−0.00232, 0.00311] · spans | +0.00200 [−0.00184, 0.00686] · spans |
+| spread post-level | −0.02926 [−0.07793, 0.00589] · spans | −0.01578 [−0.06441, 0.03455] · spans | −0.01348 [−0.07849, 0.05161] · spans |
 
-**The one non-null cell** is llama's interaction on the *post-shock level* of
-Kyle's λ (CI excludes zero). It does not survive scrutiny: mistral does not show
-it, the paired cross-model difference spans zero ("a difference in significance is
-not a significant difference"), and it is 1 of 5 metrics with no multiplicity
-correction. Treat it as a lead, not a finding.
+**Every cell spans zero.** At n=4 there was one non-null: llama's interaction on
+the *post-shock level* of Kyle's λ, CI [0.00079, 0.00987], excluding zero. It was
+flagged then as "a lead, not a finding" — mistral did not show it, the paired
+difference spanned zero, and it was 1 of 5 metrics uncorrected. **Adding six
+families resolved it as a false positive:** the estimate halved (0.00477 →
+0.00244) and the CI now spans zero. That is the expected behaviour of a
+noise-driven result under more clustering units, and it is the single clearest
+piece of evidence that the n=4 design was noise-limited rather than
+effect-limited.
+
+## Extension to 10 families
+
+The design originally ran 4 event families. Six were added (240 new runs, 0
+failures), taking it to 10 × 4 cells × 5 reps × 2 models = 400 runs.
+
+**What was added.** Six new *real* events were authored alongside their fictional
+counterparts — the design pairs each fictional shock with a real one, so more
+families needs both halves. The six span six new causal classes (port closure,
+export restriction, pipeline outage, flood, rail embargo, dam failure) with
+severities 0.55–0.85, chosen to widen the causal space rather than re-sample the
+four already present. `check_shock_balance.py --strict` passes: narrative max
+|ΔFlesch| 4.4, numeric 0.0, numeric magnitudes matched in every pair. The 16
+original shock records are byte-identical, so the original 160 runs remain valid
+and were not re-run.
+
+**Did the interaction CI narrow?** Yes — by **1.94× on average**, against the
+1.58× that √(10/4) predicts.
+
+| metric | llama n=4 → n=10 | | mistral n=4 → n=10 | |
+|---|---|---|---|---|
+| spread_widening | 0.16967 → 0.07910 | 2.15× | 0.17408 → 0.10362 | 1.68× |
+| kyle_lambda_delta | 0.00908 → 0.00513 | 1.77× | 0.01694 → 0.00766 | 2.21× |
+| archetype_divergence | 0.00035 → 0.00018 | 1.94× | 0.00013 → 0.00008 | 1.63× |
+| kyle_lambda_post | 0.00908 → 0.00525 | 1.73× | 0.01157 → 0.00543 | 2.13× |
+| spread_post | 0.17903 → 0.08382 | 2.14× | 0.19831 → 0.09896 | 2.00× |
+| **mean** | | **1.95×** | | **1.93×** |
+
+(CI widths, 95% percentile cluster bootstrap.) The two models agree on the
+narrowing factor to within 1%, which is reassuring given they were run
+independently.
+
+**Why more than √n.** Not free power. Between-family variance *fell* — llama
+5.41e-03 → 1.73e-03 — because the six new families produce more consistent
+interaction contrasts than the original four. Part of the narrowing is the design
+getting quieter, not merely larger. Note this runs against the earlier prediction
+that narrowing would fall *short* of √n because within-family variance dominates;
+within-family dominates more now (ratio 0.43 llama / 0.54 mistral), and the CIs
+narrowed anyway.
+
+**Does the null hold?** Yes, and it strengthens in three specific ways:
+
+1. **Every cell spans zero** on all 5 metrics, both models — including the one
+   cell that excluded zero at n=4 (see above).
+2. **The models converged.** At n=4 they disagreed in *sign* on spread widening
+   (llama −0.04335, mistral +0.01775; paired difference −0.06110). At n=10 both
+   are negative and small (−0.02194, −0.00876; difference −0.01318). The apparent
+   cross-model disagreement at n=4 was noise.
+3. **Estimates shrank toward zero.** llama's spread widening and spread post-level
+   both roughly halved; archetype divergence quartered. Systematic shrinkage
+   across independent metrics is the signature of n=4 estimates being
+   noise-dominated — consistent with the 23.3% same-seed decision flip rate.
+
+**Not an artifact of the new families being inert.** Decision mix is nearly
+identical between old and new families (llama: BUY 79.3/82.3%, hold 4.9/4.3%),
+and all 10 families contribute a complete 4/4 cell set on both models, so none is
+silently dropped by `complete_families()`.
+
+**What did not change.** Every estimate is still below its own MDE, so these
+remain **underpowered nulls, not confirmed zeros**. The mediation analysis is
+still n=4: the mediator probe is a separate run that was not extended to the new
+families, so NIE rows are marked with their own n.
 
 ## Decision health
 
 | Model | hold rate | forced coin-flips | backend failures |
 |---|---|---|---|
-| llama3.1:8b | 4.9% | 0.5% | 0.2% |
-| mistral:7b | 34.6% | 9.5% | 0.1% |
+| llama3.1:8b | 4.6% | 0.4% | 0.2% |
+| mistral:7b | 32.5% | 8.6% | 0.0% |
 
 mistral's high hold rate is **genuine trading behaviour, not JSON unreliability**:
 only 5 parse failures were logged across ~4,800 mistral calls. It is simply a more
@@ -69,9 +137,12 @@ than llama's.
    constraint is met at the entity level), but the *causal structure* is shared by
    design — so entity-level recall is controlled while structural recall is not.
 
-3. **n = 4 families** → weak support for generalising to supply-chain shocks broadly;
-   the 4-family cluster bootstrap has approximately nominal coverage under Gaussian
-   family effects but the intervals are wide.
+3. **n = 10 families** (was 4) → the six added families span six new causal classes
+   (port closure, export restriction, pipeline outage, flood, rail embargo, dam
+   failure), which broadens the causal space rather than re-sampling the original
+   four. Support for generalising to supply-chain shocks broadly is correspondingly
+   better than at n=4, but 10 clustering units is still modest and the intervals
+   remain wide in absolute terms.
 
 4. **n = 2 models is descriptive, not inferential.** The "combined" estimate averages
    the two per-model interactions; it does not treat models as a resampled sample and
@@ -79,8 +150,9 @@ than llama's.
    so agreement is evidence about **replication**, weak evidence about generalisation
    across model families (which would need models differing in scale and training).
 
-5. **A replicated null is a statement about consistency, not proof of absence** — with
-   4 families the CIs are wide and modest true effects would not be detected.
+5. **A replicated null is a statement about consistency, not proof of absence** — even
+   at 10 families every estimate remains below its own MDE, so modest true effects
+   would still not be detected. See "Statistical Power (n = 10 families)".
 
 6. **Stimulus provenance.** These results used the fictional-shock stimuli as they
    existed at sweep time, which included a `3nm` process-node token in the fictional
@@ -216,35 +288,33 @@ simulation*, not a claim about LLMs in general.
 
 ---
 
-## Statistical Power (n = 4 families)
+## Statistical Power (n = 10 families)
 
-Minimum detectable effect (MDE) at 80% power, two-sided α=0.05: `MDE = 2.80 × SE`, SE from the family cluster bootstrap. This makes the "n=4 is small" caveat concrete (`power_analysis.py`, no new LLM calls).
+Minimum detectable effect (MDE) at 80% power, two-sided α=0.05: `MDE = 2.80 × SE`, SE from the family cluster bootstrap. This makes the "n=10 is small" caveat concrete (`power_analysis.py`, no new LLM calls).
 
-**llama3.1:8b** (n = 4 families):
-
-| effect | estimate | SE | MDE (80%) | observed detectable? | n for ½·MDE |
-|---|---|---|---|---|---|
-| interaction · spread_widening | -0.04335 | 0.04350 | 0.12188 | **no** | 16 |
-| NIE · spread_widening | -0.00170 | 0.00898 | 0.02516 | **no** | 16 |
-| interaction · kyle_lambda_delta | 0.00364 | 0.00225 | 0.00629 | **no** | 16 |
-| NIE · kyle_lambda_delta | 0.00009 | 0.00080 | 0.00223 | **no** | 16 |
-| interaction · archetype_divergence | -0.00012 | 0.00009 | 0.00026 | **no** | 16 |
-| NIE · archetype_divergence | 0.00000 | 0.00002 | 0.00007 | **no** | 16 |
-
-**mistral:7b** (n = 4 families):
+**llama3.1:8b** (n = 10 families):
 
 | effect | estimate | SE | MDE (80%) | observed detectable? | n for ½·MDE |
 |---|---|---|---|---|---|
-| interaction · spread_widening | 0.01775 | 0.04455 | 0.12481 | **no** | 16 |
-| NIE · spread_widening | -0.00109 | 0.00464 | 0.01301 | **no** | 16 |
-| interaction · kyle_lambda_delta | -0.00014 | 0.00411 | 0.01150 | **no** | 16 |
-| NIE · kyle_lambda_delta | -0.00045 | 0.00130 | 0.00364 | **no** | 16 |
-| interaction · archetype_divergence | -0.00005 | 0.00003 | 0.00009 | **no** | 16 |
-| NIE · archetype_divergence | 0.00001 | 0.00001 | 0.00004 | **no** | 16 |
+| interaction · spread_widening | -0.02194 | 0.02065 | 0.05785 | **no** | 40 |
+| NIE · spread_widening *(n=4)* | -0.00170 | 0.00934 | 0.02617 | **no** | 16 |
+| interaction · kyle_lambda_delta | 0.00200 | 0.00131 | 0.00368 | **no** | 40 |
+| NIE · kyle_lambda_delta *(n=4)* | 0.00009 | 0.00069 | 0.00193 | **no** | 16 |
+| interaction · archetype_divergence | -0.00004 | 0.00005 | 0.00013 | **no** | 40 |
+| NIE · archetype_divergence *(n=4)* | 0.00000 | 0.00002 | 0.00007 | **no** | 16 |
 
-**Reading:** across the board the observed estimates are **smaller than their own MDE**, so this design could not have detected effects of the observed magnitude even if they were real. The interaction, mediation, and interventional nulls are all **underpowered nulls** — consistent with no effect, but not proof of zero. Detecting an effect half the current MDE would need roughly **4× the event families** (the `n for ½·MDE` column); e.g. moving from 4 to ~16 families.
+**mistral:7b** (n = 10 families):
 
----
+| effect | estimate | SE | MDE (80%) | observed detectable? | n for ½·MDE |
+|---|---|---|---|---|---|
+| interaction · spread_widening | -0.00876 | 0.02608 | 0.07306 | **no** | 40 |
+| NIE · spread_widening *(n=4)* | -0.00109 | 0.00468 | 0.01311 | **no** | 16 |
+| interaction · kyle_lambda_delta | 0.00161 | 0.00195 | 0.00547 | **no** | 40 |
+| NIE · kyle_lambda_delta *(n=4)* | -0.00045 | 0.00125 | 0.00349 | **no** | 16 |
+| interaction · archetype_divergence | -0.00003 | 0.00002 | 0.00005 | **no** | 40 |
+| NIE · archetype_divergence *(n=4)* | 0.00001 | 0.00001 | 0.00004 | **no** | 16 |
+
+**Reading:** across the board the observed estimates are **smaller than their own MDE**, so this design could not have detected effects of the observed magnitude even if they were real. The interaction, mediation, and interventional nulls are all **underpowered nulls** — consistent with no effect, but not proof of zero. Detecting an effect half the current MDE would need roughly **4× the event families** (the `n for ½·MDE` column); e.g. moving from 10 to ~40 families.
 
 ## Mediator Validity & Rigor Checks (closing)
 
@@ -302,9 +372,11 @@ temperature-0.7 sampling, not probe contamination — but the re-run was not
 redundant. It measured a reproducibility floor of the same order as the effects
 being estimated, which is why it now anchors the power discussion.
 
-**3. Statistical power.** See "Statistical Power (n = 4 families)": every observed
-estimate is below its own MDE, so all nulls are underpowered nulls; halving the
-detectable floor needs ~16 families (4x).
+**3. Statistical power.** See "Statistical Power (n = 10 families)": every observed
+estimate is still below its own MDE, so all nulls remain underpowered nulls.
+Halving the detectable floor from here needs ~40 families (4x) — and because
+within-family variance dominates (ratio 0.43 llama / 0.54 mistral), 40 is a
+lower bound on the true cost.
 
 ---
 
